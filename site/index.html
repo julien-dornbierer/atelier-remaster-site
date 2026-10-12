@@ -7,7 +7,7 @@
 <meta property="og:title" content="Atelier Remaster">
 <meta property="og:description" content="La mise à niveau digitale de votre entreprise : bilan gratuit, plan sur mesure, prix fixe.">
 <title>Atelier Remaster</title>
-<meta name="description" content="Atelier Remaster : la mise à niveau digitale des petites entreprises établies. Logo, site, réseaux et présence en ligne : bilan gratuit et plan sur mesure. Julien Dornbierer, Bienne.">
+<meta name="description" content="Atelier Remaster : la mise à niveau digitale des petites entreprises établies. Logo, site, réseaux et présence en ligne : bilan gratuit et plan sur mesure. Julien Dornbierer, Biel/Bienne.">
 <style>
 @font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage.woff2) format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}@font-face{font-family:"Source Serif 4";src:url(fonts/sourceserif4.woff2) format("woff2");font-weight:200 900;font-display:swap}
 
@@ -98,6 +98,25 @@ nav.main a:hover{color:var(--ink)}
 
 /* examples */
 .fict{font-size:.9rem;color:var(--soft);margin-top:1rem}
+.cases{display:flex;flex-direction:column;gap:clamp(48px,6vw,84px);margin-top:2.8rem}
+.case{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+@media (max-width:900px){.case{grid-template-columns:1fr}}
+.ba{position:relative;aspect-ratio:8/5;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--mist);touch-action:pan-y;user-select:none;-webkit-user-select:none;--pos:50%}
+.ba svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ba .after{clip-path:inset(0 0 0 var(--pos))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 0 1px rgba(30,39,51,.25);pointer-events:none}
+.ba .handle::after{content:"";position:absolute;top:50%;left:50%;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:2px solid #1e2733;background:linear-gradient(90deg,#fff 50%,var(--amber) 50%);box-shadow:0 4px 12px rgba(30,39,51,.3)}
+.ba .tag{position:absolute;top:12px;font:600 .8rem/1 var(--display);padding:.45em .65em;border-radius:4px;pointer-events:none}
+.ba .tag.b{left:12px;background:rgba(30,39,51,.85);color:#fff}
+.ba .tag.a{right:12px;background:var(--amber);color:#1e2733}
+.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.ba:has(input:focus-visible){outline:3px solid var(--amber);outline-offset:3px}
+.cx h3{font-size:1.5rem}
+.cx .sec{font:500 .95rem var(--display);color:var(--soft);margin:.4rem 0 1.2rem;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.cx .pk{font:700 .78rem var(--display);padding:.3em .55em;border-radius:4px;background:var(--amber-wash);color:var(--amber-deep)}
+.cx dl{margin:0;display:flex;flex-direction:column;gap:14px}
+.cx dt{font:700 .78rem var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:.2rem}
+.cx dd{margin:0;font-size:1rem;line-height:1.5;color:var(--soft)}
 
 /* method: a real sequence */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2.4rem;counter-reset:s}
@@ -184,6 +203,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
     </a>
     <nav class="main" aria-label="Navigation principale">
       <a href="#prestations" data-i="nav1">Prestations</a>
+      <a href="#exemples" data-i="nav5">Exemples</a>
       <a href="#methode" data-i="nav2">Méthode</a>
       <a href="#tarifs" data-i="nav3">Tarifs</a>
       <a href="#contact" data-i="nav4">Contact</a>
@@ -230,7 +250,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 <section id="prestations">
   <div class="wrap">
     <h2 data-i="w_t">Ce que je fais pour vous</h2>
-    <p class="lead" data-i="w_l">Une remise à niveau complète, du logo au site, pour des entreprises qui ont mieux à faire que leur marketing.</p>
+    <p class="lead" data-i="w_l">On garde ce qui fait votre réputation. On modernise tout le reste.</p>
     <div class="cols3">
       <div>
         <svg class="glyph" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4 A18 18 0 0 0 22 40" fill="none" stroke="currentColor" stroke-width="3"/><path d="M22 2.5 A19.5 19.5 0 0 1 22 41.5 Z" fill="var(--amber)"/></svg>
@@ -256,12 +276,303 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   </div>
 </section>
 
+<section id="exemples">
+  <div class="wrap">
+    <span class="kick" data-i="x_k">Exemples fictifs</span>
+    <h2 data-i="x_t">Avant, après : trois exemples</h2>
+    <p class="lead" data-i="x_l">Faites glisser pour comparer. Le nom, la couleur et le signe restent : c'est ce que vos clients reconnaissent. Le reste devient clair et lisible partout.</p>
+    <div class="cases">
+
+      <article class="case">
+        <div class="ba">
+          <svg class="before" viewBox="0 0 640 400" aria-hidden="true">
+            <defs>
+              <linearGradient id="c1t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2e85f"/><stop offset="1" stop-color="#1c7a2b"/></linearGradient>
+              <linearGradient id="c1w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4e04d"/><stop offset="1" stop-color="#2a8a35"/></linearGradient>
+            </defs>
+            <rect width="640" height="400" fill="#f4f2ec"/>
+            <text x="30" y="220" font-family="'Courier New',monospace" font-size="10" fill="#9b968b">logo_final_v3_NEW.jpg</text>
+            <g fill="#000" opacity=".15" transform="translate(4 4)">
+              <polygon points="175,58 150,100 200,100"/><polygon points="175,80 143,126 207,126"/><polygon points="175,104 136,156 214,156"/>
+            </g>
+            <polygon points="175,58 150,100 200,100" fill="url(#c1t)"/>
+            <polygon points="175,80 143,126 207,126" fill="url(#c1t)"/>
+            <polygon points="175,104 136,156 214,156" fill="url(#c1t)"/>
+            <rect x="168" y="156" width="14" height="20" fill="#7a4a1f"/>
+            <text x="236" y="98" font-family="'Brush Script MT','Segoe Script',cursive" font-size="34" fill="#1c6b2a">Menuiserie</text>
+            <text x="239" y="157" font-family="Impact,'Arial Black',sans-serif" font-size="56" fill="#000" opacity=".2">VAUCLAIR</text>
+            <text x="235" y="153" font-family="Impact,'Arial Black',sans-serif" font-size="56" fill="url(#c1w)" stroke="#14501d" stroke-width="1.2">VAUCLAIR</text>
+            <text x="238" y="182" font-family="'Times New Roman',serif" font-style="italic" font-size="16" fill="#c62828">depuis 1978</text>
+            <path d="M236 192Q350 206 470 188" fill="none" stroke="#c62828" stroke-width="2"/>
+            <path d="M30 232H610" stroke="#dcd8cf" stroke-width="1.5"/>
+            <g fill="none" stroke="#bdb8ac" stroke-width="1.5" stroke-dasharray="5 4">
+              <rect x="30" y="248" width="180" height="122" rx="8"/><rect x="230" y="248" width="180" height="122" rx="8"/><rect x="430" y="248" width="180" height="122" rx="8"/>
+            </g>
+            <g font-family="Arial,sans-serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="#9b968b">
+              <text x="44" y="270" data-i="x1c1">COULEURS</text><text x="244" y="270" data-i="x1c2">TYPOGRAPHIE</text><text x="444" y="270" data-i="x1c3">DÉCLINAISONS</text>
+            </g>
+            <g font-family="Georgia,serif" font-size="44" fill="#c9c4b8" text-anchor="middle">
+              <text x="120" y="340">?</text><text x="320" y="340">?</text><text x="520" y="340">?</text>
+            </g>
+          </svg>
+          <svg class="after" viewBox="0 0 640 400" aria-hidden="true">
+            <defs>
+              <symbol id="c1m" viewBox="-29 0 58 70"><g fill="currentColor"><rect x="-8" y="0" width="16" height="10" rx="2"/><rect x="-15" y="14" width="30" height="10" rx="2"/><rect x="-22" y="28" width="44" height="10" rx="2"/><rect x="-29" y="42" width="58" height="10" rx="2"/><rect x="-4" y="56" width="8" height="14"/></g></symbol>
+            </defs>
+            <rect width="640" height="400" fill="#fbfaf7"/>
+            <text x="30" y="220" font-family="'Courier New',monospace" font-size="10" fill="#8a9a91">vauclair-logo · svg · pdf · png</text>
+            <use href="#c1m" x="160" y="72" width="70" height="85" color="#2f5d46"/>
+            <text x="258" y="145" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="64" letter-spacing="-2" fill="#1f2a24">Vauclair</text>
+            <text x="261" y="176" font-family="Arial,sans-serif" font-weight="700" font-size="12" letter-spacing="2.6" fill="#2f5d46">MENUISERIE · DEPUIS 1978</text>
+            <path d="M30 232H610" stroke="#e6e3dc" stroke-width="1.5"/>
+            <g fill="#ffffff" stroke="#e6e3dc" stroke-width="1.5">
+              <rect x="30" y="248" width="180" height="122" rx="8"/><rect x="230" y="248" width="180" height="122" rx="8"/><rect x="430" y="248" width="180" height="122" rx="8"/>
+            </g>
+            <g font-family="Arial,sans-serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="#2f5d46">
+              <text x="44" y="270" data-i="x1c1">COULEURS</text><text x="244" y="270" data-i="x1c2">TYPOGRAPHIE</text><text x="444" y="270" data-i="x1c3">DÉCLINAISONS</text>
+            </g>
+            <circle cx="62" cy="308" r="15" fill="#2f5d46"/><circle cx="102" cy="308" r="15" fill="#c8955a"/><circle cx="142" cy="308" r="15" fill="#f3ede2" stroke="#d9d2c4"/><circle cx="182" cy="308" r="15" fill="#1f2a24"/>
+            <g font-family="Arial,sans-serif" font-size="7" fill="#6b746f" text-anchor="middle">
+              <text x="62" y="340">2F5D46</text><text x="102" y="340">C8955A</text><text x="142" y="340">F3EDE2</text><text x="182" y="340">1F2A24</text>
+            </g>
+            <text x="244" y="330" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="38" fill="#1f2a24">Aa</text>
+            <text x="326" y="330" font-family="Georgia,serif" font-size="38" fill="#1f2a24">Aa</text>
+            <g font-family="Arial,sans-serif" font-size="9" fill="#6b746f">
+              <text x="246" y="350" data-i="x1t1">Titres</text><text x="328" y="350" data-i="x1t2">Textes</text>
+            </g>
+            <rect x="444" y="286" width="48" height="48" rx="8" fill="#2f5d46"/>
+            <use href="#c1m" x="456" y="295" width="24" height="29" color="#ffffff"/>
+            <rect x="500" y="286" width="48" height="48" rx="8" fill="#c8955a"/>
+            <use href="#c1m" x="512" y="295" width="24" height="29" color="#1f2a24"/>
+            <circle cx="578" cy="310" r="24" fill="#1f2a24"/>
+            <use href="#c1m" x="566" y="296" width="24" height="29" color="#f3ede2"/>
+          </svg>
+          <span class="tag b" data-i="bf">Avant</span><span class="tag a" data-i="af">Après</span>
+          <span class="handle"></span>
+          <input type="range" min="0" max="100" step="any" value="50" aria-label="Comparer avant et après">
+        </div>
+        <div class="cx">
+          <h3>Menuiserie Vauclair</h3>
+          <p class="sec"><span data-i="x1s">Menuiserie · Seeland · depuis 1978</span><span class="pk">Pack M</span></p>
+          <dl>
+            <div><dt data-i="x_kp">Point de départ</dt><dd data-i="x1a">Un logo de 1990, et rien autour : pas de couleurs définies, pas de typographie, un seul fichier JPEG. Chaque imprimeur fait à sa façon.</dd></div>
+            <div><dt data-i="x_kk">On garde</dt><dd data-i="x1k">Le vert, le sapin et l'année de fondation.</dd></div>
+            <div><dt data-i="x_km">On modernise</dt><dd data-i="x1m">Un sapin redessiné en planches et une charte complète : couleurs, typographies, déclinaisons pour l'enseigne, les réseaux et les documents.</dd></div>
+            <div><dt data-i="x_kd">Livrables</dt><dd data-i="x1d">Logo en toutes tailles et tous formats, charte graphique, modèles de documents.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="ba">
+          <svg class="before" viewBox="0 0 640 400" aria-hidden="true">
+            <defs>
+              <linearGradient id="c2h" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1a3fa0"/><stop offset="1" stop-color="#5fa8ff"/></linearGradient>
+              <clipPath id="c2c"><rect x="233" y="44" width="174" height="322" rx="12"/></clipPath>
+            </defs>
+            <rect width="640" height="400" fill="#dde3e8"/>
+            <rect x="231" y="24" width="190" height="368" rx="28" fill="#000" opacity=".12"/>
+            <rect x="225" y="18" width="190" height="368" rx="28" fill="#1e2733"/>
+            <rect x="233" y="44" width="174" height="322" rx="12" fill="#ffffff"/>
+            <g clip-path="url(#c2c)">
+              <rect x="233" y="44" width="174" height="34" fill="url(#c2h)"/>
+              <text x="320" y="66" text-anchor="middle" font-family="'Times New Roman',serif" font-style="italic" font-weight="700" font-size="13" fill="#fff" stroke="#0b1f5c" stroke-width=".4">Fiduciaire Rochat SA</text>
+              <rect x="233" y="78" width="174" height="10" fill="#ffff66"/>
+              <text x="236" y="85.5" font-family="Arial,sans-serif" font-size="6" fill="#c00">*** Bienvenue sur notre site internet ! *** Bienvenue ***</text>
+              <g font-family="Arial,sans-serif" font-size="4.6" fill="#000">
+                <rect x="237" y="93" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="99.8">Accueil</text>
+                <rect x="237" y="106" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="112.8">Qui sommes-nous</text>
+                <rect x="237" y="119" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="125.8">Prestations</text>
+                <rect x="237" y="132" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="138.8">Tarifs</text>
+                <rect x="237" y="145" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="151.8">Liens utiles</text>
+                <rect x="237" y="158" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="164.8">Contact</text>
+              </g>
+              <text x="283" y="101" font-family="'Times New Roman',serif" font-weight="700" font-size="9" fill="#1a3fa0">Bienvenue !</text>
+              <g fill="#a9b2bb">
+                <rect x="283" y="107" width="118" height="3"/><rect x="283" y="113" width="112" height="3"/><rect x="283" y="119" width="116" height="3"/><rect x="283" y="125" width="80" height="3"/>
+                <rect x="327" y="134" width="74" height="3"/><rect x="327" y="140" width="70" height="3"/><rect x="327" y="146" width="74" height="3"/><rect x="327" y="152" width="60" height="3"/><rect x="327" y="158" width="72" height="3"/>
+                <rect x="283" y="171" width="118" height="3"/><rect x="283" y="177" width="114" height="3"/><rect x="283" y="183" width="118" height="3"/><rect x="283" y="189" width="96" height="3"/>
+                <rect x="283" y="198" width="117" height="3"/><rect x="283" y="204" width="110" height="3"/><rect x="283" y="210" width="70" height="3"/>
+              </g>
+              <rect x="283" y="133" width="38" height="29" fill="#d9dde2" stroke="#9aa3ad" stroke-width=".6"/>
+              <path d="M283 133L321 162M321 133L283 162" stroke="#9aa3ad" stroke-width=".6"/>
+              <g transform="translate(283 222)">
+                <rect width="60" height="12" fill="#ffd400"/>
+                <path d="M0 12L12 0H18L6 12ZM14 12L26 0H32L20 12ZM28 12L40 0H46L34 12ZM42 12L54 0H60L48 12Z" fill="#1e1e1e"/>
+              </g>
+              <text x="347" y="231" font-family="Arial,sans-serif" font-size="5" fill="#c00">en construction</text>
+              <g fill="#a9b2bb"><rect x="237" y="246" width="164" height="3"/><rect x="237" y="252" width="150" height="3"/><rect x="237" y="258" width="160" height="3"/><rect x="237" y="264" width="120" height="3"/></g>
+              <text x="237" y="290" font-family="Arial,sans-serif" font-size="5.5" fill="#333">Visiteurs :</text>
+              <rect x="266" y="284" width="36" height="9" fill="#000"/>
+              <text x="269" y="291" font-family="'Courier New',monospace" font-size="7" fill="#39ff14">004213</text>
+              <text x="320" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="4.6" fill="#666">Site optimisé pour Internet Explorer 6 - 1024x768</text>
+              <text x="320" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="4.6" fill="#666">Dernière mise à jour : 14.03.2009</text>
+            </g>
+          </svg>
+          <svg class="after" viewBox="0 0 640 400" aria-hidden="true">
+            <defs><clipPath id="c2d"><rect x="233" y="44" width="174" height="322" rx="12"/></clipPath></defs>
+            <rect width="640" height="400" fill="#dde3e8"/>
+            <rect x="231" y="24" width="190" height="368" rx="28" fill="#000" opacity=".12"/>
+            <rect x="225" y="18" width="190" height="368" rx="28" fill="#1e2733"/>
+            <rect x="233" y="44" width="174" height="322" rx="12" fill="#ffffff"/>
+            <g clip-path="url(#c2d)">
+              <circle cx="251" cy="59" r="9" fill="#1f3a5f"/>
+              <text x="251" y="62.6" text-anchor="middle" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="10" fill="#fff">R</text>
+              <text x="265" y="63.5" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="12.5" fill="#1f3a5f">Rochat</text>
+              <path d="M386 54H398M386 59H398M386 64H398" stroke="#1f3a5f" stroke-width="1.8" stroke-linecap="round"/>
+              <rect x="233" y="74" width="174" height="120" fill="#1f3a5f"/>
+              <text x="245" y="95" font-family="Arial,sans-serif" font-weight="700" font-size="7" letter-spacing="1.4" fill="#ffffff" opacity=".7">FIDUCIAIRE</text>
+              <g font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="19" fill="#ffffff">
+                <text x="245" y="119">Vos comptes</text><text x="245" y="140">en ordre,</text><text x="245" y="161">sans souci.</text>
+              </g>
+              <text x="245" y="182" font-family="Arial,sans-serif" font-size="7.5" fill="#ffffff" opacity=".8">Littoral neuchâtelois, depuis 1991</text>
+              <rect x="245" y="204" width="72" height="26" rx="13" fill="#d9a441"/>
+              <text x="281" y="220.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="9.5" fill="#1e2733">Appeler</text>
+              <rect x="323" y="204.75" width="72" height="24.5" rx="12.25" fill="none" stroke="#1f3a5f" stroke-width="1.5"/>
+              <text x="359" y="220.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="9.5" fill="#1f3a5f">E-mail</text>
+              <circle cx="249" cy="246" r="3.5" fill="#2e9d5b"/>
+              <text x="257" y="249" font-family="Arial,sans-serif" font-size="7.5" fill="#45505c">Ouvert · 8h–12h, 13h30–17h</text>
+              <g font-family="Arial,sans-serif" font-weight="700" font-size="10.5" fill="#1e2733">
+                <path d="M245 262H395M245 292H395M245 322H395M245 352H395" stroke="#e1e5ea" stroke-width="1"/>
+                <text x="245" y="281">Comptabilité</text><text x="245" y="311">Salaires</text><text x="245" y="341">Impôts</text>
+              </g>
+              <path d="M389 273l4 4-4 4M389 303l4 4-4 4M389 333l4 4-4 4" fill="none" stroke="#1f3a5f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+          <span class="tag b" data-i="bf">Avant</span><span class="tag a" data-i="af">Après</span>
+          <span class="handle"></span>
+          <input type="range" min="0" max="100" step="any" value="50" aria-label="Comparer avant et après">
+        </div>
+        <div class="cx">
+          <h3>Fiduciaire Rochat</h3>
+          <p class="sec"><span data-i="x2s">Fiduciaire · Littoral neuchâtelois · depuis 1991</span><span class="pk">Pack M</span></p>
+          <dl>
+            <div><dt data-i="x_kp">Point de départ</dt><dd data-i="x2a">Un site de 2009 qui s'affiche en miniature sur téléphone. Les horaires sont introuvables, le numéro n'est pas cliquable.</dd></div>
+            <div><dt data-i="x_kk">On garde</dt><dd data-i="x2k">Le bleu marine, le ton sérieux, la liste des prestations.</dd></div>
+            <div><dt data-i="x_km">On modernise</dt><dd data-i="x2m">Un site pensé d'abord pour le téléphone : horaires visibles, appel en un geste, trois prestations claires.</dd></div>
+            <div><dt data-i="x_kd">Livrables</dt><dd data-i="x2d">Site neuf, hébergé et sécurisé, en français et en allemand. Fiche Google à jour.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="ba">
+          <svg class="before" viewBox="0 0 640 400" aria-hidden="true">
+            <rect width="640" height="400" fill="#e3e8ee"/>
+            <g fill="#d3d9e0"><rect x="0" y="140" width="90" height="120"/><rect x="95" y="110" width="70" height="150"/><rect x="170" y="150" width="110" height="110"/><rect x="285" y="125" width="80" height="135"/><rect x="370" y="160" width="120" height="100"/><rect x="495" y="135" width="80" height="125"/><rect x="580" y="150" width="60" height="110"/></g>
+            <rect y="250" width="640" height="14" fill="#cfd5dc"/>
+            <rect y="264" width="640" height="136" fill="#b9c0c8"/>
+            <path d="M0 372H640" stroke="#eef1f4" stroke-width="4" stroke-dasharray="36 28"/>
+            <rect x="618" y="150" width="6" height="170" fill="#4a5058"/>
+            <rect x="606" y="110" width="30" height="70" rx="5" fill="#2b3037"/>
+            <circle cx="621" cy="124" r="8" fill="#e53935"/><circle cx="621" cy="145" r="8" fill="#5a4a1e"/><circle cx="621" cy="166" r="8" fill="#1f4a2c"/>
+            <g fill="#000" opacity=".14"><ellipse cx="25" cy="318" rx="95" ry="5"/><ellipse cx="320" cy="318" rx="150" ry="5"/><ellipse cx="542" cy="317" rx="66" ry="4"/></g>
+            <g transform="translate(-175 110) scale(.62)">
+              <path d="M90 130Q90 120 100 120H430Q445 120 455 135L520 215Q550 222 550 250V290Q550 300 540 300H100Q90 300 90 290Z" fill="#f2f3f4" stroke="#a8b0b8" stroke-width="2.4"/>
+              <polygon points="398,134 440,134 492,200 398,200" fill="#9fb4c8"/>
+              <path d="M388 122V298" stroke="#c3c9cf" stroke-width="2"/>
+              <rect x="92" y="290" width="458" height="10" rx="3" fill="#c5ccd3"/>
+              <circle cx="170" cy="305" r="36" fill="#3a3f45"/><circle cx="470" cy="305" r="36" fill="#3a3f45"/>
+              <circle cx="170" cy="305" r="30" fill="#23272c"/><circle cx="470" cy="305" r="30" fill="#23272c"/>
+              <circle cx="170" cy="305" r="14" fill="#c9d0d8"/><circle cx="470" cy="305" r="14" fill="#c9d0d8"/>
+            </g>
+            <g transform="translate(122 110) scale(.62)">
+              <path d="M90 130Q90 120 100 120H430Q445 120 455 135L520 215Q550 222 550 250V290Q550 300 540 300H100Q90 300 90 290Z" fill="#f4f5f6" stroke="#9aa3ad" stroke-width="2.4"/>
+              <polygon points="398,134 440,134 492,200 398,200" fill="#9fb4c8"/>
+              <path d="M388 122V298" stroke="#c3c9cf" stroke-width="2"/>
+              <rect x="91" y="258" width="458" height="6" fill="#d32f2f"/>
+              <rect x="91" y="266" width="458" height="6" fill="#1d4e89"/>
+              <text x="110" y="162" font-family="'Arial Black',Arial,sans-serif" font-style="italic" font-weight="900" font-size="22" fill="#1d4e89" stroke="#0b2a52" stroke-width=".6">GARAGE ZBINDEN AG</text>
+              <text x="110" y="186" font-family="Arial,sans-serif" font-style="italic" font-size="10" fill="#333">Reparaturen aller Marken • Pneuservice • Klimaservice</text>
+              <text x="110" y="200" font-family="Arial,sans-serif" font-style="italic" font-size="10" fill="#333">Abgaswartung • Occasionen • Carrosserie</text>
+              <text x="110" y="226" font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#222">Tel. 032 000 00 00   Fax 032 000 00 01</text>
+              <text x="110" y="243" font-family="Arial,sans-serif" font-size="9" fill="#444">www.garage-zbinden-ag-seeland.ch</text>
+              <text x="400" y="232" font-family="Arial,sans-serif" font-weight="700" font-size="8.5" fill="#d32f2f">Abschleppdienst 24h</text>
+              <rect x="534" y="236" width="14" height="10" rx="2" fill="#fff6c8" stroke="#9aa3ad"/>
+              <rect x="92" y="290" width="458" height="10" rx="3" fill="#c5ccd3"/>
+              <circle cx="170" cy="305" r="36" fill="#3a3f45"/><circle cx="470" cy="305" r="36" fill="#3a3f45"/>
+              <circle cx="170" cy="305" r="30" fill="#23272c"/><circle cx="470" cy="305" r="30" fill="#23272c"/>
+              <circle cx="170" cy="305" r="14" fill="#c9d0d8" stroke="#fff" stroke-width="2"/><circle cx="470" cy="305" r="14" fill="#c9d0d8" stroke="#fff" stroke-width="2"/>
+            </g>
+            <rect x="480" y="266" width="124" height="34" rx="8" fill="#c4cad1"/>
+            <path d="M505 266L525 244H575L592 266Z" fill="#c4cad1"/>
+            <path d="M512 264L528 248H548V264ZM552 248H572L585 264H552Z" fill="#8fa3b6"/>
+            <circle cx="510" cy="302" r="14" fill="#23272c"/><circle cx="578" cy="302" r="14" fill="#23272c"/>
+            <circle cx="510" cy="302" r="6" fill="#9aa3ad"/><circle cx="578" cy="302" r="6" fill="#9aa3ad"/>
+            <rect x="20" y="48" width="290" height="68" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+            <text x="36" y="72" font-family="Arial,sans-serif" font-size="11" fill="#66707c" data-i="x3r">Ce qu'on retient en 3 secondes</text>
+            <text x="36" y="101" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="18" fill="#1e2733" data-i="x3b">« Un garage… lequel ? »</text>
+          </svg>
+          <svg class="after" viewBox="0 0 640 400" aria-hidden="true">
+            <rect width="640" height="400" fill="#e3e8ee"/>
+            <g fill="#d3d9e0"><rect x="0" y="140" width="90" height="120"/><rect x="95" y="110" width="70" height="150"/><rect x="170" y="150" width="110" height="110"/><rect x="285" y="125" width="80" height="135"/><rect x="370" y="160" width="120" height="100"/><rect x="495" y="135" width="80" height="125"/><rect x="580" y="150" width="60" height="110"/></g>
+            <rect y="250" width="640" height="14" fill="#cfd5dc"/>
+            <rect y="264" width="640" height="136" fill="#b9c0c8"/>
+            <path d="M0 372H640" stroke="#eef1f4" stroke-width="4" stroke-dasharray="36 28"/>
+            <rect x="618" y="150" width="6" height="170" fill="#4a5058"/>
+            <rect x="606" y="110" width="30" height="70" rx="5" fill="#2b3037"/>
+            <circle cx="621" cy="124" r="8" fill="#e53935"/><circle cx="621" cy="145" r="8" fill="#5a4a1e"/><circle cx="621" cy="166" r="8" fill="#1f4a2c"/>
+            <g fill="#000" opacity=".14"><ellipse cx="25" cy="318" rx="95" ry="5"/><ellipse cx="320" cy="318" rx="150" ry="5"/><ellipse cx="542" cy="317" rx="66" ry="4"/></g>
+            <g transform="translate(-175 110) scale(.62)">
+              <path d="M90 130Q90 120 100 120H430Q445 120 455 135L520 215Q550 222 550 250V290Q550 300 540 300H100Q90 300 90 290Z" fill="#f2f3f4" stroke="#a8b0b8" stroke-width="2.4"/>
+              <polygon points="398,134 440,134 492,200 398,200" fill="#9fb4c8"/>
+              <path d="M388 122V298" stroke="#c3c9cf" stroke-width="2"/>
+              <rect x="92" y="290" width="458" height="10" rx="3" fill="#c5ccd3"/>
+              <circle cx="170" cy="305" r="36" fill="#3a3f45"/><circle cx="470" cy="305" r="36" fill="#3a3f45"/>
+              <circle cx="170" cy="305" r="30" fill="#23272c"/><circle cx="470" cy="305" r="30" fill="#23272c"/>
+              <circle cx="170" cy="305" r="14" fill="#c9d0d8"/><circle cx="470" cy="305" r="14" fill="#c9d0d8"/>
+            </g>
+            <g transform="translate(122 110) scale(.62)">
+              <path d="M90 130Q90 120 100 120H430Q445 120 455 135L520 215Q550 222 550 250V290Q550 300 540 300H100Q90 300 90 290Z" fill="#1d4e89"/>
+              <polygon points="398,134 440,134 492,200 398,200" fill="#9fb4c8"/>
+              <path d="M388 122V298" stroke="#163d6c" stroke-width="2"/>
+              <text x="114" y="160" font-family="Arial,sans-serif" font-weight="700" font-size="12" letter-spacing="4" fill="#ffffff" opacity=".75">GARAGE</text>
+              <text x="110" y="206" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="52" letter-spacing="-1.5" fill="#ffffff">Zbinden</text>
+              <text x="114" y="250" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="20" fill="#ffffff">032 000 00 00</text>
+              <circle cx="440" cy="245" r="20" fill="none" stroke="#ffffff" stroke-width="3"/>
+              <path d="M432 237H448L432 253H448" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+              <rect x="534" y="236" width="14" height="10" rx="2" fill="#fff6c8"/>
+              <rect x="92" y="290" width="458" height="10" rx="3" fill="#2b2f35"/>
+              <circle cx="170" cy="305" r="36" fill="#14365f"/><circle cx="470" cy="305" r="36" fill="#14365f"/>
+              <circle cx="170" cy="305" r="30" fill="#23272c"/><circle cx="470" cy="305" r="30" fill="#23272c"/>
+              <circle cx="170" cy="305" r="14" fill="#3a3f45"/><circle cx="470" cy="305" r="14" fill="#3a3f45"/>
+            </g>
+            <rect x="480" y="266" width="124" height="34" rx="8" fill="#c4cad1"/>
+            <path d="M505 266L525 244H575L592 266Z" fill="#c4cad1"/>
+            <path d="M512 264L528 248H548V264ZM552 248H572L585 264H552Z" fill="#8fa3b6"/>
+            <circle cx="510" cy="302" r="14" fill="#23272c"/><circle cx="578" cy="302" r="14" fill="#23272c"/>
+            <circle cx="510" cy="302" r="6" fill="#9aa3ad"/><circle cx="578" cy="302" r="6" fill="#9aa3ad"/>
+            <rect x="330" y="48" width="290" height="68" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+            <text x="346" y="72" font-family="Arial,sans-serif" font-size="11" fill="#66707c" data-i="x3r">Ce qu'on retient en 3 secondes</text>
+            <text x="346" y="101" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="18" fill="#1d4e89" data-i="x3n">« Zbinden, 032 000 00 00 »</text>
+          </svg>
+          <span class="tag b" data-i="bf">Avant</span><span class="tag a" data-i="af">Après</span>
+          <span class="handle"></span>
+          <input type="range" min="0" max="100" step="any" value="50" aria-label="Comparer avant et après">
+        </div>
+        <div class="cx">
+          <h3>Garage Zbinden</h3>
+          <p class="sec"><span data-i="x3s">Garage · Seeland · depuis 1985</span><span class="pk">Pack M</span></p>
+          <dl>
+            <div><dt data-i="x_kp">Point de départ</dt><dd data-i="x3a">Un véhicule qui roule tous les jours dans la région, mais dont personne ne retient rien : six prestations, deux numéros, une adresse web de trente caractères.</dd></div>
+            <div><dt data-i="x_kk">On garde</dt><dd data-i="x3k">Le bleu des débuts et le nom de famille.</dd></div>
+            <div><dt data-i="x_km">On modernise</dt><dd data-i="x3m">Un nom lisible de loin, un seul numéro, une couleur qui se remarque dans la circulation. Le véhicule devient une publicité qui travaille tous les jours.</dd></div>
+            <div><dt data-i="x_kd">Livrables</dt><dd data-i="x3d">Logo modernisé, maquette du véhicule prête pour le carrossier, enseigne, modèles de documents.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+    </div>
+    <p class="fict" data-i="x_fict">Entreprises et visuels fictifs, créés pour illustrer la démarche. Les réalisations pour des clients n'apparaissent qu'avec leur accord.</p>
+  </div>
+</section>
+
 <section id="methode">
   <div class="wrap">
     <h2 data-i="m_t">Simple, du premier échange à la suite</h2>
     <div class="steps">
       <div class="step"><div class="num">1</div><h3 data-i="m1t">Je fais le bilan</h3><p data-i="m1p">Gratuitement. Logo, site, réseaux, Google, e-mails : je regarde tout, avec les yeux d'un nouveau client.</p></div>
-      <div class="step"><div class="num">2</div><h3 data-i="m2t">Vous recevez un plan chiffré</h3><p data-i="m2p">Ce qu'il faut faire, dans quel ordre, et pour quel prix fixe. On en parle une demi-heure en visioconférence, vous décidez.</p></div>
+      <div class="step"><div class="num">2</div><h3 data-i="m2t">Vous recevez un plan chiffré</h3><p data-i="m2p">Ce que je recommande, dans quel ordre, et pour quel prix fixe. On en parle une demi-heure en visioconférence, vous décidez.</p></div>
       <div class="step"><div class="num">3</div><h3 data-i="m3t">Je m'occupe de tout</h3><p data-i="m3p">Vous validez chaque étape. Ensuite, un message ou une photo suffit pour toute nouvelle demande.</p></div>
     </div>
   </div>
@@ -329,7 +640,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
           <tr><td data-i="a4">Affiche, flyer, annonce ou carte</td><td>90</td></tr>
           <tr><td data-i="a5">Modèle de publication réutilisable</td><td>60</td></tr>
           <tr><td data-i="a6">Annonce d'emploi</td><td>180</td></tr>
-          <tr><td data-i="a5c">Campagne sponsorisée, mise en place et suivi (hors budget publicitaire)</td><td>250</td></tr>
+          <tr><td data-i="a5c">Campagne publicitaire en ligne (réseaux sociaux, Google), mise en place et suivi, hors budget publicitaire</td><td>250</td></tr>
         </table>
       </div>
     </div>
@@ -349,7 +660,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       <div><span class="k" data-i="g1k">Transparent</span><h3 data-i="g1t">Vous voyez avant de payer</h3><p data-i="g1p">Le bilan et le plan sont gratuits. Vous ne payez que ce que vous validez, au prix annoncé.</p></div>
       <div><span class="k" data-i="g2k">Libre</span><h3 data-i="g2t">Vos fichiers vous appartiennent</h3><p data-i="g2p">Logo, site, créations : tout vous est remis. Vous pouvez partir avec, à tout moment.</p></div>
       <div><span class="k" data-i="g3k">Souple</span><h3 data-i="g3t">Pas de contrat interminable</h3><p data-i="g3p">Un prix fixe par projet. L'entretien est résiliable chaque mois après six mois. Rien de plus.</p></div>
-      <div><span class="k" data-i="g4k">Proche</span><h3 data-i="g4t">Un interlocuteur, à Bienne</h3><p data-i="g4p">Une seule personne qui connaît votre entreprise, en français, en allemand et en anglais.</p></div>
+      <div><span class="k" data-i="g4k">Proche</span><h3 data-i="g4t">Un interlocuteur, à Biel/Bienne</h3><p data-i="g4p">Une seule personne qui connaît votre entreprise, en français, en allemand et en anglais.</p></div>
     </div>
   </div>
 </section>
@@ -377,15 +688,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         <img class="portrait" src="img/julien.jpg" width="112" height="112" alt="Julien Dornbierer" loading="lazy">
         <p class="big">Julien Dornbierer</p>
         <p data-i="k_cred">Spécialiste en marketing avec brevet fédéral</p>
-        <p data-i="k_who">Atelier Remaster, Bienne</p>
+        <p data-i="k_who">Atelier Remaster, Biel/Bienne</p>
         <p><a href="mailto:julien@atelier-remaster.ch">julien@atelier-remaster.ch</a></p>
       </div>
     </div>
     <form id="form" novalidate><input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-      <div class="fld"><label for="fn" data-i="l1">Votre nom</label><input id="fn" name="name" autocomplete="name" required></div>
-      <div class="fld"><label for="fc" data-i="l2">Entreprise et localité</label><input id="fc" name="company" autocomplete="organization" required></div>
-      <div class="fld"><label for="fe" data-i="l3">E-mail ou téléphone</label><input id="fe" name="contact" required></div>
-      <div class="fld"><label for="fm" data-i="l4">Ce qui vous ferait plaisir (facultatif)</label><textarea id="fm" name="msg"></textarea></div>
+      <div class="fld"><label for="fn" data-i="fl1">Votre nom</label><input id="fn" name="name" autocomplete="name" required></div>
+      <div class="fld"><label for="fc" data-i="fl2">Entreprise et localité</label><input id="fc" name="company" autocomplete="organization" required></div>
+      <div class="fld"><label for="fe" data-i="fl3">E-mail ou téléphone</label><input id="fe" name="contact" required></div>
+      <div class="fld"><label for="fm" data-i="fl4">Ce qui vous ferait plaisir (facultatif)</label><textarea id="fm" name="msg"></textarea></div>
       <div><button class="btn primary" type="submit" data-i="send">Demander mon esquisse</button></div>
       <div id="sent" class="sent" hidden data-i="sent">Merci, c'est bien reçu. Je vous réponds personnellement sous 24 heures, jours ouvrables.</div>
     </form>
@@ -395,13 +706,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Atelier Remaster · Julien Dornbierer, spécialiste en marketing avec brevet fédéral · Bienne</span>
+    <span data-i="foot_c">© 2026 Atelier Remaster · Julien Dornbierer, spécialiste en marketing avec brevet fédéral · Biel/Bienne</span>
     <span><a href="mentions-legales.html" data-i="foot">Mentions légales et protection des données</a></span>
   </div>
 </footer>
 
 <script>
-/* before/after */
+/* before/after: drag (mouse/touch) or keyboard via the range input */
+document.querySelectorAll('.ba').forEach(ba=>{
+ const r=ba.querySelector('input');let drag=false;
+ const set=v=>{ba.style.setProperty('--pos',v+'%');r.value=v};
+ const at=e=>{const b=ba.getBoundingClientRect();set(Math.max(0,Math.min(100,(e.clientX-b.left)/b.width*100)).toFixed(1))};
+ r.addEventListener('input',()=>set(r.value));
+ ba.addEventListener('pointerdown',e=>{drag=true;ba.setPointerCapture(e.pointerId);at(e)});
+ ba.addEventListener('pointermove',e=>{if(drag)at(e)});
+ ['pointerup','pointercancel'].forEach(t=>ba.addEventListener(t,()=>{drag=false}));
+});
 
 
 let LANG='fr';
@@ -426,7 +746,7 @@ h1a:"Ihr Auftritt, aufgefrischt.",h1b:"Ohne zu verlieren, woran man Sie erkennt.
 lead:"Atelier Remaster frischt Logo und Online-Auftritt etablierter Kleinunternehmen auf und kümmert sich danach um ihre Kommunikation im Alltag. Wie eine kleine Marketingabteilung, für weniger als eine Agenturstunde pro Woche.",
 cta1:"Unsere Leistungen",cta2:"Preise ansehen",small:"Analyse und erste Varianten sind kostenlos und unverbindlich.",
 cardsub:"Holz, Fenster, Innenausbau · seit 1972",before:"Vorher: die Website von 2011",after:"Nachher",cap:"Zum Vergleichen ziehen. Dieselbe Firma, dieselbe Geschichte: Man findet sie, liest sie und ruft mit einem Fingertipp an. Fiktive Firma.",
-w_t:"Was wir für Sie tun",w_l:"Vier Bereiche, seriös gemacht, für Unternehmen, die Besseres zu tun haben als Marketing.",
+w_t:"Was wir für Sie tun",w_l:"Was Ihren Ruf ausmacht, bleibt. Alles andere modernisieren wir.",
 w1t:"Ihren Auftritt auffrischen",w1p:"Logo, Farben, Briefpapier, Vorlagen. Name, Farbe und Geschichte bleiben, und alles wird überall lesbar, vom Firmenschild bis zum Handy.",
 w2t:"Ihre Online-Präsenz pflegen",w2p:"Eine klare, sichere Website und ein korrekter Google-Eintrag. Jede neue Kundenbewertung wird Ihnen gemeldet, mit einem Antwortvorschlag, den Sie freigeben. Negative Bewertungen besprechen wir gemeinsam.",
 w3t:"Ihre Kommunikation vorbereiten",w3p:"Plakate, Flyer, Stelleninserate, Ferienhinweise, Neujahrskarten, Kundenbrief. Eine Nachricht genügt, Sie erhalten das fertige Resultat.",w4t:"Ihre sozialen Medien betreuen",w4p:"Instagram, Facebook, LinkedIn. Gepflegte Profile, regelmässige Beiträge in Ihren Farben, gesponserte Kampagnen, wenn sie Sinn machen. Sie geben frei, wir veröffentlichen.",
@@ -444,18 +764,30 @@ dp_w:"Ihre kleine Marketingabteilung",dp1:"Alles aus Präsenz",dp2:"Vier Beiträ
 al_w:"Einzeln, ohne Verpflichtung",a1:"Logo aufgefrischt",a1v:"ab 1'200",a2:"Komplettes Erscheinungsbild",a3:"Firmen-Website",a3v:"ab 2'400",a4:"Plakat, Flyer, Inserat oder Karte",a5:"Social-Media-Beitrag",a5b:"Instagram-, Facebook- oder LinkedIn-Profil aufgefrischt",a5c:"Gesponserte Kampagne, Einrichtung und Betreuung (ohne Werbebudget)",a6:"Stelleninserat",a7:"Website-Anpassung",a8:"Antwortvorschlag zu einer Bewertung",a9:"Hosting und E-Mail",a9v:"29 / Monat",
 p_terms:"Pauschalen ohne Startkosten: 12 Monate, danach monatlich kündbar. Mit einer Pauschale kostet das aufgefrischte Logo 600 statt 1'200.",
 c_t:"Welches Angebot passt zu Ihnen?",q1:"Gestaltungen pro Monat (Plakate, Flyer, Inserate)",q2:"Social-Media-Beiträge pro Monat",q3:"Website-Anpassungen pro Monat",q4:"Google-Bewertungen pro Monat",q5:"Stelleninserate pro Jahr",r0:"Einzeln",
-g_t:"Warum mit uns arbeiten",g_l:"Sie führen Ihr Unternehmen. Wir erledigen das Marketing, Sie behalten die Entscheide.",g5k:"Reaktiv",g5t:"Antwort innert 24 Stunden",g5p:"Jede Anfrage erhält innert 24 Stunden eine Antwort, an Arbeitstagen. Kein Ticket, kein Warten.",g6k:"Schnell",g6t:"Direkt zur Sache",g6p:"Keine endlosen Sitzungen und Präsentationen. Ein kurzer Ablauf, konkrete Resultate.",g7k:"Einfach",g7t:"Sie müssen nur wählen",g7p:"Wir machen die Analysen und schlagen vor, was zu Ihrem Unternehmen passt. Sie sagen ja, nein oder «eher so».",g8k:"Proaktiv",g8t:"Ideen, ohne dass Sie fragen",g8p:"Falsche Öffnungszeiten, eine unbeantwortete Bewertung, eine nahende Saison: Wir melden es Ihnen mit einem Vorschlag.",g1k:"Transparent",g1t:"Sie sehen, bevor Sie zahlen",g1p:"Die ersten Varianten sind kostenlos. Sie zahlen nur, was Sie freigeben.",g2k:"Frei",g2t:"Ihre Dateien gehören Ihnen",g2p:"Logo, Website, Gestaltungen: Sie erhalten alles und können jederzeit damit gehen.",g3k:"Flexibel",g3t:"Kein endloser Vertrag",g3p:"Zwölf Monate für Pauschalen, danach monatlich kündbar. Mehr nicht.",g4k:"Nah",g4t:"Ein Ansprechpartner, in Biel",g4p:"Eine Person, die Ihr Unternehmen kennt, auf Deutsch und Französisch.",
+g_t:"Warum mit uns arbeiten",g_l:"Sie führen Ihr Unternehmen. Wir erledigen das Marketing, Sie behalten die Entscheide.",g5k:"Reaktiv",g5t:"Antwort innert 24 Stunden",g5p:"Jede Anfrage erhält innert 24 Stunden eine Antwort, an Arbeitstagen. Kein Ticket, kein Warten.",g6k:"Schnell",g6t:"Direkt zur Sache",g6p:"Keine endlosen Sitzungen und Präsentationen. Ein kurzer Ablauf, konkrete Resultate.",g7k:"Einfach",g7t:"Sie müssen nur wählen",g7p:"Wir machen die Analysen und schlagen vor, was zu Ihrem Unternehmen passt. Sie sagen ja, nein oder «eher so».",g8k:"Proaktiv",g8t:"Ideen, ohne dass Sie fragen",g8p:"Falsche Öffnungszeiten, eine unbeantwortete Bewertung, eine nahende Saison: Wir melden es Ihnen mit einem Vorschlag.",g1k:"Transparent",g1t:"Sie sehen, bevor Sie zahlen",g1p:"Die ersten Varianten sind kostenlos. Sie zahlen nur, was Sie freigeben.",g2k:"Frei",g2t:"Ihre Dateien gehören Ihnen",g2p:"Logo, Website, Gestaltungen: Sie erhalten alles und können jederzeit damit gehen.",g3k:"Flexibel",g3t:"Kein endloser Vertrag",g3p:"Zwölf Monate für Pauschalen, danach monatlich kündbar. Mehr nicht.",g4k:"Nah",g4t:"Ein Ansprechpartner, in Biel/Bienne",g4p:"Eine Person, die Ihr Unternehmen kennt, auf Deutsch und Französisch.",
 f_t:"Häufige Fragen",f1q:"Mein Logo ist vierzig Jahre alt, meine Kunden kennen es. Warum es ändern?",f1a:"Gerade weil sie es kennen. Was sie wiedererkennen (Name, Farbe, Zeichen), bleibt, und es wird dort lesbar, wo man Sie heute entdeckt: auf Google, auf dem Handy, im Browser. Wenn nichts geändert werden muss, sagen wir es Ihnen.",
 f2q:"Muss ich alles auf einmal ändern, auch Fahrzeuge und Schild?",f2a:"Nein. Zuerst das Digitale (Website, Google, E-Mails), der Rest folgt im Rhythmus Ihrer normalen Erneuerungen. Sie erhalten einen einfachen Plan.",
 f3q:"Wer beantwortet meine Kundenbewertungen?",f3a:"Sie behalten immer die Kontrolle. Jede neue Bewertung wird Ihnen mit einem Antwortvorschlag in der Sprache des Kunden gemeldet. Nichts wird ohne Ihre Zustimmung veröffentlicht, und eine negative Bewertung besprechen wir immer zuerst mit Ihnen.",
 f4q:"Und wenn ich meine Pauschale in einem Monat nicht ausschöpfe?",f4a:"Nicht genutzte Gestaltungen bleiben drei Monate verfügbar. Und ein Teil der Pauschale arbeitet auch dann für Sie: Website, Google-Eintrag, Bewertungen, Sicherheit.",
 f6q:"Auf welchen sozialen Netzwerken arbeiten Sie?",f6a:"Instagram, Facebook und LinkedIn. Wir empfehlen die Kanäle, auf denen Ihre Kunden wirklich sind: oft genügen einer oder zwei. Nichts wird ohne Ihre Zustimmung veröffentlicht.",f5q:"Arbeiten Sie auch auf Französisch?",f5a:"Ja. Alle Texte gibt es auf Deutsch und Französisch, für jede Sprache geschrieben, nicht Wort für Wort übersetzt.",
-k_t:"Eine erste Idee für Ihr Unternehmen?",k_l:"Nennen Sie uns Ihr Unternehmen. Sie erhalten eine Skizze mit Ihrem eigenen Logo, kostenlos und unverbindlich.",k_who:"Atelier Remaster, Biel",
+k_t:"Eine erste Idee für Ihr Unternehmen?",k_l:"Nennen Sie uns Ihr Unternehmen. Sie erhalten eine Skizze mit Ihrem eigenen Logo, kostenlos und unverbindlich.",k_who:"Atelier Remaster, Biel/Bienne",
 l1:"Ihr Name",l2:"Unternehmen und Ort",l3:"E-Mail oder Telefon",l4:"Was Sie sich wünschen (freiwillig)",send:"Skizze anfragen",sent:"Danke, Ihre Nachricht ist eingegangen. Ich antworte Ihnen persönlich innert 24 Stunden an Arbeitstagen.",
 foot:"Impressum und Datenschutz"};
-Object.assign(DE,{"h1a": "Die digitale Auffrischung Ihres Unternehmens.", "lead": "Vom Logo zur Website, von den sozialen Medien bis zu den E-Mails: Wir analysieren alles, was Ihr Bild im Internet ausmacht. Sie erhalten einen massgeschneiderten Plan mit Fixpreis. Danach kümmern wir uns um alles.", "small": "Analyse und Plan mit Preis sind kostenlos und unverbindlich.", "ck_l": "Nennen Sie uns Ihr Unternehmen. Wir prüfen, was ein neuer Kunde zuerst sieht, und Sie erhalten die Analyse mit einem bezifferten Plan innert drei Arbeitstagen.", "ck1": "Ihr Logo und Ihr visueller Auftritt", "ck2": "Ihre Website, am Computer und auf dem Handy", "ck3": "Die Sicherheit Ihrer Website und Ihrer E-Mails", "ck4": "Ihre sozialen Medien", "ck5": "Ihre Präsenz auf Google", "ck6": "Ein einheitlicher Auftritt auf allen Kanälen", "b_ok": "Danke, Ihre Anfrage ist eingegangen. Analyse und Plan erhalten Sie innert drei Arbeitstagen per E-Mail.", "w_l": "Eine vollständige Auffrischung, vom Logo bis zur Website, für Unternehmen, die Besseres zu tun haben als Marketing.", "w2t": "Eine moderne, sichere Website", "w2p": "Klar, schnell, auf dem Handy lesbar, bei Bedarf auf Deutsch und Französisch. Von uns gehostet, gesichert und aktuell gehalten. Ihr Google-Eintrag gleich mit.", "m1t": "Wir machen die Analyse", "m1p": "Kostenlos. Logo, Website, soziale Medien, Google, E-Mails: Wir schauen alles an, mit den Augen eines neuen Kunden.", "m2t": "Sie erhalten einen bezifferten Plan", "m2p": "Was zu tun ist, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.", "m3t": "Wir kümmern uns um alles", "m3p": "Sie geben jeden Schritt frei. Danach genügt eine Nachricht oder ein Foto für jede neue Anfrage.", "p_t": "Klare Preise, festgelegt vor dem Start", "p_l": "Die Analyse ist kostenlos. Daraus entsteht ein massgeschneiderter Plan mit Fixpreis, den Sie vor Arbeitsbeginn freigeben. Preise in CHF, exkl. MWST.", "s_w": "Auffrischen", "s1": "Logo überarbeitet und bereinigt", "s2": "Bestehende Website korrigiert oder neue One-Page", "s3": "Google- und Social-Media-Profile erneuert", "s4": "Dateien für alle Anwendungen", "s_t": "Für einen soliden Auftritt, der in die Jahre gekommen ist.", "m_w": "Auf den neusten Stand bringen", "mm1": "Logo modernisiert und vollständiger visueller Auftritt", "mm2": "Neue Website, schnell und sicher", "mm3": "Google und zwei soziale Netzwerke eingerichtet", "mm4": "Vorlagen: Geschäftspapier, E-Mail-Signatur, Beiträge", "m_tt": "Der häufigste Fall.", "l_w": "Neu aufbauen", "from": "ab", "l1": "Komplett neuer visueller Auftritt", "l2": "Website mit mehreren Seiten, auf Deutsch und Französisch", "l3": "Alle Inhalte getextet", "l4": "Kommunikationsplan für das ganze Jahr", "l_t": "Wenn alles neu gemacht werden muss.", "e_w": "Nach der Auffrischung", "e_h": "Betreuung", "pm": "pro Monat", "e1": "Hosting, Sicherheit und Zertifikat der Website", "e2": "Kleine Website-Anpassungen, bis 30 Minuten pro Monat", "e3": "Überwachung Ihrer Online-Präsenz, mit unseren Vorschlägen", "e4": "Ein Gespräch mit Ihnen pro Quartal", "e_t": "Mindestens sechs Monate, danach monatlich kündbar.", "al_w": "Einzeln, ohne Verpflichtung", "a0": "Arbeitsstunde, pro Viertelstunde verrechnet", "a4": "Plakat, Flyer, Inserat oder Karte", "p_terms": "Der genaue Preis Ihres Pakets steht in Ihrem Plan, vor jeder Verpflichtung. Keine Mehrkosten ohne Ihre Zustimmung. Ihre Dateien gehören Ihnen.", "g1p": "Analyse und Plan sind kostenlos. Sie zahlen nur, was Sie freigeben, zum angekündigten Preis.", "g3p": "Ein Fixpreis pro Projekt. Die Betreuung ist nach sechs Monaten monatlich kündbar. Mehr nicht.", "g8p": "Falsche Öffnungszeiten, eine nahende Saison, eine Seite, die altert: Wir melden es Ihnen mit einem Vorschlag.", "f7q": "Was kostet eine Auffrischung?", "f7a": "Das hängt davon ab, was die Analyse zeigt. Die meisten Unternehmen liegen im Paket M, zwischen 4'000 und 7'000 Franken. Der genaue Preis steht in Ihrem Plan und ändert sich nach der Freigabe nicht mehr.", "f8q": "Und nach der Auffrischung?", "f8a": "Mit der Betreuung für 79 Franken pro Monat bleibt Ihre Website aktuell und sicher, und wir behalten Ihre Online-Präsenz im Auge. Alles andere bestellen Sie einzeln, wenn Sie es brauchen."});
+Object.assign(DE,{"h1a": "Die digitale Auffrischung Ihres Unternehmens.", "lead": "Vom Logo zur Website, von den sozialen Medien bis zu den E-Mails: Wir analysieren alles, was Ihr Bild im Internet ausmacht. Sie erhalten einen massgeschneiderten Plan mit Fixpreis. Danach kümmern wir uns um alles.", "small": "Analyse und Plan mit Preis sind kostenlos und unverbindlich.", "ck_l": "Nennen Sie uns Ihr Unternehmen. Wir prüfen, was ein neuer Kunde zuerst sieht, und Sie erhalten die Analyse mit einem bezifferten Plan innert drei Arbeitstagen.", "ck1": "Ihr Logo und Ihr visueller Auftritt", "ck2": "Ihre Website, am Computer und auf dem Handy", "ck3": "Die Sicherheit Ihrer Website und Ihrer E-Mails", "ck4": "Ihre sozialen Medien", "ck5": "Ihre Präsenz auf Google", "ck6": "Ein einheitlicher Auftritt auf allen Kanälen", "b_ok": "Danke, Ihre Anfrage ist eingegangen. Analyse und Plan erhalten Sie innert drei Arbeitstagen per E-Mail.", "w_l": "Was Ihren Ruf ausmacht, bleibt. Alles andere modernisieren wir.", "w2t": "Eine moderne, sichere Website", "w2p": "Klar, schnell, auf dem Handy lesbar, bei Bedarf auf Deutsch und Französisch. Von uns gehostet, gesichert und aktuell gehalten. Ihr Google-Eintrag gleich mit.", "m1t": "Wir machen die Analyse", "m1p": "Kostenlos. Logo, Website, soziale Medien, Google, E-Mails: Wir schauen alles an, mit den Augen eines neuen Kunden.", "m2t": "Sie erhalten einen bezifferten Plan", "m2p": "Was zu tun ist, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.", "m3t": "Wir kümmern uns um alles", "m3p": "Sie geben jeden Schritt frei. Danach genügt eine Nachricht oder ein Foto für jede neue Anfrage.", "p_t": "Klare Preise, festgelegt vor dem Start", "p_l": "Die Analyse ist kostenlos. Daraus entsteht ein massgeschneiderter Plan mit Fixpreis, den Sie vor Arbeitsbeginn freigeben. Preise in CHF, exkl. MWST.", "s_w": "Auffrischen", "s1": "Logo überarbeitet und bereinigt", "s2": "Bestehende Website korrigiert oder neue One-Page", "s3": "Google- und Social-Media-Profile erneuert", "s4": "Dateien für alle Anwendungen", "s_t": "Für einen soliden Auftritt, der in die Jahre gekommen ist.", "m_w": "Auf den neusten Stand bringen", "mm1": "Logo modernisiert und vollständiger visueller Auftritt", "mm2": "Neue Website, schnell und sicher", "mm3": "Google und zwei soziale Netzwerke eingerichtet", "mm4": "Vorlagen: Geschäftspapier, E-Mail-Signatur, Beiträge", "m_tt": "Der häufigste Fall.", "l_w": "Neu aufbauen", "from": "ab", "l1": "Komplett neuer visueller Auftritt", "l2": "Website mit mehreren Seiten, auf Deutsch und Französisch", "l3": "Alle Inhalte getextet", "l4": "Kommunikationsplan für das ganze Jahr", "l_t": "Wenn alles neu gemacht werden muss.", "e_w": "Nach der Auffrischung", "e_h": "Betreuung", "pm": "pro Monat", "e1": "Hosting, Sicherheit und Zertifikat der Website", "e2": "Kleine Website-Anpassungen, bis 30 Minuten pro Monat", "e3": "Überwachung Ihrer Online-Präsenz, mit unseren Vorschlägen", "e4": "Ein Gespräch mit Ihnen pro Quartal", "e_t": "Mindestens sechs Monate, danach monatlich kündbar.", "al_w": "Einzeln, ohne Verpflichtung", "a0": "Arbeitsstunde, pro Viertelstunde verrechnet", "a4": "Plakat, Flyer, Inserat oder Karte", "p_terms": "Der genaue Preis Ihres Pakets steht in Ihrem Plan, vor jeder Verpflichtung. Keine Mehrkosten ohne Ihre Zustimmung. Ihre Dateien gehören Ihnen.", "g1p": "Analyse und Plan sind kostenlos. Sie zahlen nur, was Sie freigeben, zum angekündigten Preis.", "g3p": "Ein Fixpreis pro Projekt. Die Betreuung ist nach sechs Monaten monatlich kündbar. Mehr nicht.", "g8p": "Falsche Öffnungszeiten, eine nahende Saison, eine Seite, die altert: Wir melden es Ihnen mit einem Vorschlag.", "f7q": "Was kostet eine Auffrischung?", "f7a": "Das hängt davon ab, was die Analyse zeigt. Die meisten Unternehmen liegen im Paket M, zwischen 4'000 und 7'000 Franken. Der genaue Preis steht in Ihrem Plan und ändert sich nach der Freigabe nicht mehr.", "f8q": "Und nach der Auffrischung?", "f8a": "Mit der Betreuung für 79 Franken pro Monat bleibt Ihre Website aktuell und sicher, und wir behalten Ihre Online-Präsenz im Auge. Alles andere bestellen Sie einzeln, wenn Sie es brauchen."});
 Object.assign(DE,{"h1a": "Ihr Unternehmen, auf den neusten Stand.", "lead": "Logo, Website, soziale Medien, E-Mails: Ich analysiere alles, was Ihr Bild im Internet ausmacht. Sie erhalten einen massgeschneiderten Plan mit Fixpreis, danach kümmere ich mich um alles.", "cta1": "Meine Leistungen", "ck_l": "Nennen Sie mir Ihr Unternehmen. Ich prüfe, was ein neuer Kunde zuerst sieht, und Sie erhalten die Analyse mit einem bezifferten Plan innert drei Arbeitstagen.", "w_t": "Was ich für Sie tue", "w1p": "Logo, Farben, Geschäftspapier, Dokumentvorlagen. Ich behalte Ihren Namen, Ihre Farbe, Ihre Geschichte und mache alles überall lesbar, vom Firmenschild bis zum Handy.", "w2p": "Klar, schnell, auf dem Handy lesbar, in allen Sprachen Ihrer Kunden. Von mir gehostet, gesichert und aktuell gehalten. Ihr Google-Eintrag gleich mit.", "w4t": "Ihre sozialen Medien einrichten", "w4p": "Instagram, Facebook, LinkedIn. Gepflegte Profile, Beitragsvorlagen in Ihren Farben, Planung und Werkzeuge, um in wenigen Minuten zu posten. Ich richte das System ein, Sie veröffentlichen selbständig.", "m1t": "Ich mache die Analyse", "m1p": "Kostenlos. Logo, Website, soziale Medien, Google, E-Mails: Ich schaue alles an, mit den Augen eines neuen Kunden.", "m2p": "Was zu tun ist, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.", "m3t": "Ich kümmere mich um alles", "mm3": "Google und zwei soziale Netzwerke eingerichtet, mit Beitragsvorlagen", "mm4": "Vorlagen: Geschäftspapier, E-Mail-Signatur, Dokumente", "l2": "Website mit mehreren Seiten, mehrsprachig", "e3": "Überwachung Ihrer Online-Präsenz, mit meinen Vorschlägen", "a5": "Wiederverwendbare Beitragsvorlage", "g_t": "Warum mit mir arbeiten", "g_l": "Sie führen Ihr Unternehmen. Ich erledige das Marketing, Sie behalten die Entscheide.", "g7p": "Ich mache die Analysen und schlage vor, was zu Ihrem Unternehmen passt. Sie sagen ja, nein oder «eher so».", "g8p": "Falsche Öffnungszeiten, eine nahende Saison, eine Seite, die altert: Ich melde es Ihnen mit einem Vorschlag.", "g4p": "Eine Person, die Ihr Unternehmen kennt, auf Deutsch, Französisch und Englisch.", "f1a": "Gerade weil sie es kennen. Was sie wiedererkennen (Name, Farbe, Zeichen), bleibt, und ich mache es dort lesbar, wo man Sie heute entdeckt: auf Google, auf dem Handy, im Browser. Wenn nichts geändert werden muss, sage ich es Ihnen.", "f2a": "Nein. Wir beginnen mit dem Digitalen (Website, Google, E-Mails), der Rest folgt im Rhythmus Ihrer natürlichen Erneuerungen. Ich gebe Ihnen einen einfachen Plan.", "f8a": "Mit der Betreuung für 79 Franken pro Monat bleibt Ihre Website aktuell und sicher, und ich behalte Ihre Online-Präsenz im Auge. Alles andere bestellen Sie einzeln, wenn Sie es brauchen.", "f6q": "Posten Sie für uns auf unseren Kanälen?", "f6a": "Nein, und das ist Absicht: Niemand kennt Ihren Alltag besser als Sie. Ich richte das ganze System ein (Profile, Vorlagen, Planung, Werkzeuge) und zeige Ihnen, wie Sie in wenigen Minuten posten. Punktuelle Hilfe können Sie einzeln bestellen.", "f5q": "Arbeiten Sie in mehreren Sprachen?", "f5a": "Ja. Deutsch, Französisch und Englisch, für jede Sprache geschrieben, nicht Wort für Wort übersetzt. Weitere Sprachen auf Anfrage.", "k_l": "Nennen Sie mir Ihr Unternehmen. Sie erhalten eine Skizze mit Ihrem eigenen Logo, kostenlos und unverbindlich."});
 Object.assign(DE,{"h1a": "Ein Online-Auftritt, der Ihrem Unternehmen gerecht wird.", "lead_s": "Ein Design, das zu Ihnen passt, eine Sichtbarkeit, die sich auszahlt.", "lead": "<strong data-i=\"lead_s\">Ein Design, das zu Ihnen passt, eine Sichtbarkeit, die sich auszahlt.</strong> Ich analysiere Ihren Online-Auftritt und schlage Ihnen einen massgeschneiderten Plan zum Fixpreis vor."});
+Object.assign(DE,{m2p:"Was ich empfehle, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.",
+a5c:"Online-Werbekampagne (soziale Medien, Google), Einrichtung und Betreuung, ohne Werbebudget",
+foot_c:"© 2026 Atelier Remaster · Julien Dornbierer, Marketingfachmann mit eidg. Fachausweis · Biel/Bienne",
+nav5:"Beispiele",fl1:"Ihr Name",fl2:"Unternehmen und Ort",fl3:"E-Mail oder Telefon",fl4:"Was Sie sich wünschen (freiwillig)",
+x_k:"Fiktive Beispiele",x_t:"Vorher, nachher: drei Beispiele",x_l:"Zum Vergleichen ziehen. Name, Farbe und Zeichen bleiben: Daran erkennen Ihre Kunden Sie. Alles andere wird klar und überall lesbar.",
+x_kp:"Ausgangslage",x_kk:"Bleibt",x_km:"Wird modernisiert",x_kd:"Lieferumfang",
+x1s:"Schreinerei · Seeland · seit 1978",x1a:"Ein Logo von 1990, und sonst nichts: keine festgelegten Farben, keine Schrift, eine einzige JPEG-Datei. Jede Druckerei macht es auf ihre Weise.",x1k:"Das Grün, die Tanne und das Gründungsjahr.",x1m:"Eine aus Brettern neu gezeichnete Tanne und ein vollständiges Erscheinungsbild: Farben, Schriften, Varianten für Firmenschild, soziale Medien und Dokumente.",x1d:"Logo in allen Grössen und Formaten, Gestaltungsrichtlinien, Dokumentvorlagen.",
+x1c1:"FARBEN",x1c2:"SCHRIFTEN",x1c3:"VARIANTEN",x1t1:"Titel",x1t2:"Text",
+x3r:"Was man in 3 Sekunden behält",x3b:"«Eine Garage… welche?»",x3n:"«Zbinden, 032 000 00 00»",
+x2s:"Treuhand · Region Neuenburg · seit 1991",x2a:"Eine Website von 2009, die auf dem Handy winzig erscheint. Die Öffnungszeiten sind unauffindbar, die Nummer ist nicht anklickbar.",x2k:"Das Marineblau, der seriöse Ton, die Liste der Leistungen.",x2m:"Eine Website, die zuerst fürs Handy gedacht ist: Öffnungszeiten sichtbar, Anruf mit einem Fingertipp, drei klare Leistungen.",x2d:"Neue Website, gehostet und gesichert, auf Französisch und Deutsch. Aktueller Google-Eintrag.",
+x3s:"Garage · Seeland · seit 1985",x3a:"Ein Fahrzeug, das jeden Tag in der Region unterwegs ist, aber an das sich niemand erinnert: sechs Leistungen, zwei Nummern, eine Webadresse mit dreissig Zeichen.",x3k:"Das Blau der Anfänge und der Familienname.",x3m:"Ein Name, der von weitem lesbar ist, eine einzige Nummer, eine Farbe, die im Verkehr auffällt. Das Fahrzeug wird zur Werbung, die jeden Tag arbeitet.",x3d:"Modernisiertes Logo, Fahrzeugbeschriftung bereit für den Carrossier, Firmenschild, Dokumentvorlagen.",
+x_fict:"Fiktive Unternehmen und Gestaltungen, zur Veranschaulichung erstellt. Kundenarbeiten zeige ich nur mit deren Einverständnis."});
 const FR={};document.querySelectorAll('[data-i]').forEach(el=>FR[el.dataset.i]=el.innerHTML);
 function setLang(l){LANG=l;const d=l==='de'?DE:FR;document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;if(d[k]!==undefined)el.innerHTML=d[k]});document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.l===l)));try{localStorage.setItem('ar-lang',l)}catch(e){}calc()}
 document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
