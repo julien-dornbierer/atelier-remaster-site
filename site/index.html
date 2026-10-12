@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Atelier Remaster">
-<meta property="og:description" content="Votre image, remise à neuf. Sans perdre ce qui vous rend reconnaissable.">
+<meta property="og:description" content="La mise à niveau digitale de votre entreprise : bilan gratuit, plan sur mesure, prix fixe.">
 <title>Atelier Remaster</title>
-<meta name="description" content="Atelier Remaster remet à jour l'image des petites entreprises établies et s'occupe ensuite de leur communication. Bienne.">
+<meta name="description" content="Atelier Remaster : la mise à niveau digitale des petites entreprises établies. Logo, site, réseaux et présence en ligne : bilan gratuit et plan sur mesure. Bienne.">
 <style>
 @font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage.woff2) format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}@font-face{font-family:"Source Serif 4";src:url(fonts/sourceserif4.woff2) format("woff2");font-weight:200 900;font-display:swap}
 
@@ -118,6 +118,7 @@ nav.main a:hover{color:var(--ink)}
 .plan li{padding-left:26px;position:relative;line-height:1.45}
 .plan li::before{content:"";position:absolute;left:0;top:.42em;width:14px;height:14px;border-radius:50%;border:2px solid var(--ink);background:linear-gradient(90deg,transparent 50%,var(--amber) 50%)}
 .plan .terms{font-size:.9rem;color:var(--soft);border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.pricing2{display:grid;grid-template-columns:1fr 1.15fr;gap:20px;margin-top:20px;align-items:start}@media (max-width:1000px){.pricing2{grid-template-columns:1fr}}.plan .price.range{font-size:2.05rem}.plan h3{margin:0}
 .list{width:100%;border-collapse:collapse;font-size:.98rem}
 .list td{padding:.62em 0;border-bottom:1px solid var(--line);vertical-align:baseline}
 .list td:last-child{text-align:right;white-space:nowrap;font:600 1rem var(--display);font-variant-numeric:tabular-nums;padding-left:12px}
@@ -193,21 +194,21 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 <section class="hero">
   <div class="wrap grid">
     <div>
-      <h1><span data-i="h1a">Votre image, remise à jour.</span> <span class="quiet" data-i="h1b">Sans perdre ce qui vous fait reconnaître.</span></h1>
-      <p class="lead" data-i="lead">Atelier Remaster rafraîchit le logo et la présence en ligne des petites entreprises établies, puis s'occupe de leur communication au quotidien. Comme un petit département marketing, pour moins qu'une heure d'agence par semaine.</p>
+      <h1><span data-i="h1a">La mise à niveau digitale de votre entreprise.</span> <span class="quiet" data-i="h1b">Sans perdre ce qui vous fait reconnaître.</span></h1>
+      <p class="lead" data-i="lead">Du logo au site, des réseaux sociaux aux e-mails : nous faisons le bilan de tout ce qui compose votre image en ligne. Vous recevez un plan de remise à niveau sur mesure, avec un prix fixe. Puis nous nous occupons de tout.</p>
       <div class="ctas"><a class="btn" href="#prestations" data-i="cta1">Nos prestations</a><a class="btn" href="#tarifs" data-i="cta2">Voir les tarifs</a></div>
-      <p class="small" data-i="small">Le bilan et les premières pistes sont gratuits et sans engagement.</p>
+      <p class="small" data-i="small">Le bilan et le plan chiffré sont gratuits et sans engagement.</p>
     </div>
     <div>
       <div class="check" id="check">
         <h2 class="ct" data-i="ck_t">Votre bilan d'image, offert</h2>
-        <p class="cl" data-i="ck_l">Indiquez votre entreprise. Nous vérifions pour vous ce qu'un nouveau client voit en premier, et vous recevez le bilan sous trois jours ouvrés.</p>
+        <p class="cl" data-i="ck_l">Indiquez votre entreprise. Nous analysons ce qu'un nouveau client voit en premier, et vous recevez le bilan avec un plan de remise à niveau chiffré, sous trois jours ouvrables.</p>
         <ul class="we">
-          <li data-i="ck1">Votre site sur un téléphone</li>
-          <li data-i="ck2">La sécurité de votre site et de vos e-mails</li>
-          <li data-i="ck3">Votre fiche Google : horaires, photos, coordonnées</li>
-          <li data-i="ck4">Vos avis clients et les réponses</li>
-          <li data-i="ck5">La lisibilité de votre logo, de l'enseigne au téléphone</li>
+          <li data-i="ck1">Votre logo et votre identité visuelle</li>
+          <li data-i="ck2">Votre site, sur ordinateur et sur téléphone</li>
+          <li data-i="ck3">La sécurité de votre site et de vos e-mails</li>
+          <li data-i="ck4">Vos réseaux sociaux</li>
+          <li data-i="ck5">Votre présence sur Google</li>
           <li data-i="ck6">La cohérence de votre image d'un support à l'autre</li>
         </ul>
         <form id="bilan" class="bilan" novalidate><input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
@@ -216,7 +217,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
           <label for="b2" data-i="b2">Votre e-mail</label>
           <input id="b2" name="email" type="email" autocomplete="email" required>
           <button class="btn primary" type="submit" data-i="ck_cta">Recevoir mon bilan gratuit</button>
-          <p class="ok-msg" id="bilan-ok" hidden data-i="b_ok">Merci, c'est bien reçu. Votre bilan vous parvient par e-mail dans les trois jours ouvrables.</p>
+          <p class="ok-msg" id="bilan-ok" hidden data-i="b_ok">Merci, c'est bien reçu. Votre bilan et votre plan vous parviennent par e-mail dans les trois jours ouvrables.</p>
         </form>
         <p class="fine" data-i="b_fine">Sans engagement. Vos données servent uniquement à vous envoyer ce bilan.</p>
       </div>
@@ -227,7 +228,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 <section id="prestations">
   <div class="wrap">
     <h2 data-i="w_t">Ce que nous faisons pour vous</h2>
-    <p class="lead" data-i="w_l">Quatre domaines, faits sérieusement, pour des entreprises qui ont mieux à faire que leur marketing.</p>
+    <p class="lead" data-i="w_l">Une remise à niveau complète, du logo au site, pour des entreprises qui ont mieux à faire que leur marketing.</p>
     <div class="cols3">
       <div>
         <svg class="glyph" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 4 A18 18 0 0 0 22 40" fill="none" stroke="currentColor" stroke-width="3"/><path d="M22 2.5 A19.5 19.5 0 0 1 22 41.5 Z" fill="var(--amber)"/></svg>
@@ -236,8 +237,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       </div>
       <div>
         <svg class="glyph" viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="7" width="36" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><rect x="22" y="7" width="18" height="28" fill="var(--amber)"/><path d="M14 40h16" stroke="currentColor" stroke-width="3"/></svg>
-        <h3 data-i="w2t">Tenir votre présence en ligne</h3>
-        <p data-i="w2p">Un site clair et sécurisé, une fiche Google juste. Chaque nouvel avis client vous est signalé, avec une proposition de réponse que vous validez. Les avis négatifs, on les regarde ensemble.</p>
+        <h3 data-i="w2t">Un site moderne et sûr</h3>
+        <p data-i="w2p">Clair, rapide, lisible sur téléphone, en français et en allemand si besoin. Hébergé, sécurisé et tenu à jour par nos soins. Votre fiche Google suit, au passage.</p>
       </div>
       <div>
         <svg class="glyph" viewBox="0 0 44 44" aria-hidden="true"><rect x="7" y="4" width="30" height="36" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><path d="M22 4 H34 A3 3 0 0 1 37 7 V40 H22 Z" fill="var(--amber)"/><path d="M12 14h8M12 21h8M12 28h8" stroke="currentColor" stroke-width="3"/></svg>
@@ -257,83 +258,80 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   <div class="wrap">
     <h2 data-i="m_t">Simple, du premier échange à la suite</h2>
     <div class="steps">
-      <div class="step"><div class="num">1</div><h3 data-i="m1t">On se parle une demi-heure</h3><p data-i="m1p">En visioconférence (Google Meet, Teams ou Zoom, comme vous préférez), avec votre bilan à l'écran. Vous racontez votre entreprise, ce qui doit rester, ce qui vous gêne.</p></div>
-      <div class="step"><div class="num">2</div><h3 data-i="m2t">Vous recevez deux ou trois pistes</h3><p data-i="m2p">Gratuitement et sans engagement. Vous choisissez, on ajuste avec vous.</p></div>
-      <div class="step"><div class="num">3</div><h3 data-i="m3t">On s'occupe du reste</h3><p data-i="m3p">Fichiers pour tous les supports, site, fiche Google. Ensuite, un message ou une photo suffit pour toute nouvelle demande.</p></div>
+      <div class="step"><div class="num">1</div><h3 data-i="m1t">Nous faisons le bilan</h3><p data-i="m1p">Gratuitement. Logo, site, réseaux, Google, e-mails : nous regardons tout, avec les yeux d'un nouveau client.</p></div>
+      <div class="step"><div class="num">2</div><h3 data-i="m2t">Vous recevez un plan chiffré</h3><p data-i="m2p">Ce qu'il faut faire, dans quel ordre, et pour quel prix fixe. On en parle une demi-heure en visioconférence, vous décidez.</p></div>
+      <div class="step"><div class="num">3</div><h3 data-i="m3t">On s'occupe de tout</h3><p data-i="m3p">Vous validez chaque étape. Ensuite, un message ou une photo suffit pour toute nouvelle demande.</p></div>
     </div>
   </div>
 </section>
 
 <section id="tarifs">
   <div class="wrap">
-    <h2 data-i="p_t">Des prix affichés, sans surprise</h2>
-    <p class="lead" data-i="p_l">À la pièce quand vous en avez besoin. En forfait quand c'est plus avantageux. Prix en CHF, hors TVA.</p>
+    <h2 data-i="p_t">Des prix clairs, fixés avant de commencer</h2>
+    <p class="lead" data-i="p_l">Le bilan est gratuit. Il débouche sur un plan sur mesure et un prix fixe, que vous validez avant tout travail. Prix en CHF, hors TVA.</p>
     <div class="pricing">
       <div class="plan">
-        <span class="who" data-i="pr_w">Pour être bien présent</span>
-        <h3>Présence</h3>
-        <div class="price">149.– <small data-i="pm">par mois</small></div>
+        <span class="who" data-i="s_w">Rafraîchir</span>
+        <h3>Pack S</h3>
+        <div class="price range">1'800–3'000</div>
         <ul>
-          <li data-i="pr1">Hébergement, e-mail à votre nom, sécurité</li>
-          <li data-i="pr2">Mises à jour du site comprises</li>
-          <li data-i="pr3">Fiche Google tenue à jour</li>
-          <li data-i="pr4">Suivi de vos avis Google : chaque avis vous est signalé avec une proposition de réponse, publiée seulement avec votre accord</li>
-          <li data-i="pr5">Un document graphique par mois, à vos couleurs : affiche, flyer, annonce ou carte de vœux</li>
-          <li data-i="pr6">Un bref compte rendu chaque mois</li>
+          <li data-i="s1">Logo retouché et mis au propre</li>
+          <li data-i="s2">Site existant corrigé, ou nouvelle page unique</li>
+          <li data-i="s3">Profils Google et réseaux remis à neuf</li>
+          <li data-i="s4">Fichiers prêts pour tous les supports</li>
         </ul>
-        <p class="terms" data-i="pr_t">Avantageux dès deux ou trois interventions par mois.</p>
+        <p class="terms" data-i="s_t">Pour une image correcte, mais qui a pris de l'âge.</p>
       </div>
       <div class="plan feature">
-        <span class="who" data-i="dp_w">Votre petit département marketing</span>
-        <h3>Département</h3>
-        <div class="price">490.– <small data-i="pm2">par mois</small></div>
+        <span class="who" data-i="m_w">Remettre à niveau</span>
+        <h3>Pack M</h3>
+        <div class="price range">4'000–7'000</div>
         <ul>
-          <li data-i="dp1">Tout ce que comprend Présence</li>
-          <li data-i="dp2">Quatre publications par mois sur Instagram, Facebook ou LinkedIn</li>
-          <li data-i="dp2b">Suivi des commentaires et messages, avec vos réponses validées</li>
-          <li data-i="dp3">Trois documents graphiques par mois au lieu d'un</li>
-          <li data-i="dp4">Votre année préparée d'avance : vacances, fêtes, portes ouvertes, apprentissage</li>
-          <li data-i="dp5">Annonces d'emploi et d'apprentissage comprises</li>
-          <li data-i="dp6">Lettre d'information clients quatre fois par an</li>
-          <li data-i="dp7">Un point avec vous chaque trimestre</li>
+          <li data-i="mm1">Logo modernisé et identité visuelle complète</li>
+          <li data-i="mm2">Site vitrine neuf, rapide et sécurisé</li>
+          <li data-i="mm3">Google et deux réseaux sociaux configurés</li>
+          <li data-i="mm4">Modèles : papeterie, signature e-mail, publications</li>
         </ul>
-        <p class="terms" data-i="dp_t">Avantageux dès que vous publiez régulièrement ou que vous recrutez.</p>
+        <p class="terms" data-i="m_tt">Le cas le plus fréquent.</p>
+      </div>
+      <div class="plan">
+        <span class="who" data-i="l_w">Refondre</span>
+        <h3>Pack L</h3>
+        <div class="price range"><small data-i="from">dès</small> 8'000</div>
+        <ul>
+          <li data-i="l1">Nouvelle identité visuelle complète</li>
+          <li data-i="l2">Site de plusieurs pages, en français et en allemand</li>
+          <li data-i="l3">Rédaction de tous les contenus</li>
+          <li data-i="l4">Plan de communication pour l'année</li>
+        </ul>
+        <p class="terms" data-i="l_t">Quand tout est à reprendre.</p>
+      </div>
+    </div>
+    <div class="pricing2">
+      <div class="plan">
+        <span class="who" data-i="e_w">Après la mise à niveau</span>
+        <h3 data-i="e_h">Entretien</h3>
+        <div class="price">79.– <small data-i="pm">par mois</small></div>
+        <ul>
+          <li data-i="e1">Hébergement, sécurité et certificat du site</li>
+          <li data-i="e2">Petites mises à jour du site, jusqu'à 30 minutes par mois</li>
+          <li data-i="e3">Surveillance de votre présence en ligne, avec nos propositions</li>
+          <li data-i="e4">Un point avec vous chaque trimestre</li>
+        </ul>
+        <p class="terms" data-i="e_t">Six mois minimum, puis résiliable chaque mois.</p>
       </div>
       <div class="plan">
         <span class="who" data-i="al_w">À la pièce, sans engagement</span>
         <table class="list">
-          <tr><td data-i="a1">Logo remis à jour</td><td data-i="a1v">dès 1'200</td></tr>
-          <tr><td data-i="a2">Identité complète</td><td>1'900</td></tr>
-          <tr><td data-i="a3">Site vitrine</td><td data-i="a3v">dès 2'400</td></tr>
+          <tr><td data-i="a0">Heure de travail, au quart d'heure</td><td>110</td></tr>
           <tr><td data-i="a4">Affiche, flyer, annonce ou carte</td><td>90</td></tr>
           <tr><td data-i="a5">Publication sur les réseaux</td><td>60</td></tr>
-          <tr><td data-i="a5b">Profil Instagram, Facebook ou LinkedIn remis à neuf</td><td>180</td></tr>
-          <tr><td data-i="a5c">Campagne sponsorisée, mise en place et suivi (hors budget publicitaire)</td><td>250</td></tr>
           <tr><td data-i="a6">Annonce d'emploi</td><td>180</td></tr>
-          <tr><td data-i="a7">Mise à jour du site</td><td>80</td></tr>
-          <tr><td data-i="a8">Proposition de réponse à un avis</td><td>20</td></tr>
-          <tr><td data-i="a9">Hébergement et e-mail</td><td data-i="a9v">29 / mois</td></tr>
+          <tr><td data-i="a5c">Campagne sponsorisée, mise en place et suivi (hors budget publicitaire)</td><td>250</td></tr>
         </table>
       </div>
     </div>
-    <p class="fict" data-i="p_terms">Forfaits sans frais de départ : 12 mois, puis résiliables chaque mois. Avec un forfait, le logo remis à jour coûte 600 au lieu de 1'200.</p>
-
-    <h3 style="margin-top:3rem" data-i="c_t">Quelle formule vous convient ?</h3>
-    <div class="calc">
-      <div class="in">
-        <div class="f"><label for="q1" data-i="q1">Documents graphiques par mois (affiches, flyers, annonces)</label><output id="o1">1</output><input type="range" id="q1" min="0" max="8" value="1"></div>
-        <div class="f"><label for="q2" data-i="q2">Publications sur les réseaux par mois</label><output id="o2">2</output><input type="range" id="q2" min="0" max="12" value="2"></div>
-        <div class="f"><label for="q3" data-i="q3">Mises à jour du site par mois</label><output id="o3">1</output><input type="range" id="q3" min="0" max="6" value="1"></div>
-        <div class="f"><label for="q4" data-i="q4">Avis Google reçus par mois</label><output id="o4">3</output><input type="range" id="q4" min="0" max="20" value="3"></div>
-        <div class="f"><label for="q5" data-i="q5">Annonces d'emploi par an</label><output id="o5">1</output><input type="range" id="q5" min="0" max="6" value="1"></div>
-      </div>
-      <div class="out" aria-live="polite">
-        <div class="row" id="r0"><b data-i="r0">À la pièce</b><span id="v0"></span></div>
-        <div class="row" id="r1"><b>Présence</b><span id="v1"></span></div>
-        <div class="row" id="r2"><b>Département</b><span id="v2"></span></div>
-        <p class="verdict" id="verdict"></p>
-      </div>
-    </div>
+    <p class="fict" data-i="p_terms">Le prix exact de votre pack figure dans votre plan, avant tout engagement. Aucun dépassement sans votre accord. Vos fichiers vous appartiennent.</p>
   </div>
 </section>
 
@@ -345,10 +343,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       <div><span class="k" data-i="g5k">Réactif</span><h3 data-i="g5t">Une réponse sous 24 heures</h3><p data-i="g5p">Chaque demande reçoit une réponse dans les 24 heures, jours ouvrables. Pas de ticket, pas d'attente.</p></div>
       <div><span class="k" data-i="g6k">Rapide</span><h3 data-i="g6t">Droit au but</h3><p data-i="g6p">Pas de réunions à rallonge ni de présentations interminables. Un processus court, des résultats concrets.</p></div>
       <div><span class="k" data-i="g7k">Simple</span><h3 data-i="g7t">Vous n'avez qu'à choisir</h3><p data-i="g7p">Nous faisons les analyses et vous proposons ce qui convient à votre entreprise. Vous dites oui, non ou « plutôt comme ça ».</p></div>
-      <div><span class="k" data-i="g8k">Proactif</span><h3 data-i="g8t">Des idées sans les demander</h3><p data-i="g8p">Un horaire à corriger, un avis sans réponse, une saison qui approche : on vous le signale avec une proposition.</p></div>
-      <div><span class="k" data-i="g1k">Transparent</span><h3 data-i="g1t">Vous voyez avant de payer</h3><p data-i="g1p">Les premières pistes sont gratuites. Vous ne payez que ce que vous validez.</p></div>
+      <div><span class="k" data-i="g8k">Proactif</span><h3 data-i="g8t">Des idées sans les demander</h3><p data-i="g8p">Un horaire à corriger, une saison qui approche, une page qui vieillit : on vous le signale avec une proposition.</p></div>
+      <div><span class="k" data-i="g1k">Transparent</span><h3 data-i="g1t">Vous voyez avant de payer</h3><p data-i="g1p">Le bilan et le plan sont gratuits. Vous ne payez que ce que vous validez, au prix annoncé.</p></div>
       <div><span class="k" data-i="g2k">Libre</span><h3 data-i="g2t">Vos fichiers vous appartiennent</h3><p data-i="g2p">Logo, site, créations : tout vous est remis. Vous pouvez partir avec, à tout moment.</p></div>
-      <div><span class="k" data-i="g3k">Souple</span><h3 data-i="g3t">Pas de contrat interminable</h3><p data-i="g3p">Douze mois pour les forfaits, puis résiliable chaque mois. Rien de plus.</p></div>
+      <div><span class="k" data-i="g3k">Souple</span><h3 data-i="g3t">Pas de contrat interminable</h3><p data-i="g3p">Un prix fixe par projet. L'entretien est résiliable chaque mois après six mois. Rien de plus.</p></div>
       <div><span class="k" data-i="g4k">Proche</span><h3 data-i="g4t">Un interlocuteur, à Bienne</h3><p data-i="g4p">Une seule personne qui connaît votre entreprise, en français et en allemand.</p></div>
     </div>
   </div>
@@ -360,8 +358,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
     <div class="faq">
       <details><summary data-i="f1q">Mon logo a quarante ans, mes clients le connaissent. Pourquoi le toucher ?</summary><p data-i="f1a">Justement parce qu'ils le connaissent. On garde ce qu'ils reconnaissent (le nom, la couleur, le signe) et on le rend lisible là où on vous découvre aujourd'hui : sur Google, sur un téléphone, dans un onglet. Si rien ne doit changer, on vous le dira.</p></details>
       <details><summary data-i="f2q">Faut-il tout changer d'un coup, véhicules et enseigne compris ?</summary><p data-i="f2a">Non. On commence par le numérique (site, Google, e-mails), puis le reste suit au rythme de vos renouvellements naturels. On vous remet un plan simple.</p></details>
-      <details><summary data-i="f3q">Qui répond à mes avis clients ?</summary><p data-i="f3a">Vous gardez toujours la main. Chaque nouvel avis vous est signalé avec une proposition de réponse, dans la langue du client. Rien n'est publié sans votre accord, et un avis négatif est toujours discuté avec vous avant toute réponse.</p></details>
-      <details><summary data-i="f4q">Et si je n'utilise pas tout mon forfait un mois ?</summary><p data-i="f4a">Les documents non utilisés restent disponibles trois mois. Et une partie du forfait travaille pour vous même quand vous ne demandez rien : site, fiche Google, suivi des avis, sécurité.</p></details>
+      <details><summary data-i="f7q">Combien coûte une mise à niveau ?</summary><p data-i="f7a">Cela dépend de ce que le bilan révèle. La plupart des entreprises se situent dans le Pack M, entre 4'000 et 7'000 francs. Le prix exact figure dans votre plan, et il ne bouge plus une fois validé.</p></details>
+      <details><summary data-i="f8q">Et après la mise à niveau ?</summary><p data-i="f8a">Avec l'entretien à 79 francs par mois, votre site reste à jour et sécurisé, et nous gardons un œil sur votre présence en ligne. Pour le reste, vous commandez à la pièce, quand vous en avez besoin.</p></details>
       <details><summary data-i="f6q">Sur quels réseaux sociaux travaillez-vous ?</summary><p data-i="f6a">Instagram, Facebook et LinkedIn. On vous conseille ceux où sont réellement vos clients : souvent un ou deux suffisent. Rien n'est publié sans votre accord.</p></details>
       <details><summary data-i="f5q">Travaillez-vous aussi en allemand ?</summary><p data-i="f5a">Oui. Tous les textes peuvent être livrés en français et en allemand, rédigés pour chaque langue et non traduits mot à mot.</p></details>
     </div>
@@ -403,24 +401,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 /* before/after */
 
 
-/* calculator */
-const P={c:90,p:60,u:80,a:20,j:180,h:29};
-const val=id=>+document.getElementById(id).value;
-const chf=n=>"CHF "+Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,"'");
 let LANG='fr';
-const T={fr:{per:" / mois",cheapest:(n,s)=>`${n} vous fait économiser ${s} par mois par rapport à la pièce.`,piece:"Avec ces besoins, la commande à la pièce reste la plus avantageuse."},
- de:{per:" / Monat",cheapest:(n,s)=>`${n} spart Ihnen ${s} pro Monat gegenüber Einzelaufträgen.`,piece:"Bei diesem Bedarf bleiben Einzelaufträge am günstigsten."}};
-function calc(){const c=val('q1'),p=val('q2'),u=val('q3'),a=val('q4'),j=val('q5')/12;
-['o1','o2','o3','o4','o5'].forEach((o,i)=>document.getElementById(o).value=val('q'+(i+1)));
-const piece=c*P.c+p*P.p+u*P.u+a*P.a+j*P.j+P.h;
-const pres=149+Math.max(0,c-1)*P.c+p*P.p+j*P.j;
-const dep=490+Math.max(0,c-3)*P.c+Math.max(0,p-4)*P.p;
-const v=[piece,pres,dep];v.forEach((x,i)=>document.getElementById('v'+i).textContent=chf(x)+T[LANG].per);
-const best=v.indexOf(Math.min(...v));[0,1,2].forEach(i=>document.getElementById('r'+i).classList.toggle('best',i===best));
-document.getElementById('verdict').textContent=best===0?T[LANG].piece:T[LANG].cheapest(best===1?'Présence':'Département',chf(piece-v[best]));}
-['q1','q2','q3','q4','q5'].forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();
-
-
+function calc(){}
 
 /* forms -> FormSubmit (e-mail to julien@atelier-remaster.ch) */
 const ERR={fr:"L'envoi n'a pas abouti. Écrivez-moi directement à julien@atelier-remaster.ch.",de:"Das Senden hat nicht geklappt. Schreiben Sie mir direkt an julien@atelier-remaster.ch."};
@@ -468,6 +450,7 @@ f6q:"Auf welchen sozialen Netzwerken arbeiten Sie?",f6a:"Instagram, Facebook und
 k_t:"Eine erste Idee für Ihr Unternehmen?",k_l:"Nennen Sie uns Ihr Unternehmen. Sie erhalten eine Skizze mit Ihrem eigenen Logo, kostenlos und unverbindlich.",k_who:"Atelier Remaster, Biel",
 l1:"Ihr Name",l2:"Unternehmen und Ort",l3:"E-Mail oder Telefon",l4:"Was Sie sich wünschen (freiwillig)",send:"Skizze anfragen",sent:"Danke, Ihre Nachricht ist eingegangen. Ich antworte Ihnen persönlich innert 24 Stunden an Arbeitstagen.",
 foot:"Impressum und Datenschutz"};
+Object.assign(DE,{"h1a": "Die digitale Auffrischung Ihres Unternehmens.", "lead": "Vom Logo zur Website, von den sozialen Medien bis zu den E-Mails: Wir analysieren alles, was Ihr Bild im Internet ausmacht. Sie erhalten einen massgeschneiderten Plan mit Fixpreis. Danach kümmern wir uns um alles.", "small": "Analyse und Plan mit Preis sind kostenlos und unverbindlich.", "ck_l": "Nennen Sie uns Ihr Unternehmen. Wir prüfen, was ein neuer Kunde zuerst sieht, und Sie erhalten die Analyse mit einem bezifferten Plan innert drei Arbeitstagen.", "ck1": "Ihr Logo und Ihr visueller Auftritt", "ck2": "Ihre Website, am Computer und auf dem Handy", "ck3": "Die Sicherheit Ihrer Website und Ihrer E-Mails", "ck4": "Ihre sozialen Medien", "ck5": "Ihre Präsenz auf Google", "ck6": "Ein einheitlicher Auftritt auf allen Kanälen", "b_ok": "Danke, Ihre Anfrage ist eingegangen. Analyse und Plan erhalten Sie innert drei Arbeitstagen per E-Mail.", "w_l": "Eine vollständige Auffrischung, vom Logo bis zur Website, für Unternehmen, die Besseres zu tun haben als Marketing.", "w2t": "Eine moderne, sichere Website", "w2p": "Klar, schnell, auf dem Handy lesbar, bei Bedarf auf Deutsch und Französisch. Von uns gehostet, gesichert und aktuell gehalten. Ihr Google-Eintrag gleich mit.", "m1t": "Wir machen die Analyse", "m1p": "Kostenlos. Logo, Website, soziale Medien, Google, E-Mails: Wir schauen alles an, mit den Augen eines neuen Kunden.", "m2t": "Sie erhalten einen bezifferten Plan", "m2p": "Was zu tun ist, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.", "m3t": "Wir kümmern uns um alles", "m3p": "Sie geben jeden Schritt frei. Danach genügt eine Nachricht oder ein Foto für jede neue Anfrage.", "p_t": "Klare Preise, festgelegt vor dem Start", "p_l": "Die Analyse ist kostenlos. Daraus entsteht ein massgeschneiderter Plan mit Fixpreis, den Sie vor Arbeitsbeginn freigeben. Preise in CHF, exkl. MWST.", "s_w": "Auffrischen", "s1": "Logo überarbeitet und bereinigt", "s2": "Bestehende Website korrigiert oder neue One-Page", "s3": "Google- und Social-Media-Profile erneuert", "s4": "Dateien für alle Anwendungen", "s_t": "Für einen soliden Auftritt, der in die Jahre gekommen ist.", "m_w": "Auf den neusten Stand bringen", "mm1": "Logo modernisiert und vollständiger visueller Auftritt", "mm2": "Neue Website, schnell und sicher", "mm3": "Google und zwei soziale Netzwerke eingerichtet", "mm4": "Vorlagen: Geschäftspapier, E-Mail-Signatur, Beiträge", "m_tt": "Der häufigste Fall.", "l_w": "Neu aufbauen", "from": "ab", "l1": "Komplett neuer visueller Auftritt", "l2": "Website mit mehreren Seiten, auf Deutsch und Französisch", "l3": "Alle Inhalte getextet", "l4": "Kommunikationsplan für das ganze Jahr", "l_t": "Wenn alles neu gemacht werden muss.", "e_w": "Nach der Auffrischung", "e_h": "Betreuung", "pm": "pro Monat", "e1": "Hosting, Sicherheit und Zertifikat der Website", "e2": "Kleine Website-Anpassungen, bis 30 Minuten pro Monat", "e3": "Überwachung Ihrer Online-Präsenz, mit unseren Vorschlägen", "e4": "Ein Gespräch mit Ihnen pro Quartal", "e_t": "Mindestens sechs Monate, danach monatlich kündbar.", "al_w": "Einzeln, ohne Verpflichtung", "a0": "Arbeitsstunde, pro Viertelstunde verrechnet", "a4": "Plakat, Flyer, Inserat oder Karte", "p_terms": "Der genaue Preis Ihres Pakets steht in Ihrem Plan, vor jeder Verpflichtung. Keine Mehrkosten ohne Ihre Zustimmung. Ihre Dateien gehören Ihnen.", "g1p": "Analyse und Plan sind kostenlos. Sie zahlen nur, was Sie freigeben, zum angekündigten Preis.", "g3p": "Ein Fixpreis pro Projekt. Die Betreuung ist nach sechs Monaten monatlich kündbar. Mehr nicht.", "g8p": "Falsche Öffnungszeiten, eine nahende Saison, eine Seite, die altert: Wir melden es Ihnen mit einem Vorschlag.", "f7q": "Was kostet eine Auffrischung?", "f7a": "Das hängt davon ab, was die Analyse zeigt. Die meisten Unternehmen liegen im Paket M, zwischen 4'000 und 7'000 Franken. Der genaue Preis steht in Ihrem Plan und ändert sich nach der Freigabe nicht mehr.", "f8q": "Und nach der Auffrischung?", "f8a": "Mit der Betreuung für 79 Franken pro Monat bleibt Ihre Website aktuell und sicher, und wir behalten Ihre Online-Präsenz im Auge. Alles andere bestellen Sie einzeln, wenn Sie es brauchen."});
 const FR={};document.querySelectorAll('[data-i]').forEach(el=>FR[el.dataset.i]=el.innerHTML);
 function setLang(l){LANG=l;const d=l==='de'?DE:FR;document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;if(d[k]!==undefined)el.innerHTML=d[k]});document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.l===l)));try{localStorage.setItem('ar-lang',l)}catch(e){}calc()}
 document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
