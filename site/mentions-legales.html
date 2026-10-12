@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mentions légales · Atelier Remaster</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage.woff2) format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}@font-face{font-family:"Source Serif 4";src:url(fonts/sourceserif4.woff2) format("woff2");font-weight:200 900;font-display:swap}
+
+/* Layout: left-aligned editorial one-pager. Hero = headline left, live before/after right.
+   Then: what we do (3 plain blocks) · examples (before/after pairs) · method (true sequence) · prices + calculator · promises · FAQ · contact. */
+:root{
+  --paper:#f7f7f5;      /* page */
+  --surface:#ffffff;    /* raised */
+  --ink:#1e2733;        /* deep slate, text and logo */
+  --soft:#566170;       /* secondary text */
+  --line:#dde1e6;       /* hairlines */
+  --amber:#e3a33a;      /* brand: the remastered half */
+  --amber-deep:#8e570a; /* amber as text */
+  --amber-wash:#f8ead0; /* highlight ground */
+  --mist:#e9edf1;       /* quiet panels */
+  --on-amber:#1e2733;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --r:6px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141a22;--surface:#1b2330;--ink:#eef1f4;--soft:#a3adb9;--line:#2b3542;--amber:#e8ac47;--amber-deep:#f0bf6a;--amber-wash:#3a2d16;--mist:#1f2834;--on-amber:#1e2733;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#141a22;--surface:#1b2330;--ink:#eef1f4;--soft:#a3adb9;--line:#2b3542;--amber:#e8ac47;--amber-deep:#f0bf6a;--amber-wash:#3a2d16;--mist:#1f2834;--on-amber:#1e2733;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.1rem/1.62 var(--text);font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.015em;line-height:1.04;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,6.2vw,5rem);font-variation-settings:"wdth" 88;letter-spacing:-.03em}
+h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-variation-settings:"wdth" 92}
+h3{font-size:1.3rem;letter-spacing:-.01em}
+p{margin:0 0 .9em;max-width:62ch}
+a{color:inherit}
+.lead{font-size:clamp(1.15rem,1.6vw,1.35rem);line-height:1.55;color:var(--soft)}
+h2+.lead{margin-top:1.1rem}
+.btn{display:inline-flex;align-items:center;gap:.5em;font:600 1rem/1 var(--display);padding:.95em 1.3em;border-radius:var(--r);text-decoration:none;border:1.5px solid var(--ink);cursor:pointer;background:transparent;color:var(--ink)}
+.btn.primary{background:var(--amber);border-color:var(--amber);color:var(--on-amber)}
+.btn:hover{transform:translateY(-1px)}
+.btn,.btn:hover{transition:transform .15s ease}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+section{padding-block:clamp(64px,9vw,120px)}
+section+section{border-top:1px solid var(--line)}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand svg{width:30px;height:30px;flex:none}
+.brand span{font:700 1.15rem/1 var(--display);letter-spacing:-.02em;font-variation-settings:"wdth" 90}
+nav.main{display:flex;align-items:center;gap:26px;font:500 .98rem var(--display)}
+nav.main a{text-decoration:none;color:var(--soft)}
+nav.main a:hover{color:var(--ink)}
+.lang{display:flex;border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden}
+.lang button{font:600 .85rem var(--display);padding:.45em .7em;background:none;border:0;color:var(--soft);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+@media (max-width:820px){nav.main a{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(48px,7vw,96px) clamp(56px,8vw,110px)}
+.hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1 .quiet{display:block;color:var(--soft);font-weight:600}
+.hero .lead{margin-top:1.2rem}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.6rem}
+.hero .small{font-size:.95rem;color:var(--soft);margin-top:1rem}
+@media (max-width:900px){.hero .grid{grid-template-columns:1fr}}
+
+/* bilan card */
+.check{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:clamp(22px,3vw,34px);box-shadow:0 24px 50px -34px rgba(30,39,51,.45)}
+.check .ct{font-size:1.6rem}
+.check .cl{color:var(--soft);font-size:1rem;margin:.6rem 0 1rem}
+.we{list-style:none;margin:0 0 1.2rem;padding:0;display:flex;flex-direction:column}
+.we li{display:grid;grid-template-columns:24px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:1rem;line-height:1.4}
+.we li::before{content:"";width:16px;height:16px;margin-top:3px;border-radius:50%;border:2px solid var(--ink);background:linear-gradient(90deg,transparent 50%,var(--amber) 50%)}
+.bilan{display:flex;flex-direction:column;gap:8px}
+.bilan label{font:500 .95rem var(--display)}
+.bilan input{font:inherit;font-size:1rem;padding:.7em .85em;border:1.5px solid var(--line);border-radius:var(--r);background:var(--paper);color:var(--ink);margin-bottom:6px}
+.bilan .btn{align-self:flex-start;margin-top:4px}
+.ok-msg{background:var(--amber-wash);padding:10px 12px;border-radius:var(--r);font-size:.95rem;margin:6px 0 0}
+.check .fine{font-size:.88rem;color:var(--soft);margin:.9rem 0 0}
+
+/* what */
+.cols3{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,4vw,56px);margin-top:2.6rem}
+.cols3 h3{margin-bottom:.6rem}
+.cols3 p{font-size:1.02rem;color:var(--soft)}
+.cols3 .glyph{width:44px;height:44px;margin-bottom:1rem}
+@media (max-width:1000px){.cols3{grid-template-columns:1fr 1fr}}@media (max-width:560px){.cols3{grid-template-columns:1fr}}
+
+/* examples */
+.fict{font-size:.9rem;color:var(--soft);margin-top:1rem}
+
+/* method: a real sequence */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2.4rem;counter-reset:s}
+.step{padding:0 28px 0 0;position:relative}
+.step+.step{padding-left:28px;border-left:1px solid var(--line)}
+.step .num{font:800 3.2rem/1 var(--display);color:var(--amber);font-variation-settings:"wdth" 85}
+.step h3{margin:.6rem 0 .5rem}
+.step p{font-size:1rem;color:var(--soft)}
+@media (max-width:820px){.steps{grid-template-columns:1fr;gap:28px}.step+.step{border-left:0;padding-left:0}}
+
+/* pricing */
+.pricing{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:20px;margin-top:2.4rem;align-items:start}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.plan.feature{border:2px solid var(--amber)}
+.plan .who{font:600 .95rem var(--display);color:var(--amber-deep)}
+.plan .price{font:800 2.6rem/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.plan .price small{font:500 1rem var(--display);color:var(--soft);letter-spacing:0}
+.plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;font-size:1rem}
+.plan li{padding-left:26px;position:relative;line-height:1.45}
+.plan li::before{content:"";position:absolute;left:0;top:.42em;width:14px;height:14px;border-radius:50%;border:2px solid var(--ink);background:linear-gradient(90deg,transparent 50%,var(--amber) 50%)}
+.plan .terms{font-size:.9rem;color:var(--soft);border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.list{width:100%;border-collapse:collapse;font-size:.98rem}
+.list td{padding:.62em 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+.list td:last-child{text-align:right;white-space:nowrap;font:600 1rem var(--display);font-variant-numeric:tabular-nums;padding-left:12px}
+@media (max-width:1000px){.pricing{grid-template-columns:1fr}}
+
+/* calculator */
+.calc{margin-top:2.4rem;background:var(--surface);border:1px solid var(--line);border-radius:10px;display:grid;grid-template-columns:1.1fr 1fr}
+.calc .in{padding:28px;display:flex;flex-direction:column;gap:18px;border-right:1px solid var(--line);min-width:0}
+.calc .out{padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.f{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center}
+.f label{font:500 1rem var(--display)}
+.f output{font:700 1.1rem var(--display);font-variant-numeric:tabular-nums}
+.f input{grid-column:1/-1;width:100%;accent-color:var(--amber)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--r)}
+.row b{font:600 1.05rem var(--display)}
+.row span{font:700 1.2rem var(--display);font-variant-numeric:tabular-nums}
+.row.best{border:2px solid var(--amber);background:var(--amber-wash)}
+.verdict{font-size:1rem;margin-top:4px}
+@media (max-width:820px){.calc{grid-template-columns:1fr}.calc .in{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* promises */
+.promise{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:2.4rem}
+.promise h3{font-size:1.15rem;margin-bottom:.4rem}.promise .k{display:block;font:700 .78rem var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:.5rem}
+.promise p{font-size:1rem;color:var(--soft)}
+@media (max-width:900px){.promise{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.promise{grid-template-columns:1fr}}
+
+/* faq */
+.faq{margin-top:2rem;max-width:820px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font:600 1.15rem var(--display);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;border:2px solid var(--ink);background:linear-gradient(90deg,transparent 50%,var(--amber) 50%);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(180deg)}
+.faq details p{color:var(--soft);padding-bottom:16px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px)}
+form{display:flex;flex-direction:column;gap:14px}
+.fld{display:flex;flex-direction:column;gap:6px}
+.fld label{font:500 .98rem var(--display)}
+.fld input,.fld textarea{font:inherit;font-size:1rem;padding:.75em .85em;border:1.5px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink)}
+.fld textarea{min-height:120px;resize:vertical}
+.sent{padding:14px 16px;border-radius:var(--r);background:var(--amber-wash);font-size:1rem}
+.direct p{margin:.2rem 0}
+.direct .big{font:700 1.5rem var(--display);letter-spacing:-.01em}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding-block:36px 48px;color:var(--soft);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+.kick{font:600 1rem var(--display);color:var(--amber-deep);margin-bottom:.8rem;display:block}
+</style>
+<style>.legal{max-width:68ch;padding-block:48px 72px}.legal h1{font-family:var(--display);font-size:clamp(2rem,4vw,2.6rem);margin:0 0 .4em}.legal h2{font-family:var(--display);font-size:1.3rem;margin:2.2em 0 .5em}.legal h3{font-family:var(--display);font-size:1.05rem;margin:1.6em 0 .3em}.legal p,.legal li{line-height:1.6}.legal hr{border:0;border-top:1px solid var(--line);margin:3em 0}.back{display:inline-block;margin-bottom:2em}</style>
+</head>
+<body>
+<main class="wrap legal">
+<a class="back" href="index.html">← Atelier Remaster</a>
+<h1>Mentions légales</h1>
+
+<h2>Responsable du site</h2>
+<p>Atelier Remaster<br>Julien Dornbierer, spécialiste en marketing avec brevet fédéral<br>Nordweg 2<br>2502 Biel/Bienne<br>Suisse</p>
+<p>E-mail : <a href="mailto:julien@atelier-remaster.ch">julien@atelier-remaster.ch</a></p>
+
+<h2>Responsabilité</h2>
+<p>Les contenus de ce site sont rédigés avec soin, sans garantie d'exactitude, d'exhaustivité ni d'actualité. Les prix indiqués sont informatifs ; seule une offre écrite fait foi. Les liens vers des sites tiers sont fournis sans responsabilité quant à leur contenu.</p>
+
+<h2>Droits d'auteur</h2>
+<p>Les textes, illustrations et éléments graphiques de ce site appartiennent à Atelier Remaster. Toute reproduction demande une autorisation écrite préalable.</p>
+
+<h2>Protection des données</h2>
+<p>Cette déclaration explique quelles données personnelles sont traitées lorsque vous utilisez ce site, conformément à la loi fédérale sur la protection des données (LPD).</p>
+
+<h3>Responsable du traitement</h3>
+<p>Julien Dornbierer, Atelier Remaster, adresse ci-dessus.</p>
+
+<h3>Consultation du site</h3>
+<p>Le site est hébergé par Infomaniak Network SA, à Genève (Suisse). Lors de chaque visite, le serveur enregistre des données techniques (adresse IP, date et heure, page consultée, navigateur) pour assurer le fonctionnement et la sécurité du site. Ce site n'utilise ni cookies, ni outil de statistiques, ni publicité. Les polices de caractères sont hébergées sur le site lui-même. Votre choix de langue (FR/DE) est mémorisé uniquement dans votre navigateur.</p>
+
+<h3>Formulaires</h3>
+<p>Lorsque vous envoyez un formulaire, les informations saisies (nom, entreprise, e-mail ou téléphone, message) sont transmises par le service FormSubmit (formsubmit.co) à notre boîte e-mail, gérée par Google Workspace. Ces prestataires peuvent traiter les données hors de Suisse, notamment aux États-Unis. Nous utilisons ces données uniquement pour répondre à votre demande et préparer le bilan ou l'esquisse demandés. Elles ne sont ni vendues ni utilisées pour de la publicité, et sont supprimées lorsqu'elles ne sont plus nécessaires, au plus tard deux ans après le dernier contact, sauf obligation légale de conservation.</p>
+
+<h3>Vos droits</h3>
+<p>Vous pouvez à tout moment demander quelles données vous concernant sont traitées, les faire corriger ou supprimer, en écrivant à <a href="mailto:julien@atelier-remaster.ch">julien@atelier-remaster.ch</a>. Vous pouvez également vous adresser au Préposé fédéral à la protection des données et à la transparence (PFPDT).</p>
+
+<p><small>Version du 12 octobre 2026</small></p>
+
+<hr>
+
+<h1 lang="de">Impressum</h1>
+<div lang="de">
+<h2>Verantwortlich für diese Website</h2>
+<p>Atelier Remaster<br>Julien Dornbierer, Marketingfachmann mit eidg. Fachausweis<br>Nordweg 2<br>2502 Biel/Bienne<br>Schweiz</p>
+<p>E-Mail: <a href="mailto:julien@atelier-remaster.ch">julien@atelier-remaster.ch</a></p>
+
+<h2>Haftung</h2>
+<p>Die Inhalte dieser Website werden mit Sorgfalt erstellt, ohne Gewähr für Richtigkeit, Vollständigkeit und Aktualität. Die angegebenen Preise sind unverbindlich; massgebend ist allein eine schriftliche Offerte. Für Inhalte verlinkter Websites wird keine Haftung übernommen.</p>
+
+<h2>Urheberrecht</h2>
+<p>Texte, Illustrationen und grafische Elemente dieser Website gehören Atelier Remaster. Jede Verwendung bedarf der vorgängigen schriftlichen Zustimmung.</p>
+
+<h2>Datenschutz</h2>
+<p>Diese Erklärung beschreibt, welche Personendaten bei der Nutzung dieser Website bearbeitet werden, gemäss dem Bundesgesetz über den Datenschutz (DSG).</p>
+<h3>Verantwortliche Stelle</h3>
+<p>Julien Dornbierer, Atelier Remaster, Adresse oben.</p>
+<h3>Besuch der Website</h3>
+<p>Die Website wird von der Infomaniak Network AG in Genf (Schweiz) gehostet. Bei jedem Besuch speichert der Server technische Daten (IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browser), um Betrieb und Sicherheit der Website zu gewährleisten. Diese Website verwendet keine Cookies, keine Statistik-Tools und keine Werbung. Die Schriften werden von der Website selbst geladen. Ihre Sprachwahl (FR/DE) wird nur in Ihrem Browser gespeichert.</p>
+<h3>Formulare</h3>
+<p>Wenn Sie ein Formular absenden, werden Ihre Angaben (Name, Unternehmen, E-Mail oder Telefon, Nachricht) über den Dienst FormSubmit (formsubmit.co) an unser E-Mail-Postfach bei Google Workspace übermittelt. Diese Anbieter können Daten ausserhalb der Schweiz bearbeiten, insbesondere in den USA. Wir verwenden die Daten ausschliesslich zur Beantwortung Ihrer Anfrage und zur Erstellung der gewünschten Analyse oder Skizze. Sie werden weder verkauft noch für Werbung genutzt und gelöscht, sobald sie nicht mehr benötigt werden, spätestens zwei Jahre nach dem letzten Kontakt, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
+<h3>Ihre Rechte</h3>
+<p>Sie können jederzeit Auskunft über Ihre Daten verlangen, sie berichtigen oder löschen lassen: <a href="mailto:julien@atelier-remaster.ch">julien@atelier-remaster.ch</a>. Zudem können Sie sich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) wenden.</p>
+<p><small>Stand: 12. Oktober 2026</small></p>
+</div>
+
+</main>
+</body>
+</html>
