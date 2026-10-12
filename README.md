@@ -3,7 +3,7 @@
 Site vitrine d'Atelier Remaster (Julien Dornbierer, Bienne).
 
 - `site/` : les fichiers publiés tels quels (HTML statique, polices auto-hébergées, aucune dépendance externe hormis l'envoi des formulaires via FormSubmit).
-- `.github/workflows/deploy.yml` : à chaque modification de `site/` sur `main`, le site est envoyé chez Infomaniak par FTPS.
+- `.github/workflows/deploy.yml` : à chaque modification de `site/` sur `main`, le site est envoyé chez Infomaniak par SFTP (lftp, sans suppression de fichiers distants).
 
 ## Activer la publication automatique
 
