@@ -37,7 +37,8 @@ il contient tout le contexte business, les décisions et la liste des tâches ou
 - Avis Google / fiche Google : détail secondaire, pas un argument principal.
 - Aucun faux avis, aucune fausse référence : les réalisations n'apparaissent qu'avec l'accord des clients.
 
-## Offre et prix affichés (CHF, hors TVA)
+## Offre et prix affichés (CHF)
+- Julien ne facture pas la TVA pour l'instant : aucune mention de TVA sur le site ni dans les documents.
 - Bilan d'image + plan chiffré : gratuit (pour l'instant).
 - Pack S « Rafraîchir » 1'800–3'000 · Pack M « Remettre à niveau » 4'000–7'000 · Pack L « Refondre » dès 8'000.
 - Entretien 79.– / mois (6 mois minimum, puis résiliable chaque mois).
