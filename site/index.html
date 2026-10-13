@@ -207,7 +207,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
       <a href="#methode" data-i="nav2">Méthode</a>
       <a href="#tarifs" data-i="nav3">Tarifs</a>
       <a href="#contact" data-i="nav4">Contact</a>
-      <div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="de" aria-pressed="false">DE</button></div>
+      <div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="de" aria-pressed="false">DE</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
     </nav>
   </div>
 </header>
@@ -728,13 +728,14 @@ let LANG='fr';
 function calc(){}
 
 /* forms -> FormSubmit (e-mail to julien@atelier-remaster.ch) */
-const ERR={fr:"L'envoi n'a pas abouti. Écrivez-moi directement à julien@atelier-remaster.ch.",de:"Das Senden hat nicht geklappt. Schreiben Sie mir direkt an julien@atelier-remaster.ch."};
+const ERR={fr:"L'envoi n'a pas abouti. Écrivez-moi directement à julien@atelier-remaster.ch.",de:"Das Senden hat nicht geklappt. Schreiben Sie mir direkt an julien@atelier-remaster.ch.",en:"Sending failed. Please write to me directly at julien@atelier-remaster.ch."};
+const dict=l=>l==='de'?DE:l==='en'?EN:FR;
 function wire(id,okId,subject){const f=document.getElementById(id);f.addEventListener('submit',async e=>{e.preventDefault();
  if(!f.checkValidity()){f.reportValidity();return}
  const b=f.querySelector('button[type=submit]');b.disabled=true;const ok=document.getElementById(okId);
  const data=Object.fromEntries(new FormData(f).entries());data._subject=subject+' : '+(data.company||'');data._template='table';data._captcha='false';data.langue=LANG;
  try{const r=await fetch('https://formsubmit.co/ajax/julien@atelier-remaster.ch',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
-  if(!r.ok)throw 0;ok.innerHTML=(LANG==='de'?DE:FR)[ok.dataset.i];ok.hidden=false;f.reset()}
+  if(!r.ok)throw 0;ok.innerHTML=dict(LANG)[ok.dataset.i];ok.hidden=false;f.reset()}
  catch(_){ok.textContent=ERR[LANG];ok.hidden=false;b.disabled=false}})}
 wire('bilan','bilan-ok','Bilan d\'image');
 wire('form','sent','Demande d\'esquisse');
@@ -788,10 +789,60 @@ x3r:"Was man in 3 Sekunden behält",x3b:"«Eine Garage… welche?»",x3n:"«Zbin
 x2s:"Treuhand · Region Neuenburg · seit 1991",x2a:"Eine Website von 2009, die auf dem Handy winzig erscheint. Die Öffnungszeiten sind unauffindbar, die Nummer ist nicht anklickbar.",x2k:"Das Marineblau, der seriöse Ton, die Liste der Leistungen.",x2m:"Eine Website, die zuerst fürs Handy gedacht ist: Öffnungszeiten sichtbar, Anruf mit einem Fingertipp, drei klare Leistungen.",x2d:"Neue Website, gehostet und gesichert, auf Französisch und Deutsch. Aktueller Google-Eintrag.",
 x3s:"Garage · Seeland · seit 1985",x3a:"Ein Fahrzeug, das jeden Tag in der Region unterwegs ist, aber an das sich niemand erinnert: sechs Leistungen, zwei Nummern, eine Webadresse mit dreissig Zeichen.",x3k:"Das Blau der Anfänge und der Familienname.",x3m:"Ein Name, der von weitem lesbar ist, eine einzige Nummer, eine Farbe, die im Verkehr auffällt. Das Fahrzeug wird zur Werbung, die jeden Tag arbeitet.",x3d:"Modernisiertes Logo, Fahrzeugbeschriftung bereit für den Carrossier, Firmenschild, Dokumentvorlagen.",
 x_fict:"Fiktive Unternehmen und Gestaltungen, zur Veranschaulichung erstellt. Kundenarbeiten zeige ich nur mit deren Einverständnis."});
+const EN={nav1:"Services",nav5:"Examples",nav2:"Method",nav3:"Pricing",nav4:"Contact",
+h1a:"An online presence that matches your business.",lead_s:"A design that reflects who you are, visibility that pays off.",
+lead:"<strong data-i=\"lead_s\">A design that reflects who you are, visibility that pays off.</strong> I review how your business looks online and propose a tailored plan at a fixed price.",
+cta1:"My services",cta2:"See pricing",small:"The review and the costed plan are free, with no obligation.",
+ck_t:"Your free image review",ck_l:"Tell me your business name. I look at what a new customer sees first, and you receive the review with a costed upgrade plan within three working days.",
+ck1:"Your logo and visual identity",ck2:"Your website, on desktop and on mobile",ck3:"The security of your website and your e-mails",ck4:"Your social media",ck5:"Your presence on Google",ck6:"A consistent image across every channel",
+b1:"Business name or website address",b2:"Your e-mail",ck_cta:"Get my free review",b_ok:"Thank you, your request has arrived. Your review and plan will reach you by e-mail within three working days.",b_fine:"No obligation. Your details are only used to send you this review.",
+w_t:"What I do for you",w_l:"What built your reputation stays. Everything else gets modernised.",
+w1t:"Bring your image up to date",w1p:"Logo, colours, stationery, document templates. I keep your name, your colour, your story, and make it all legible everywhere, from your shop sign to a phone screen.",
+w2t:"A modern, secure website",w2p:"Clear, fast, easy to read on a phone, in all your customers' languages. Hosted, secured and kept up to date by me. Your Google listing comes along too.",
+w3t:"Prepare your communication",w3p:"Posters, flyers, job ads, holiday notices, greeting cards, newsletters. One message is enough: you receive the finished result, ready to use.",
+w4t:"Set up your social media",w4p:"Instagram, Facebook, LinkedIn. Polished profiles, post templates in your colours, a schedule and tools to publish in a few minutes. I set up the system, you publish on your own.",
+x_k:"Fictional examples",x_t:"Before and after: three examples",x_l:"Drag to compare. The name, the colour and the symbol stay: that's what your customers recognise. Everything else becomes clear and legible everywhere.",
+x_kp:"Starting point",x_kk:"What stays",x_km:"What changes",x_kd:"Deliverables",bf:"Before",af:"After",
+x1c1:"COLOURS",x1c2:"TYPOGRAPHY",x1c3:"VARIATIONS",x1t1:"Headings",x1t2:"Body text",
+x1s:"Joinery · Seeland · since 1978",x1a:"A logo from 1990 and nothing around it: no defined colours, no typeface, a single JPEG file. Every printer does it their own way.",x1k:"The green, the fir tree and the founding year.",x1m:"A fir tree redrawn from wooden planks and a complete brand guide: colours, typefaces, variations for the sign, social media and documents.",x1d:"Logo in every size and format, brand guidelines, document templates.",
+x2s:"Accounting firm · Neuchâtel lakeside · since 1991",x2a:"A website from 2009 that shows up as a miniature on phones. The opening hours are impossible to find and the phone number isn't clickable.",x2k:"The navy blue, the serious tone, the list of services.",x2m:"A website designed for phones first: opening hours in plain sight, one tap to call, three clear services.",x2d:"New website, hosted and secured, in French and German. Up-to-date Google listing.",
+x3r:"What sticks after 3 seconds",x3b:"“A garage… which one?”",x3n:"“Zbinden, 032 000 00 00”",
+x3s:"Garage · Seeland · since 1985",x3a:"A vehicle that drives around the region every day, yet nobody remembers anything about it: six services, two phone numbers, a thirty-character web address.",x3k:"The original blue and the family name.",x3m:"A name you can read from a distance, a single number, a colour that stands out in traffic. The vehicle becomes an advert that works every day.",x3d:"Modernised logo, vehicle design ready for the body shop, signage, document templates.",
+x_fict:"Fictional businesses and visuals, created to illustrate the approach. Client work only appears with the client's consent.",
+m_t:"Simple, from the first exchange onwards",m1t:"I review your image",m1p:"Free of charge. Logo, website, social media, Google, e-mails: I look at everything through the eyes of a new customer.",
+m2t:"You receive a costed plan",m2p:"What I recommend, in what order, and at what fixed price. We discuss it for half an hour by video call, and you decide.",
+m3t:"I take care of everything",m3p:"You approve every step. After that, a message or a photo is all it takes for any new request.",
+p_t:"Clear prices, set before we start",p_l:"The review is free. It leads to a tailored plan and a fixed price, which you approve before any work begins. Prices in CHF, excluding VAT.",
+s_w:"Refresh",s1:"Logo touched up and cleaned up",s2:"Existing website fixed, or a new single page",s3:"Google and social media profiles refreshed",s4:"Files ready for every medium",s_t:"For an image that is fine, but showing its age.",
+m_w:"Bring up to date",mm1:"Modernised logo and complete visual identity",mm2:"New showcase website, fast and secure",mm3:"Google and two social networks set up, with post templates",mm4:"Templates: stationery, e-mail signature, documents",m_tt:"The most common case.",
+l_w:"Rebuild",from:"from",l1:"Complete new visual identity",l2:"Multi-page, multilingual website",l3:"All content written for you",l4:"Communication plan for the year",l_t:"When everything needs redoing.",
+e_w:"After the upgrade",e_h:"Maintenance",pm:"per month",e1:"Website hosting, security and certificate",e2:"Small website updates, up to 30 minutes per month",e3:"Monitoring of your online presence, with my suggestions",e4:"A check-in with you every quarter",e_t:"Six months minimum, then cancellable monthly.",
+al_w:"Pay as you go, no commitment",a0:"Hour of work, billed by the quarter hour",a4:"Poster, flyer, ad or card",a5:"Reusable post template",a6:"Job advert",a5c:"Online ad campaign (social media, Google), setup and monitoring, ad budget not included",
+p_terms:"The exact price of your pack is in your plan, before you commit to anything. No extra costs without your approval. Your files belong to you.",
+g_t:"Why work with me",g_l:"You run your business. I do the marketing work, you keep the decisions.",
+g5k:"Responsive",g5t:"A reply within 24 hours",g5p:"Every request gets a reply within 24 hours on working days. No tickets, no waiting.",
+g6k:"Fast",g6t:"Straight to the point",g6p:"No endless meetings or drawn-out presentations. A short process, concrete results.",
+g7k:"Simple",g7t:"All you do is choose",g7p:"I do the analysis and suggest what suits your business. You say yes, no, or “more like this”.",
+g8k:"Proactive",g8t:"Ideas without having to ask",g8p:"Opening hours to correct, a season coming up, a page getting old: I let you know, with a suggestion.",
+g1k:"Transparent",g1t:"You see before you pay",g1p:"The review and the plan are free. You only pay for what you approve, at the announced price.",
+g2k:"Free to leave",g2t:"Your files belong to you",g2p:"Logo, website, designs: you receive everything. You can take it with you at any time.",
+g3k:"Flexible",g3t:"No never-ending contract",g3p:"A fixed price per project. Maintenance can be cancelled monthly after six months. That's all.",
+g4k:"Local",g4t:"One contact person, in Biel/Bienne",g4p:"A single person who knows your business, in French, German and English.",
+f_t:"Frequently asked questions",
+f1q:"My logo is forty years old and my customers know it. Why change it?",f1a:"Precisely because they know it. I keep what they recognise (the name, the colour, the symbol) and make it legible where people discover you today: on Google, on a phone, in a browser tab. If nothing needs to change, I'll tell you.",
+f2q:"Do I have to change everything at once, vehicles and signage included?",f2a:"No. We start with the digital side (website, Google, e-mails), and the rest follows as things naturally come up for renewal. I give you a simple plan.",
+f7q:"How much does an upgrade cost?",f7a:"It depends on what the review reveals. Most businesses fall within Pack M, between 4'000 and 7'000 francs. The exact price is in your plan, and it doesn't change once approved.",
+f8q:"And after the upgrade?",f8a:"With maintenance at 79 francs a month, your website stays up to date and secure, and I keep an eye on your online presence. For everything else, you order as you go, when you need it.",
+f6q:"Do you post on our social media for us?",f6a:"No, and that's deliberate: nobody knows your day-to-day better than you. I set up the whole system (profiles, templates, schedule, tools) and show you how to publish in a few minutes. If you'd like occasional help, you can order it as you go.",
+f5q:"Do you work in several languages?",f5a:"Yes. French, German and English, written for each language rather than translated word for word. Other languages are possible on request.",
+k_t:"A first idea for your business?",k_l:"Tell me your business name. You'll receive a sketch based on your own logo, free and with no obligation.",
+k_cred:"Marketing Specialist with Federal Diploma of Higher Education",k_who:"Atelier Remaster, Biel/Bienne",
+fl1:"Your name",fl2:"Business and town",fl3:"E-mail or phone",fl4:"What you'd like (optional)",send:"Request my sketch",sent:"Thank you, your message has arrived. I'll reply to you personally within 24 hours on working days.",
+foot_c:"© 2026 Atelier Remaster · Julien Dornbierer, Marketing Specialist with Federal Diploma of Higher Education · Biel/Bienne",foot:"Legal notice and privacy policy"};
 const FR={};document.querySelectorAll('[data-i]').forEach(el=>FR[el.dataset.i]=el.innerHTML);
-function setLang(l){LANG=l;const d=l==='de'?DE:FR;document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;if(d[k]!==undefined)el.innerHTML=d[k]});document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.l===l)));try{localStorage.setItem('ar-lang',l)}catch(e){}calc()}
+function setLang(l){LANG=l;const d=dict(l);document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;if(d[k]!==undefined)el.innerHTML=d[k]});document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.l===l)));try{localStorage.setItem('ar-lang',l)}catch(e){}calc()}
 document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
-try{const s=localStorage.getItem('ar-lang');if(s==='de')setLang('de')}catch(e){}
+try{const s=localStorage.getItem('ar-lang');if(s==='de'||s==='en')setLang(s)}catch(e){}
 </script>
 </body>
 </html>

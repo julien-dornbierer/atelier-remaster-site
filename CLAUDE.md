@@ -12,18 +12,19 @@ il contient tout le contexte business, les décisions et la liste des tâches ou
   (environ 1 minute). Pas de build, pas de dépendances.
 - Domaine : DNS chez Infomaniak (A → 185.199.108/109/111.153, `www` CNAME → julien-dornbierer.github.io).
   E-mails : Google Workspace (MX/SPF/DKIM/DMARC dans la même zone : ne pas toucher).
-- Après modification : vérifier le rendu (desktop 1280 px + mobile 390 px, FR et DE, aucun scroll horizontal),
+- Après modification : vérifier le rendu (desktop 1280 px + mobile 390 px, FR, DE et EN, aucun scroll horizontal),
   puis commit + push. Rappeler à Julien de recharger avec Ctrl+F5.
 
 ## Structure de `site/index.html`
 - Page unique, HTML/CSS/JS inline. Polices auto-hébergées dans `site/fonts/` (Bricolage Grotesque pour les titres,
   Source Serif 4 pour le texte). Aucun appel à Google Fonts (cohérence avec la déclaration de protection des données).
 - Couleurs en variables CSS (`--paper`, `--ink`, `--amber`, …) avec mode sombre automatique.
-- **Bilingue FR/DE** : chaque texte traduisible porte `data-i="clé"`. Le français est dans le HTML ;
-  l'allemand dans l'objet JS `DE` (plus des `Object.assign(DE, {...})` successifs : la dernière valeur gagne).
-  Toute modification de texte FR doit avoir son équivalent DE.
+- **Trilingue FR/DE/EN** (sélecteur à 3 onglets) : chaque texte traduisible porte `data-i="clé"`. Le français est dans le HTML ;
+  l'allemand dans l'objet JS `DE` (plus des `Object.assign(DE, {...})` successifs : la dernière valeur gagne),
+  l'anglais dans l'objet JS `EN`.
+  Toute modification de texte FR doit avoir son équivalent DE et EN.
 - Formulaires (bilan + contact) : envoyés via FormSubmit (AJAX) vers julien@atelier-remaster.ch.
-- `site/mentions-legales.html` : impressum + protection des données FR/DE. À tenir à jour si l'hébergement,
+- `site/mentions-legales.html` : impressum + protection des données FR/DE/EN. À tenir à jour si l'hébergement,
   les outils ou les traitements de données changent.
 - `tools/` : scripts Python de modifications ponctuelles (historique, ne pas relancer).
 
