@@ -173,7 +173,7 @@ nav.main a:hover{color:var(--ink)}
 .plan li{padding-left:26px;position:relative;line-height:1.45}
 .plan li::before{content:"";position:absolute;left:4px;top:.3em;width:6px;height:11px;border-right:2.5px solid var(--amber-deep);border-bottom:2.5px solid var(--amber-deep);transform:rotate(45deg)}
 .plan .terms{font-size:.9rem;color:var(--soft);border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
-.pricing2{display:grid;grid-template-columns:1fr 1.15fr;gap:20px;margin-top:20px;align-items:start}@media (max-width:1000px){.pricing2{grid-template-columns:1fr}}.plan .price.range{font-size:2.05rem}.plan h3{margin:0}
+.pricing2{display:grid;grid-template-columns:1fr 1.15fr;gap:20px;margin-top:20px;align-items:start}@media (max-width:1000px){.pricing2{grid-template-columns:1fr}}.plan .price.range{font-size:2.05rem}.plan h3{margin:0}.big-note{margin:1.4rem 0 0;font-size:1.02rem;color:var(--soft)}
 .portrait{width:112px;height:112px;border-radius:50%;object-fit:cover;display:block;margin-bottom:14px;background:var(--mist)}
 .list{width:100%;border-collapse:collapse;font-size:.98rem}
 .list td{padding:.62em 0;border-bottom:1px solid var(--line);vertical-align:baseline}
@@ -329,7 +329,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         </div>
         <div class="cx">
           <h3>Menuiserie Vauclair</h3>
-          <p class="sec"><span data-i="x1s">Menuiserie · Seeland · depuis 1978</span><span class="pk">Pack M</span></p>
+          <p class="sec"><span data-i="x1s">Menuiserie · Seeland · depuis 1978</span><span class="pk" data-i="x1p">Logo</span></p>
           <dl>
             <div><dt data-i="x_kp">Point de départ</dt><dd data-i="x1a">Un logo de 1990, et rien autour : pas de couleurs définies, pas de typographie, un seul fichier JPEG. Chaque imprimeur fait à sa façon.</dd></div>
             <div><dt data-i="x_kk">On garde</dt><dd data-i="x1k">Le vert, le sapin et l'année de fondation.</dd></div>
@@ -350,7 +350,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         </div>
         <div class="cx">
           <h3>Fiduciaire Rochat</h3>
-          <p class="sec"><span data-i="x2s">Fiduciaire · Littoral neuchâtelois · depuis 1991</span><span class="pk">Pack M</span></p>
+          <p class="sec"><span data-i="x2s">Fiduciaire · Littoral neuchâtelois · depuis 1991</span><span class="pk" data-i="x2p">Logo + site</span></p>
           <dl>
             <div><dt data-i="x_kp">Point de départ</dt><dd data-i="x2a">Un site de 2009 qui s'affiche en miniature sur téléphone. Les horaires sont introuvables, le numéro n'est pas cliquable.</dd></div>
             <div><dt data-i="x_kk">On garde</dt><dd data-i="x2k">Le bleu marine, le ton sérieux, la liste des prestations.</dd></div>
@@ -371,7 +371,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         </div>
         <div class="cx">
           <h3>Garage Zbinden</h3>
-          <p class="sec"><span data-i="x3s">Garage · Seeland · depuis 1985</span><span class="pk">Pack M</span></p>
+          <p class="sec"><span data-i="x3s">Garage · Seeland · depuis 1985</span><span class="pk" data-i="x3p">Sur devis</span></p>
           <dl>
             <div><dt data-i="x_kp">Point de départ</dt><dd data-i="x3a">Un véhicule qui roule tous les jours dans la région, mais dont personne ne retient rien : six prestations, deux numéros, une adresse web de trente caractères.</dd></div>
             <div><dt data-i="x_kk">On garde</dt><dd data-i="x3k">Le bleu des débuts et le nom de famille.</dd></div>
@@ -401,55 +401,54 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
 <section id="tarifs">
   <div class="wrap">
     <h2 data-i="p_t">Des prix clairs, fixés avant de commencer</h2>
-    <p class="lead" data-i="p_l">Le bilan est gratuit. Il débouche sur un plan sur mesure et un prix fixe, que vous validez avant tout travail. Prix en CHF.</p>
+    <p class="lead" data-i="p_l">Le bilan est gratuit. Vous recevez ensuite un prix fixe, que vous validez avant tout travail. Prix en CHF.</p>
     <div class="pricing">
       <div class="plan">
-        <span class="who" data-i="s_w">Rafraîchir</span>
-        <h3>Pack S</h3>
-        <div class="price range">1'800–3'000</div>
+        <span class="who" data-i="o1_w">Rafraîchir votre image</span>
+        <h3 data-i="o1_h">Logo</h3>
+        <div class="price"><small data-i="from">dès</small> 490.–</div>
         <ul>
-          <li data-i="s1">Logo retouché et mis au propre</li>
-          <li data-i="s2">Site existant corrigé, ou nouvelle page unique</li>
-          <li data-i="s3">Profils Google et réseaux remis à neuf</li>
-          <li data-i="s4">Fichiers prêts pour tous les supports</li>
+          <li data-i="o1a">Votre logo modernisé, en gardant ce que vos clients reconnaissent</li>
+          <li data-i="o1b">Couleurs et polices définies</li>
+          <li data-i="o1c">Fichiers pour tous les usages : impression, site, réseaux, enseigne</li>
+          <li data-i="o1d">Deux tours de retouches</li>
         </ul>
-        <p class="terms" data-i="s_t">Pour une image correcte, mais qui a pris de l'âge.</p>
+        <p class="terms" data-i="o1_t">Pour une image qui a pris de l'âge.</p>
+      </div>
+      <div class="plan">
+        <span class="who" data-i="o2_w">Être trouvé et contacté</span>
+        <h3 data-i="o2_h">Site</h3>
+        <div class="price"><small data-i="from">dès</small> 1'190.–</div>
+        <ul>
+          <li data-i="o2a">Un site clair, pensé pour le téléphone</li>
+          <li data-i="o2b">Horaires et prestations visibles, appel et e-mail en un geste</li>
+          <li data-i="o2c">Mise en ligne et fiche Google mise à jour</li>
+          <li data-i="o2d">Une langue, deux tours de retouches</li>
+        </ul>
+        <p class="terms" data-i="o2_t">Pages ou langues en plus : prix fixe indiqué dans votre plan.</p>
       </div>
       <div class="plan feature">
-        <span class="who" data-i="m_w">Remettre à niveau</span>
-        <h3>Pack M</h3>
-        <div class="price range">4'000–7'000</div>
+        <span class="who" data-i="o3_w">Le plus avantageux</span>
+        <h3 data-i="o3_h">Logo + site</h3>
+        <div class="price"><small data-i="from">dès</small> 1'490.–</div>
         <ul>
-          <li data-i="mm1">Logo modernisé et identité visuelle complète</li>
-          <li data-i="mm2">Site vitrine neuf, rapide et sécurisé</li>
-          <li data-i="mm3">Google et deux réseaux sociaux mis en place, avec modèles de publication</li>
-          <li data-i="mm4">Modèles : papeterie, signature e-mail, documents</li>
+          <li data-i="o3a">Le logo et le site, pensés ensemble</li>
+          <li data-i="o3b">Tout ce que comprennent les deux offres</li>
+          <li data-i="o3c">Une image cohérente partout : site, Google, documents</li>
         </ul>
-        <p class="terms" data-i="m_tt">Le cas le plus fréquent.</p>
-      </div>
-      <div class="plan">
-        <span class="who" data-i="l_w">Refondre</span>
-        <h3>Pack L</h3>
-        <div class="price range"><small data-i="from">dès</small> 8'000</div>
-        <ul>
-          <li data-i="l1">Nouvelle identité visuelle complète</li>
-          <li data-i="l2">Site de plusieurs pages, multilingue</li>
-          <li data-i="l3">Rédaction de tous les contenus</li>
-          <li data-i="l4">Plan de communication pour l'année</li>
-        </ul>
-        <p class="terms" data-i="l_t">Quand tout est à reprendre.</p>
+        <p class="terms" data-i="o3_t">190 francs de moins que séparément.</p>
       </div>
     </div>
+    <p class="big-note" data-i="p_big">Un projet plus grand ? Plusieurs pages ou langues, véhicules, enseigne, papeterie : vous recevez un devis à prix fixe.</p>
     <div class="pricing2">
       <div class="plan">
-        <span class="who" data-i="e_w">Après la mise à niveau</span>
-        <h3 data-i="e_h">Entretien</h3>
-        <div class="price">79.– <small data-i="pm">par mois</small></div>
+        <span class="who" data-i="e_w">Une fois le site en ligne</span>
+        <h3 data-i="e_h">Hébergement et entretien</h3>
+        <div class="price">39.– <small data-i="pm">par mois</small></div>
         <ul>
           <li data-i="e1">Hébergement, sécurité et certificat du site</li>
           <li data-i="e2">Petites mises à jour du site, jusqu'à 30 minutes par mois</li>
           <li data-i="e3">Surveillance de votre présence en ligne, avec mes propositions</li>
-          <li data-i="e4">Un point avec vous chaque trimestre</li>
         </ul>
         <p class="terms" data-i="e_t">Six mois minimum, puis résiliable chaque mois.</p>
       </div>
@@ -464,7 +463,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
         </table>
       </div>
     </div>
-    <p class="fict" data-i="p_terms">Le prix exact de votre pack figure dans votre plan, avant tout engagement. Aucun dépassement sans votre accord. Vos fichiers vous appartiennent.</p>
+    <p class="fict" data-i="p_terms">Le prix exact figure dans votre plan, avant tout engagement. Aucun dépassement sans votre accord. Vos fichiers et votre site vous appartiennent.</p>
   </div>
 </section>
 
@@ -487,8 +486,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
     <div class="faq">
       <details><summary data-i="f1q">Mon logo a quarante ans, mes clients le connaissent. Pourquoi le toucher ?</summary><p data-i="f1a">Justement parce qu'ils le connaissent. Je garde ce qu'ils reconnaissent (le nom, la couleur, le signe) et je le rends lisible là où on vous découvre aujourd'hui : sur Google, sur un téléphone, dans un onglet. Si rien ne doit changer, je vous le dirai.</p></details>
       <details><summary data-i="f2q">Faut-il tout changer d'un coup, véhicules et enseigne compris ?</summary><p data-i="f2a">Non. On commence par le numérique (site, Google, e-mails), puis le reste suit au rythme de vos renouvellements naturels. Je vous remets un plan simple.</p></details>
-      <details><summary data-i="f7q">Combien coûte une mise à niveau ?</summary><p data-i="f7a">Cela dépend de ce que le bilan révèle. La plupart des entreprises se situent dans le Pack M, entre 4'000 et 7'000 francs. Le prix exact figure dans votre plan, et il ne bouge plus une fois validé.</p></details>
-      <details><summary data-i="f8q">Et après la mise à niveau ?</summary><p data-i="f8a">Avec l'entretien à 79 francs par mois, votre site reste à jour et sécurisé, et je garde un œil sur votre présence en ligne. Pour le reste, vous commandez à la pièce, quand vous en avez besoin.</p></details>
+      <details><summary data-i="f7q">Combien coûte une mise à niveau ?</summary><p data-i="f7a">Un logo modernisé coûte dès 490 francs, un site dès 1'190 francs, les deux ensemble dès 1'490 francs. Pour un projet plus grand, le prix exact figure dans votre plan, et il ne bouge plus une fois validé.</p></details>
+      <details><summary data-i="f8q">Et après la mise à niveau ?</summary><p data-i="f8a">Avec l'entretien à 39 francs par mois, votre site reste à jour et sécurisé, et je garde un œil sur votre présence en ligne. Pour le reste, vous commandez à la pièce, quand vous en avez besoin.</p></details>
       <details><summary data-i="f6q">Publiez-vous sur nos réseaux à notre place ?</summary><p data-i="f6a">Non, et c'est voulu : personne ne connaît votre quotidien mieux que vous. Je mets en place tout le système (profils, modèles, planning, outils) et je vous montre comment publier en quelques minutes. Si vous voulez de l'aide ponctuelle, elle se commande à la pièce.</p></details>
       <details><summary data-i="f5q">Travaillez-vous en plusieurs langues ?</summary><p data-i="f5a">Oui. Français, allemand et anglais, rédigés pour chaque langue et non traduits mot à mot. D'autres langues sont possibles sur demande.</p></details>
     </div>
@@ -596,8 +595,8 @@ f6q:"Auf welchen sozialen Netzwerken arbeiten Sie?",f6a:"Instagram, Facebook und
 k_t:"Eine erste Idee für Ihr Unternehmen?",k_l:"Nennen Sie uns Ihr Unternehmen. Sie erhalten eine Skizze mit Ihrem eigenen Logo, kostenlos und unverbindlich.",k_who:"Atelier Remaster, Biel/Bienne",
 l1:"Ihr Name",l2:"Unternehmen und Ort",l3:"E-Mail oder Telefon",l4:"Was Sie sich wünschen (freiwillig)",send:"Skizze anfragen",sent:"Danke, Ihre Nachricht ist eingegangen. Ich antworte Ihnen persönlich innert 24 Stunden an Arbeitstagen.",
 foot:"Impressum und Datenschutz"};
-Object.assign(DE,{"h1a": "Die digitale Auffrischung Ihres Unternehmens.", "lead": "Vom Logo zur Website, von den sozialen Medien bis zu den E-Mails: Wir analysieren alles, was Ihr Bild im Internet ausmacht. Sie erhalten einen massgeschneiderten Plan mit Fixpreis. Danach kümmern wir uns um alles.", "small": "Analyse und Plan mit Preis sind kostenlos und unverbindlich.", "ck_l": "Nennen Sie uns Ihr Unternehmen. Wir prüfen, was ein neuer Kunde zuerst sieht, und Sie erhalten die Analyse mit einem bezifferten Plan innert drei Arbeitstagen.", "ck1": "Ihr Logo und Ihr visueller Auftritt", "ck2": "Ihre Website, am Computer und auf dem Handy", "ck3": "Die Sicherheit Ihrer Website und Ihrer E-Mails", "ck4": "Ihre sozialen Medien", "ck5": "Ihre Präsenz auf Google", "ck6": "Ein einheitlicher Auftritt auf allen Kanälen", "b_ok": "Danke, Ihre Anfrage ist eingegangen. Analyse und Plan erhalten Sie innert drei Arbeitstagen per E-Mail.", "w_l": "Was Ihren Ruf ausmacht, bleibt. Alles andere modernisieren wir.", "w2t": "Eine moderne, sichere Website", "w2p": "Klar, schnell, auf dem Handy lesbar, bei Bedarf auf Deutsch und Französisch. Von uns gehostet, gesichert und aktuell gehalten. Ihr Google-Eintrag gleich mit.", "m1t": "Wir machen die Analyse", "m1p": "Kostenlos. Logo, Website, soziale Medien, Google, E-Mails: Wir schauen alles an, mit den Augen eines neuen Kunden.", "m2t": "Sie erhalten einen bezifferten Plan", "m2p": "Was zu tun ist, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.", "m3t": "Wir kümmern uns um alles", "m3p": "Sie geben jeden Schritt frei. Danach genügt eine Nachricht oder ein Foto für jede neue Anfrage.", "p_t": "Klare Preise, festgelegt vor dem Start", "p_l": "Die Analyse ist kostenlos. Daraus entsteht ein massgeschneiderter Plan mit Fixpreis, den Sie vor Arbeitsbeginn freigeben. Preise in CHF.", "s_w": "Auffrischen", "s1": "Logo überarbeitet und bereinigt", "s2": "Bestehende Website korrigiert oder neue One-Page", "s3": "Google- und Social-Media-Profile erneuert", "s4": "Dateien für alle Anwendungen", "s_t": "Für einen soliden Auftritt, der in die Jahre gekommen ist.", "m_w": "Auf den neusten Stand bringen", "mm1": "Logo modernisiert und vollständiger visueller Auftritt", "mm2": "Neue Website, schnell und sicher", "mm3": "Google und zwei soziale Netzwerke eingerichtet", "mm4": "Vorlagen: Geschäftspapier, E-Mail-Signatur, Beiträge", "m_tt": "Der häufigste Fall.", "l_w": "Neu aufbauen", "from": "ab", "l1": "Komplett neuer visueller Auftritt", "l2": "Website mit mehreren Seiten, auf Deutsch und Französisch", "l3": "Alle Inhalte getextet", "l4": "Kommunikationsplan für das ganze Jahr", "l_t": "Wenn alles neu gemacht werden muss.", "e_w": "Nach der Auffrischung", "e_h": "Betreuung", "pm": "pro Monat", "e1": "Hosting, Sicherheit und Zertifikat der Website", "e2": "Kleine Website-Anpassungen, bis 30 Minuten pro Monat", "e3": "Überwachung Ihrer Online-Präsenz, mit unseren Vorschlägen", "e4": "Ein Gespräch mit Ihnen pro Quartal", "e_t": "Mindestens sechs Monate, danach monatlich kündbar.", "al_w": "Einzeln, ohne Verpflichtung", "a0": "Arbeitsstunde, pro Viertelstunde verrechnet", "a4": "Plakat, Flyer, Inserat oder Karte", "p_terms": "Der genaue Preis Ihres Pakets steht in Ihrem Plan, vor jeder Verpflichtung. Keine Mehrkosten ohne Ihre Zustimmung. Ihre Dateien gehören Ihnen.", "g1p": "Analyse und Plan sind kostenlos. Sie zahlen nur, was Sie freigeben, zum angekündigten Preis.", "f7q": "Was kostet eine Auffrischung?", "f7a": "Das hängt davon ab, was die Analyse zeigt. Die meisten Unternehmen liegen im Paket M, zwischen 4'000 und 7'000 Franken. Der genaue Preis steht in Ihrem Plan und ändert sich nach der Freigabe nicht mehr.", "f8q": "Und nach der Auffrischung?", "f8a": "Mit der Betreuung für 79 Franken pro Monat bleibt Ihre Website aktuell und sicher, und wir behalten Ihre Online-Präsenz im Auge. Alles andere bestellen Sie einzeln, wenn Sie es brauchen."});
-Object.assign(DE,{"h1a": "Ihr Unternehmen, auf den neusten Stand.", "lead": "Logo, Website, soziale Medien, E-Mails: Ich analysiere alles, was Ihr Bild im Internet ausmacht. Sie erhalten einen massgeschneiderten Plan mit Fixpreis, danach kümmere ich mich um alles.", "cta1": "Meine Leistungen", "ck_l": "Nennen Sie mir Ihr Unternehmen. Ich prüfe, was ein neuer Kunde zuerst sieht, und Sie erhalten die Analyse mit einem bezifferten Plan innert drei Arbeitstagen.", "w_t": "Was ich für Sie tue", "w1p": "Logo, Farben, Geschäftspapier, Dokumentvorlagen. Ich behalte Ihren Namen, Ihre Farbe, Ihre Geschichte und mache alles überall lesbar, vom Firmenschild bis zum Handy.", "w2p": "Klar, schnell, auf dem Handy lesbar, in allen Sprachen Ihrer Kunden. Von mir gehostet, gesichert und aktuell gehalten. Ihr Google-Eintrag gleich mit.", "w4t": "Ihre sozialen Medien einrichten", "w4p": "Instagram, Facebook, LinkedIn. Gepflegte Profile, Beitragsvorlagen in Ihren Farben, Planung und Werkzeuge, um in wenigen Minuten zu posten. Ich richte das System ein, Sie veröffentlichen selbständig.", "m1t": "Ich mache die Analyse", "m1p": "Kostenlos. Logo, Website, soziale Medien, Google, E-Mails: Ich schaue alles an, mit den Augen eines neuen Kunden.", "m2p": "Was zu tun ist, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.", "m3t": "Ich kümmere mich um alles", "mm3": "Google und zwei soziale Netzwerke eingerichtet, mit Beitragsvorlagen", "mm4": "Vorlagen: Geschäftspapier, E-Mail-Signatur, Dokumente", "l2": "Website mit mehreren Seiten, mehrsprachig", "e3": "Überwachung Ihrer Online-Präsenz, mit meinen Vorschlägen", "a5": "Wiederverwendbare Beitragsvorlage", "g_t": "Warum mit mir arbeiten", "g_l": "Sie führen Ihr Unternehmen. Ich erledige das Marketing, Sie behalten die Entscheide.", "g4p": "Eine Person, die Ihr Unternehmen kennt, auf Deutsch, Französisch und Englisch.", "f1a": "Gerade weil sie es kennen. Was sie wiedererkennen (Name, Farbe, Zeichen), bleibt, und ich mache es dort lesbar, wo man Sie heute entdeckt: auf Google, auf dem Handy, im Browser. Wenn nichts geändert werden muss, sage ich es Ihnen.", "f2a": "Nein. Wir beginnen mit dem Digitalen (Website, Google, E-Mails), der Rest folgt im Rhythmus Ihrer natürlichen Erneuerungen. Ich gebe Ihnen einen einfachen Plan.", "f8a": "Mit der Betreuung für 79 Franken pro Monat bleibt Ihre Website aktuell und sicher, und ich behalte Ihre Online-Präsenz im Auge. Alles andere bestellen Sie einzeln, wenn Sie es brauchen.", "f6q": "Posten Sie für uns auf unseren Kanälen?", "f6a": "Nein, und das ist Absicht: Niemand kennt Ihren Alltag besser als Sie. Ich richte das ganze System ein (Profile, Vorlagen, Planung, Werkzeuge) und zeige Ihnen, wie Sie in wenigen Minuten posten. Punktuelle Hilfe können Sie einzeln bestellen.", "f5q": "Arbeiten Sie in mehreren Sprachen?", "f5a": "Ja. Deutsch, Französisch und Englisch, für jede Sprache geschrieben, nicht Wort für Wort übersetzt. Weitere Sprachen auf Anfrage.", "k_l": "Nennen Sie mir Ihr Unternehmen. Sie erhalten eine Skizze mit Ihrem eigenen Logo, kostenlos und unverbindlich."});
+Object.assign(DE,{"h1a": "Die digitale Auffrischung Ihres Unternehmens.", "lead": "Vom Logo zur Website, von den sozialen Medien bis zu den E-Mails: Wir analysieren alles, was Ihr Bild im Internet ausmacht. Sie erhalten einen massgeschneiderten Plan mit Fixpreis. Danach kümmern wir uns um alles.", "small": "Analyse und Plan mit Preis sind kostenlos und unverbindlich.", "ck_l": "Nennen Sie uns Ihr Unternehmen. Wir prüfen, was ein neuer Kunde zuerst sieht, und Sie erhalten die Analyse mit einem bezifferten Plan innert drei Arbeitstagen.", "ck1": "Ihr Logo und Ihr visueller Auftritt", "ck2": "Ihre Website, am Computer und auf dem Handy", "ck3": "Die Sicherheit Ihrer Website und Ihrer E-Mails", "ck4": "Ihre sozialen Medien", "ck5": "Ihre Präsenz auf Google", "ck6": "Ein einheitlicher Auftritt auf allen Kanälen", "b_ok": "Danke, Ihre Anfrage ist eingegangen. Analyse und Plan erhalten Sie innert drei Arbeitstagen per E-Mail.", "w_l": "Was Ihren Ruf ausmacht, bleibt. Alles andere modernisieren wir.", "w2t": "Eine moderne, sichere Website", "w2p": "Klar, schnell, auf dem Handy lesbar, bei Bedarf auf Deutsch und Französisch. Von uns gehostet, gesichert und aktuell gehalten. Ihr Google-Eintrag gleich mit.", "m1t": "Wir machen die Analyse", "m1p": "Kostenlos. Logo, Website, soziale Medien, Google, E-Mails: Wir schauen alles an, mit den Augen eines neuen Kunden.", "m2t": "Sie erhalten einen bezifferten Plan", "m2p": "Was zu tun ist, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.", "m3t": "Wir kümmern uns um alles", "m3p": "Sie geben jeden Schritt frei. Danach genügt eine Nachricht oder ein Foto für jede neue Anfrage.", "p_t": "Klare Preise, festgelegt vor dem Start", "p_l": "Die Analyse ist kostenlos. Daraus entsteht ein massgeschneiderter Plan mit Fixpreis, den Sie vor Arbeitsbeginn freigeben. Preise in CHF.", "s_w": "Auffrischen", "s1": "Logo überarbeitet und bereinigt", "s2": "Bestehende Website korrigiert oder neue One-Page", "s3": "Google- und Social-Media-Profile erneuert", "s4": "Dateien für alle Anwendungen", "s_t": "Für einen soliden Auftritt, der in die Jahre gekommen ist.", "m_w": "Auf den neusten Stand bringen", "mm1": "Logo modernisiert und vollständiger visueller Auftritt", "mm2": "Neue Website, schnell und sicher", "mm3": "Google und zwei soziale Netzwerke eingerichtet", "mm4": "Vorlagen: Geschäftspapier, E-Mail-Signatur, Beiträge", "m_tt": "Der häufigste Fall.", "l_w": "Neu aufbauen", "from": "ab", "l1": "Komplett neuer visueller Auftritt", "l2": "Website mit mehreren Seiten, auf Deutsch und Französisch", "l3": "Alle Inhalte getextet", "l4": "Kommunikationsplan für das ganze Jahr", "l_t": "Wenn alles neu gemacht werden muss.", "e_w": "Nach der Auffrischung", "e_h": "Betreuung", "pm": "pro Monat", "e1": "Hosting, Sicherheit und Zertifikat der Website", "e2": "Kleine Website-Anpassungen, bis 30 Minuten pro Monat", "e3": "Überwachung Ihrer Online-Präsenz, mit unseren Vorschlägen", "e4": "Ein Gespräch mit Ihnen pro Quartal", "e_t": "Mindestens sechs Monate, danach monatlich kündbar.", "al_w": "Einzeln, ohne Verpflichtung", "a0": "Arbeitsstunde, pro Viertelstunde verrechnet", "a4": "Plakat, Flyer, Inserat oder Karte", "p_terms": "Der genaue Preis Ihres Pakets steht in Ihrem Plan, vor jeder Verpflichtung. Keine Mehrkosten ohne Ihre Zustimmung. Ihre Dateien gehören Ihnen.", "g1p": "Analyse und Plan sind kostenlos. Sie zahlen nur, was Sie freigeben, zum angekündigten Preis.", "f7q": "Was kostet eine Auffrischung?", "f7a": "Das hängt davon ab, was die Analyse zeigt. Die meisten Unternehmen liegen im Paket M, zwischen 4'000 und 7'000 Franken. Der genaue Preis steht in Ihrem Plan und ändert sich nach der Freigabe nicht mehr.", "f8q": "Und nach der Auffrischung?", "f8a": "Mit der Betreuung für 39 Franken pro Monat bleibt Ihre Website aktuell und sicher, und wir behalten Ihre Online-Präsenz im Auge. Alles andere bestellen Sie einzeln, wenn Sie es brauchen."});
+Object.assign(DE,{"h1a": "Ihr Unternehmen, auf den neusten Stand.", "lead": "Logo, Website, soziale Medien, E-Mails: Ich analysiere alles, was Ihr Bild im Internet ausmacht. Sie erhalten einen massgeschneiderten Plan mit Fixpreis, danach kümmere ich mich um alles.", "cta1": "Meine Leistungen", "ck_l": "Nennen Sie mir Ihr Unternehmen. Ich prüfe, was ein neuer Kunde zuerst sieht, und Sie erhalten die Analyse mit einem bezifferten Plan innert drei Arbeitstagen.", "w_t": "Was ich für Sie tue", "w1p": "Logo, Farben, Geschäftspapier, Dokumentvorlagen. Ich behalte Ihren Namen, Ihre Farbe, Ihre Geschichte und mache alles überall lesbar, vom Firmenschild bis zum Handy.", "w2p": "Klar, schnell, auf dem Handy lesbar, in allen Sprachen Ihrer Kunden. Von mir gehostet, gesichert und aktuell gehalten. Ihr Google-Eintrag gleich mit.", "w4t": "Ihre sozialen Medien einrichten", "w4p": "Instagram, Facebook, LinkedIn. Gepflegte Profile, Beitragsvorlagen in Ihren Farben, Planung und Werkzeuge, um in wenigen Minuten zu posten. Ich richte das System ein, Sie veröffentlichen selbständig.", "m1t": "Ich mache die Analyse", "m1p": "Kostenlos. Logo, Website, soziale Medien, Google, E-Mails: Ich schaue alles an, mit den Augen eines neuen Kunden.", "m2p": "Was zu tun ist, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.", "m3t": "Ich kümmere mich um alles", "mm3": "Google und zwei soziale Netzwerke eingerichtet, mit Beitragsvorlagen", "mm4": "Vorlagen: Geschäftspapier, E-Mail-Signatur, Dokumente", "l2": "Website mit mehreren Seiten, mehrsprachig", "e3": "Überwachung Ihrer Online-Präsenz, mit meinen Vorschlägen", "a5": "Wiederverwendbare Beitragsvorlage", "g_t": "Warum mit mir arbeiten", "g_l": "Sie führen Ihr Unternehmen. Ich erledige das Marketing, Sie behalten die Entscheide.", "g4p": "Eine Person, die Ihr Unternehmen kennt, auf Deutsch, Französisch und Englisch.", "f1a": "Gerade weil sie es kennen. Was sie wiedererkennen (Name, Farbe, Zeichen), bleibt, und ich mache es dort lesbar, wo man Sie heute entdeckt: auf Google, auf dem Handy, im Browser. Wenn nichts geändert werden muss, sage ich es Ihnen.", "f2a": "Nein. Wir beginnen mit dem Digitalen (Website, Google, E-Mails), der Rest folgt im Rhythmus Ihrer natürlichen Erneuerungen. Ich gebe Ihnen einen einfachen Plan.", "f8a": "Mit der Betreuung für 39 Franken pro Monat bleibt Ihre Website aktuell und sicher, und ich behalte Ihre Online-Präsenz im Auge. Alles andere bestellen Sie einzeln, wenn Sie es brauchen.", "f6q": "Posten Sie für uns auf unseren Kanälen?", "f6a": "Nein, und das ist Absicht: Niemand kennt Ihren Alltag besser als Sie. Ich richte das ganze System ein (Profile, Vorlagen, Planung, Werkzeuge) und zeige Ihnen, wie Sie in wenigen Minuten posten. Punktuelle Hilfe können Sie einzeln bestellen.", "f5q": "Arbeiten Sie in mehreren Sprachen?", "f5a": "Ja. Deutsch, Französisch und Englisch, für jede Sprache geschrieben, nicht Wort für Wort übersetzt. Weitere Sprachen auf Anfrage.", "k_l": "Nennen Sie mir Ihr Unternehmen. Sie erhalten eine Skizze mit Ihrem eigenen Logo, kostenlos und unverbindlich."});
 Object.assign(DE,{"h1a": "Ein Online-Auftritt, der Ihrem Unternehmen gerecht wird.", "lead_s": "Ein Design, das zu Ihnen passt, eine Sichtbarkeit, die sich auszahlt.", "lead": "<strong data-i=\"lead_s\">Ein Design, das zu Ihnen passt, eine Sichtbarkeit, die sich auszahlt.</strong> Ich analysiere Ihren Online-Auftritt und schlage Ihnen einen massgeschneiderten Plan zum Fixpreis vor."});
 Object.assign(DE,{m2p:"Was ich empfehle, in welcher Reihenfolge und zu welchem Fixpreis. Wir besprechen ihn eine halbe Stunde per Videocall, Sie entscheiden.",
 a5c:"Online-Werbekampagne (soziale Medien, Google), Einrichtung und Betreuung, ohne Werbebudget",
@@ -651,13 +650,16 @@ f_t:"Frequently asked questions",
 f1q:"My logo is forty years old and my customers know it. Why change it?",f1a:"Precisely because they know it. I keep what they recognise (the name, the colour, the symbol) and make it legible where people discover you today: on Google, on a phone, in a browser tab. If nothing needs to change, I'll tell you.",
 f2q:"Do I have to change everything at once, vehicles and signage included?",f2a:"No. We start with the digital side (website, Google, e-mails), and the rest follows as things naturally come up for renewal. I give you a simple plan.",
 f7q:"How much does an upgrade cost?",f7a:"It depends on what the review reveals. Most businesses fall within Pack M, between 4'000 and 7'000 francs. The exact price is in your plan, and it doesn't change once approved.",
-f8q:"And after the upgrade?",f8a:"With maintenance at 79 francs a month, your website stays up to date and secure, and I keep an eye on your online presence. For everything else, you order as you go, when you need it.",
+f8q:"And after the upgrade?",f8a:"With maintenance at 39 francs a month, your website stays up to date and secure, and I keep an eye on your online presence. For everything else, you order as you go, when you need it.",
 f6q:"Do you post on our social media for us?",f6a:"No, and that's deliberate: nobody knows your day-to-day better than you. I set up the whole system (profiles, templates, schedule, tools) and show you how to publish in a few minutes. If you'd like occasional help, you can order it as you go.",
 f5q:"Do you work in several languages?",f5a:"Yes. French, German and English, written for each language rather than translated word for word. Other languages are possible on request.",
 k_t:"A first idea for your business?",k_l:"Tell me your business name. You'll receive a sketch based on your own logo, free and with no obligation.",
 k_cred:"Marketing Specialist with Federal Diploma of Higher Education",k_who:"Atelier Remaster, Biel/Bienne",
 fl1:"Your name",fl2:"Business and town",fl3:"E-mail or phone",fl4:"What you'd like (optional)",send:"Request my sketch",sent:"Thank you, your message has arrived. I'll reply to you personally within 24 hours on working days.",
 foot_c:"© 2026 Atelier Remaster · Julien Dornbierer, Marketing Specialist with Federal Diploma of Higher Education · Biel/Bienne",foot:"Legal notice and privacy policy"};
+/* price list of 08.11.2026 (overrides older keys) */
+Object.assign(DE,{"o1_w": "Ihr Erscheinungsbild auffrischen", "o1_h": "Logo", "o1a": "Ihr Logo modernisiert, das Wiedererkennbare bleibt", "o1b": "Farben und Schriften festgelegt", "o1c": "Dateien für jeden Einsatz: Druck, Website, soziale Medien, Firmenschild", "o1d": "Zwei Korrekturrunden", "o1_t": "Für ein Erscheinungsbild, das in die Jahre gekommen ist.", "o2_w": "Gefunden und kontaktiert werden", "o2_h": "Website", "o2a": "Eine klare Website, für das Handy gemacht", "o2b": "Öffnungszeiten und Leistungen sichtbar, Anruf und E-Mail mit einem Fingertipp", "o2c": "Aufschaltung und aktualisierter Google-Eintrag", "o2d": "Eine Sprache, zwei Korrekturrunden", "o2_t": "Weitere Seiten oder Sprachen: Fixpreis in Ihrem Plan.", "o3_w": "Am vorteilhaftesten", "o3_h": "Logo + Website", "o3a": "Logo und Website, aufeinander abgestimmt", "o3b": "Alles, was die beiden Angebote enthalten", "o3c": "Ein einheitliches Bild überall: Website, Google, Dokumente", "o3_t": "190 Franken günstiger als einzeln.", "p_big": "Ein grösseres Projekt? Mehrere Seiten oder Sprachen, Fahrzeuge, Firmenschild, Briefpapier: Sie erhalten eine Offerte zum Fixpreis.", "e_w": "Sobald die Website online ist", "e_h": "Hosting und Betreuung", "p_l": "Die Analyse ist kostenlos. Danach erhalten Sie einen Fixpreis, den Sie vor jeder Arbeit freigeben. Preise in CHF.", "p_terms": "Der genaue Preis steht in Ihrem Plan, bevor Sie sich verpflichten. Keine Mehrkosten ohne Ihr Einverständnis. Ihre Dateien und Ihre Website gehören Ihnen.", "f7a": "Ein modernisiertes Logo kostet ab 490 Franken, eine Website ab 1'190 Franken, beides zusammen ab 1'490 Franken. Bei grösseren Projekten steht der genaue Preis in Ihrem Plan und ändert sich nach der Freigabe nicht mehr.", "x1p": "Logo", "x2p": "Logo + Website", "x3p": "Offerte"});
+Object.assign(EN,{"o1_w": "Refresh your image", "o1_h": "Logo", "o1a": "Your logo modernised, keeping what your customers recognise", "o1b": "Colours and typefaces defined", "o1c": "Files for every use: print, website, social media, signage", "o1d": "Two rounds of changes", "o1_t": "For an image that has aged.", "o2_w": "Get found and contacted", "o2_h": "Website", "o2a": "A clear website, designed for phones", "o2b": "Opening hours and services in plain sight, one tap to call or e-mail", "o2c": "Put online, with your Google listing updated", "o2d": "One language, two rounds of changes", "o2_t": "Extra pages or languages: fixed price stated in your plan.", "o3_w": "Best value", "o3_h": "Logo + website", "o3a": "Logo and website, designed together", "o3b": "Everything both offers include", "o3c": "A consistent image everywhere: website, Google, documents", "o3_t": "190 francs less than separately.", "p_big": "A bigger project? Several pages or languages, vehicles, signage, stationery: you get a fixed-price quote.", "e_w": "Once your website is live", "e_h": "Hosting and maintenance", "p_l": "The review is free. You then receive a fixed price, which you approve before any work begins. Prices in CHF.", "p_terms": "The exact price is in your plan, before you commit to anything. No extra costs without your agreement. Your files and your website belong to you.", "f7a": "A modernised logo starts at 490 francs, a website at 1'190 francs, both together at 1'490 francs. For a bigger project, the exact price is in your plan, and it doesn't change once approved.", "x1p": "Logo", "x2p": "Logo + website", "x3p": "Custom quote"});
 const FR={};document.querySelectorAll('[data-i]').forEach(el=>FR[el.dataset.i]=el.innerHTML);
 function setLang(l){LANG=l;const d=dict(l);document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;if(d[k]!==undefined)el.innerHTML=d[k]});document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.l===l)));try{localStorage.setItem('ar-lang',l)}catch(e){}calc()}
 document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));

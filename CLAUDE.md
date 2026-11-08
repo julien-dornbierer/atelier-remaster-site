@@ -39,10 +39,14 @@ il contient tout le contexte business, les décisions et la liste des tâches ou
 - Avis Google / fiche Google : détail secondaire, pas un argument principal.
 - Aucun faux avis, aucune fausse référence : les réalisations n'apparaissent qu'avec l'accord des clients.
 
-## Offre et prix affichés (CHF)
+## Offre et prix affichés (CHF) : grille du 08.11.2026
 - Julien ne facture pas la TVA pour l'instant : aucune mention de TVA sur le site ni dans les documents.
-- Bilan d'image + plan chiffré : gratuit (pour l'instant).
-- Pack S « Rafraîchir » 1'800–3'000 · Pack M « Remettre à niveau » 4'000–7'000 · Pack L « Refondre » dès 8'000.
-- Entretien 79.– / mois (6 mois minimum, puis résiliable chaque mois).
+- Bilan d'image : gratuit (pour l'instant).
+- Trois offres simples, prix « dès » (plus de Packs S/M/L, plus de fourchettes) :
+  Logo dès 490.– · Site dès 1'190.– (fiche Google comprise) · Logo + site dès 1'490.–.
+- Projet plus grand (plusieurs pages ou langues, véhicules, enseigne, papeterie) : sur devis, prix fixe.
+- Hébergement et entretien 39.– / mois (6 mois minimum, puis résiliable chaque mois).
 - À la pièce : heure 110.– (au quart d'heure), document graphique 90, modèle de publication 60,
   annonce d'emploi 180, campagne sponsorisée 250 (hors budget pub).
+- Positionnement : bas de la fourchette des freelances suisses sérieux, moins cher que localsearch sur 3 ans
+  sans engagement long ; on ne se bat pas contre le low-cost ni le « fait soi-même ».
