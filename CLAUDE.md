@@ -26,6 +26,8 @@ il contient tout le contexte business, les décisions et la liste des tâches ou
 - Formulaires (bilan + contact) : envoyés via FormSubmit (AJAX) vers julien@atelier-remaster.ch.
 - `site/mentions-legales.html` : impressum + protection des données FR/DE/EN. À tenir à jour si l'hébergement,
   les outils ou les traitements de données changent.
+- Section « Exemples » : photos avant/après et planches de charte en WebP dans `site/img/ex/` (entreprises fictives).
+  Clic sur la vignette = planche en grand dans le `<dialog id="lb">`.
 - `tools/` : scripts Python de modifications ponctuelles (historique, ne pas relancer).
 
 ## Règles de rédaction (validées par Julien)

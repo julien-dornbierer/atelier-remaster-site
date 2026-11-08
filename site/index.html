@@ -127,8 +127,8 @@ nav.main a:hover{color:var(--ink)}
 .cases{display:flex;flex-direction:column;gap:clamp(48px,6vw,84px);margin-top:2.8rem}
 .case{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
 @media (max-width:900px){.case{grid-template-columns:1fr}}
-.ba{position:relative;aspect-ratio:8/5;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--mist);touch-action:pan-y;user-select:none;-webkit-user-select:none;--pos:50%}
-.ba svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ba{position:relative;aspect-ratio:43/24;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--mist);touch-action:pan-y;user-select:none;-webkit-user-select:none;--pos:50%}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;-webkit-user-drag:none}
 .ba .after{clip-path:inset(0 0 0 var(--pos))}
 .ba .handle{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 0 1px rgba(30,39,51,.25);pointer-events:none}
 .ba .handle::after{content:"";position:absolute;top:50%;left:50%;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:2px solid #1e2733;background:linear-gradient(90deg,#fff 50%,var(--amber) 50%);box-shadow:0 4px 12px rgba(30,39,51,.3)}
@@ -138,6 +138,15 @@ nav.main a:hover{color:var(--ink)}
 .ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
 .ba:has(input:focus-visible){outline:2px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 6px var(--amber)}
 .cx h3{font-size:1.5rem}
+.ci{display:flex;align-items:center;gap:14px;width:100%;margin-top:1.4rem;padding:8px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);font:600 .95rem var(--display);text-align:left;cursor:zoom-in}
+.ci img{width:132px;height:auto;flex:none;border-radius:6px;border:1px solid var(--line)}
+.ci span::after{content:" →";color:var(--amber-deep)}
+.ci:hover{border-color:var(--amber)}
+.ci:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+#lb{padding:0;border:0;border-radius:10px;max-width:min(96vw,1600px);width:96vw;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+#lb::backdrop{background:rgba(20,26,34,.82)}
+#lb img{display:block;width:100%;height:auto}
+#lb button{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:0;background:#1e2733;color:#fff;font:700 1.3rem/1 var(--display);cursor:pointer}
 .cx .sec{font:500 .95rem var(--display);color:var(--soft);margin:.4rem 0 1.2rem;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .cx .pk{font:700 .78rem var(--display);padding:.3em .55em;border-radius:4px;background:var(--amber-wash);color:var(--amber-deep)}
 .cx dl{margin:0;display:flex;flex-direction:column;gap:14px}
@@ -307,73 +316,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   <div class="wrap">
     <span class="kick" data-i="x_k">Exemples fictifs</span>
     <h2 data-i="x_t">Avant, après : trois exemples</h2>
-    <p class="lead" data-i="x_l">Faites glisser pour comparer. Le nom, la couleur et le signe restent : c'est ce que vos clients reconnaissent. Le reste devient clair et lisible partout.</p>
+    <p class="lead" data-i="x_l">Faites glisser pour comparer. Le nom, la couleur et le signe restent : c'est ce que vos clients reconnaissent. Le reste devient clair et lisible partout. Chaque exemple est livré avec sa charte graphique.</p>
     <div class="cases">
 
       <article class="case">
         <div class="ba">
-          <svg class="before" viewBox="0 0 640 400" aria-hidden="true">
-            <defs>
-              <linearGradient id="c1t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2e85f"/><stop offset="1" stop-color="#1c7a2b"/></linearGradient>
-              <linearGradient id="c1w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4e04d"/><stop offset="1" stop-color="#2a8a35"/></linearGradient>
-            </defs>
-            <rect width="640" height="400" fill="#f4f2ec"/>
-            <text x="30" y="220" font-family="'Courier New',monospace" font-size="10" fill="#9b968b">logo_final_v3_NEW.jpg</text>
-            <g fill="#000" opacity=".15" transform="translate(4 4)">
-              <polygon points="175,58 150,100 200,100"/><polygon points="175,80 143,126 207,126"/><polygon points="175,104 136,156 214,156"/>
-            </g>
-            <polygon points="175,58 150,100 200,100" fill="url(#c1t)"/>
-            <polygon points="175,80 143,126 207,126" fill="url(#c1t)"/>
-            <polygon points="175,104 136,156 214,156" fill="url(#c1t)"/>
-            <rect x="168" y="156" width="14" height="20" fill="#7a4a1f"/>
-            <text x="236" y="98" font-family="'Brush Script MT','Segoe Script',cursive" font-size="34" fill="#1c6b2a">Menuiserie</text>
-            <text x="239" y="157" font-family="Impact,'Arial Black',sans-serif" font-size="56" fill="#000" opacity=".2">VAUCLAIR</text>
-            <text x="235" y="153" font-family="Impact,'Arial Black',sans-serif" font-size="56" fill="url(#c1w)" stroke="#14501d" stroke-width="1.2">VAUCLAIR</text>
-            <text x="238" y="182" font-family="'Times New Roman',serif" font-style="italic" font-size="16" fill="#c62828">depuis 1978</text>
-            <path d="M236 192Q350 206 470 188" fill="none" stroke="#c62828" stroke-width="2"/>
-            <path d="M30 232H610" stroke="#dcd8cf" stroke-width="1.5"/>
-            <g fill="none" stroke="#bdb8ac" stroke-width="1.5" stroke-dasharray="5 4">
-              <rect x="30" y="248" width="180" height="122" rx="8"/><rect x="230" y="248" width="180" height="122" rx="8"/><rect x="430" y="248" width="180" height="122" rx="8"/>
-            </g>
-            <g font-family="Arial,sans-serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="#9b968b">
-              <text x="44" y="270" data-i="x1c1">COULEURS</text><text x="244" y="270" data-i="x1c2">TYPOGRAPHIE</text><text x="444" y="270" data-i="x1c3">DÉCLINAISONS</text>
-            </g>
-            <g font-family="Georgia,serif" font-size="44" fill="#c9c4b8" text-anchor="middle">
-              <text x="120" y="340">?</text><text x="320" y="340">?</text><text x="520" y="340">?</text>
-            </g>
-          </svg>
-          <svg class="after" viewBox="0 0 640 400" aria-hidden="true">
-            <defs>
-              <symbol id="c1m" viewBox="-29 0 58 70"><g fill="currentColor"><rect x="-8" y="0" width="16" height="10" rx="2"/><rect x="-15" y="14" width="30" height="10" rx="2"/><rect x="-22" y="28" width="44" height="10" rx="2"/><rect x="-29" y="42" width="58" height="10" rx="2"/><rect x="-4" y="56" width="8" height="14"/></g></symbol>
-            </defs>
-            <rect width="640" height="400" fill="#fbfaf7"/>
-            <text x="30" y="220" font-family="'Courier New',monospace" font-size="10" fill="#8a9a91">vauclair-logo · svg · pdf · png</text>
-            <use href="#c1m" x="160" y="72" width="70" height="85" color="#2f5d46"/>
-            <text x="258" y="145" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="64" letter-spacing="-2" fill="#1f2a24">Vauclair</text>
-            <text x="261" y="176" font-family="Arial,sans-serif" font-weight="700" font-size="12" letter-spacing="2.6" fill="#2f5d46">MENUISERIE · DEPUIS 1978</text>
-            <path d="M30 232H610" stroke="#e6e3dc" stroke-width="1.5"/>
-            <g fill="#ffffff" stroke="#e6e3dc" stroke-width="1.5">
-              <rect x="30" y="248" width="180" height="122" rx="8"/><rect x="230" y="248" width="180" height="122" rx="8"/><rect x="430" y="248" width="180" height="122" rx="8"/>
-            </g>
-            <g font-family="Arial,sans-serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="#2f5d46">
-              <text x="44" y="270" data-i="x1c1">COULEURS</text><text x="244" y="270" data-i="x1c2">TYPOGRAPHIE</text><text x="444" y="270" data-i="x1c3">DÉCLINAISONS</text>
-            </g>
-            <circle cx="62" cy="308" r="15" fill="#2f5d46"/><circle cx="102" cy="308" r="15" fill="#c8955a"/><circle cx="142" cy="308" r="15" fill="#f3ede2" stroke="#d9d2c4"/><circle cx="182" cy="308" r="15" fill="#1f2a24"/>
-            <g font-family="Arial,sans-serif" font-size="7" fill="#6b746f" text-anchor="middle">
-              <text x="62" y="340">2F5D46</text><text x="102" y="340">C8955A</text><text x="142" y="340">F3EDE2</text><text x="182" y="340">1F2A24</text>
-            </g>
-            <text x="244" y="330" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="38" fill="#1f2a24">Aa</text>
-            <text x="326" y="330" font-family="Georgia,serif" font-size="38" fill="#1f2a24">Aa</text>
-            <g font-family="Arial,sans-serif" font-size="9" fill="#6b746f">
-              <text x="246" y="350" data-i="x1t1">Titres</text><text x="328" y="350" data-i="x1t2">Textes</text>
-            </g>
-            <rect x="444" y="286" width="48" height="48" rx="8" fill="#2f5d46"/>
-            <use href="#c1m" x="456" y="295" width="24" height="29" color="#ffffff"/>
-            <rect x="500" y="286" width="48" height="48" rx="8" fill="#c8955a"/>
-            <use href="#c1m" x="512" y="295" width="24" height="29" color="#1f2a24"/>
-            <circle cx="578" cy="310" r="24" fill="#1f2a24"/>
-            <use href="#c1m" x="566" y="296" width="24" height="29" color="#f3ede2"/>
-          </svg>
+          <img class="before" src="img/ex/vauclair-avant.webp" width="1376" height="768" alt="" loading="lazy" decoding="async">
+          <img class="after" src="img/ex/vauclair-apres.webp" width="1376" height="768" alt="" loading="lazy" decoding="async">
           <span class="tag b" data-i="bf">Avant</span><span class="tag a" data-i="af">Après</span>
           <span class="handle"></span>
           <input type="range" min="0" max="100" step="any" value="50" aria-label="Comparer avant et après">
@@ -387,85 +336,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
             <div><dt data-i="x_km">On modernise</dt><dd data-i="x1m">Un sapin redessiné en planches et une charte complète : couleurs, typographies, déclinaisons pour l'enseigne, les réseaux et les documents.</dd></div>
             <div><dt data-i="x_kd">Livrables</dt><dd data-i="x1d">Logo en toutes tailles et tous formats, charte graphique, modèles de documents.</dd></div>
           </dl>
+          <button class="ci" type="button" data-full="img/ex/vauclair-charte.webp" data-t="Menuiserie Vauclair"><img src="img/ex/vauclair-charte-mini.webp" width="720" height="402" alt="" loading="lazy" decoding="async"><span data-i="x_ci">Voir la charte graphique</span></button>
         </div>
       </article>
 
       <article class="case">
         <div class="ba">
-          <svg class="before" viewBox="0 0 640 400" aria-hidden="true">
-            <defs>
-              <linearGradient id="c2h" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1a3fa0"/><stop offset="1" stop-color="#5fa8ff"/></linearGradient>
-              <clipPath id="c2c"><rect x="233" y="44" width="174" height="322" rx="12"/></clipPath>
-            </defs>
-            <rect width="640" height="400" fill="#dde3e8"/>
-            <rect x="231" y="24" width="190" height="368" rx="28" fill="#000" opacity=".12"/>
-            <rect x="225" y="18" width="190" height="368" rx="28" fill="#1e2733"/>
-            <rect x="233" y="44" width="174" height="322" rx="12" fill="#ffffff"/>
-            <g clip-path="url(#c2c)">
-              <rect x="233" y="44" width="174" height="34" fill="url(#c2h)"/>
-              <text x="320" y="66" text-anchor="middle" font-family="'Times New Roman',serif" font-style="italic" font-weight="700" font-size="13" fill="#fff" stroke="#0b1f5c" stroke-width=".4">Fiduciaire Rochat SA</text>
-              <rect x="233" y="78" width="174" height="10" fill="#ffff66"/>
-              <text x="236" y="85.5" font-family="Arial,sans-serif" font-size="6" fill="#c00">*** Bienvenue sur notre site internet ! *** Bienvenue ***</text>
-              <g font-family="Arial,sans-serif" font-size="4.6" fill="#000">
-                <rect x="237" y="93" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="99.8">Accueil</text>
-                <rect x="237" y="106" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="112.8">Qui sommes-nous</text>
-                <rect x="237" y="119" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="125.8">Prestations</text>
-                <rect x="237" y="132" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="138.8">Tarifs</text>
-                <rect x="237" y="145" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="151.8">Liens utiles</text>
-                <rect x="237" y="158" width="40" height="10" fill="#c0c0c0" stroke="#808080" stroke-width=".6"/><text x="240" y="164.8">Contact</text>
-              </g>
-              <text x="283" y="101" font-family="'Times New Roman',serif" font-weight="700" font-size="9" fill="#1a3fa0">Bienvenue !</text>
-              <g fill="#a9b2bb">
-                <rect x="283" y="107" width="118" height="3"/><rect x="283" y="113" width="112" height="3"/><rect x="283" y="119" width="116" height="3"/><rect x="283" y="125" width="80" height="3"/>
-                <rect x="327" y="134" width="74" height="3"/><rect x="327" y="140" width="70" height="3"/><rect x="327" y="146" width="74" height="3"/><rect x="327" y="152" width="60" height="3"/><rect x="327" y="158" width="72" height="3"/>
-                <rect x="283" y="171" width="118" height="3"/><rect x="283" y="177" width="114" height="3"/><rect x="283" y="183" width="118" height="3"/><rect x="283" y="189" width="96" height="3"/>
-                <rect x="283" y="198" width="117" height="3"/><rect x="283" y="204" width="110" height="3"/><rect x="283" y="210" width="70" height="3"/>
-              </g>
-              <rect x="283" y="133" width="38" height="29" fill="#d9dde2" stroke="#9aa3ad" stroke-width=".6"/>
-              <path d="M283 133L321 162M321 133L283 162" stroke="#9aa3ad" stroke-width=".6"/>
-              <g transform="translate(283 222)">
-                <rect width="60" height="12" fill="#ffd400"/>
-                <path d="M0 12L12 0H18L6 12ZM14 12L26 0H32L20 12ZM28 12L40 0H46L34 12ZM42 12L54 0H60L48 12Z" fill="#1e1e1e"/>
-              </g>
-              <text x="347" y="231" font-family="Arial,sans-serif" font-size="5" fill="#c00">en construction</text>
-              <g fill="#a9b2bb"><rect x="237" y="246" width="164" height="3"/><rect x="237" y="252" width="150" height="3"/><rect x="237" y="258" width="160" height="3"/><rect x="237" y="264" width="120" height="3"/></g>
-              <text x="237" y="290" font-family="Arial,sans-serif" font-size="5.5" fill="#333">Visiteurs :</text>
-              <rect x="266" y="284" width="36" height="9" fill="#000"/>
-              <text x="269" y="291" font-family="'Courier New',monospace" font-size="7" fill="#39ff14">004213</text>
-              <text x="320" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="4.6" fill="#666">Site optimisé pour Internet Explorer 6 - 1024x768</text>
-              <text x="320" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="4.6" fill="#666">Dernière mise à jour : 14.03.2009</text>
-            </g>
-          </svg>
-          <svg class="after" viewBox="0 0 640 400" aria-hidden="true">
-            <defs><clipPath id="c2d"><rect x="233" y="44" width="174" height="322" rx="12"/></clipPath></defs>
-            <rect width="640" height="400" fill="#dde3e8"/>
-            <rect x="231" y="24" width="190" height="368" rx="28" fill="#000" opacity=".12"/>
-            <rect x="225" y="18" width="190" height="368" rx="28" fill="#1e2733"/>
-            <rect x="233" y="44" width="174" height="322" rx="12" fill="#ffffff"/>
-            <g clip-path="url(#c2d)">
-              <circle cx="251" cy="59" r="9" fill="#1f3a5f"/>
-              <text x="251" y="62.6" text-anchor="middle" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="10" fill="#fff">R</text>
-              <text x="265" y="63.5" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="12.5" fill="#1f3a5f">Rochat</text>
-              <path d="M386 54H398M386 59H398M386 64H398" stroke="#1f3a5f" stroke-width="1.8" stroke-linecap="round"/>
-              <rect x="233" y="74" width="174" height="120" fill="#1f3a5f"/>
-              <text x="245" y="95" font-family="Arial,sans-serif" font-weight="700" font-size="7" letter-spacing="1.4" fill="#ffffff" opacity=".7">FIDUCIAIRE</text>
-              <g font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="19" fill="#ffffff">
-                <text x="245" y="119">Vos comptes</text><text x="245" y="140">en ordre,</text><text x="245" y="161">sans souci.</text>
-              </g>
-              <text x="245" y="182" font-family="Arial,sans-serif" font-size="7.5" fill="#ffffff" opacity=".8">Littoral neuchâtelois, depuis 1991</text>
-              <rect x="245" y="204" width="72" height="26" rx="13" fill="#d9a441"/>
-              <text x="281" y="220.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="9.5" fill="#1e2733">Appeler</text>
-              <rect x="323" y="204.75" width="72" height="24.5" rx="12.25" fill="none" stroke="#1f3a5f" stroke-width="1.5"/>
-              <text x="359" y="220.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="9.5" fill="#1f3a5f">E-mail</text>
-              <circle cx="249" cy="246" r="3.5" fill="#2e9d5b"/>
-              <text x="257" y="249" font-family="Arial,sans-serif" font-size="7.5" fill="#45505c">Ouvert · 8h–12h, 13h30–17h</text>
-              <g font-family="Arial,sans-serif" font-weight="700" font-size="10.5" fill="#1e2733">
-                <path d="M245 262H395M245 292H395M245 322H395M245 352H395" stroke="#e1e5ea" stroke-width="1"/>
-                <text x="245" y="281">Comptabilité</text><text x="245" y="311">Salaires</text><text x="245" y="341">Impôts</text>
-              </g>
-              <path d="M389 273l4 4-4 4M389 303l4 4-4 4M389 333l4 4-4 4" fill="none" stroke="#1f3a5f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </g>
-          </svg>
+          <img class="before" src="img/ex/rochat-avant.webp" width="1376" height="768" alt="" loading="lazy" decoding="async">
+          <img class="after" src="img/ex/rochat-apres.webp" width="1376" height="768" alt="" loading="lazy" decoding="async">
           <span class="tag b" data-i="bf">Avant</span><span class="tag a" data-i="af">Après</span>
           <span class="handle"></span>
           <input type="range" min="0" max="100" step="any" value="50" aria-label="Comparer avant et après">
@@ -477,102 +355,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
             <div><dt data-i="x_kp">Point de départ</dt><dd data-i="x2a">Un site de 2009 qui s'affiche en miniature sur téléphone. Les horaires sont introuvables, le numéro n'est pas cliquable.</dd></div>
             <div><dt data-i="x_kk">On garde</dt><dd data-i="x2k">Le bleu marine, le ton sérieux, la liste des prestations.</dd></div>
             <div><dt data-i="x_km">On modernise</dt><dd data-i="x2m">Un site pensé d'abord pour le téléphone : horaires visibles, appel en un geste, trois prestations claires.</dd></div>
-            <div><dt data-i="x_kd">Livrables</dt><dd data-i="x2d">Site neuf, hébergé et sécurisé, en français et en allemand. Fiche Google à jour.</dd></div>
+            <div><dt data-i="x_kd">Livrables</dt><dd data-i="x2d">Site neuf, hébergé et sécurisé, en français et en allemand. Logo affiné et charte graphique. Fiche Google à jour.</dd></div>
           </dl>
+          <button class="ci" type="button" data-full="img/ex/rochat-charte.webp" data-t="Fiduciaire Rochat"><img src="img/ex/rochat-charte-mini.webp" width="720" height="402" alt="" loading="lazy" decoding="async"><span data-i="x_ci">Voir la charte graphique</span></button>
         </div>
       </article>
 
       <article class="case">
         <div class="ba">
-          <svg class="before" viewBox="0 0 640 400" aria-hidden="true">
-            <rect width="640" height="400" fill="#e3e8ee"/>
-            <g fill="#d3d9e0"><rect x="0" y="140" width="90" height="120"/><rect x="95" y="110" width="70" height="150"/><rect x="170" y="150" width="110" height="110"/><rect x="285" y="125" width="80" height="135"/><rect x="370" y="160" width="120" height="100"/><rect x="495" y="135" width="80" height="125"/><rect x="580" y="150" width="60" height="110"/></g>
-            <rect y="250" width="640" height="14" fill="#cfd5dc"/>
-            <rect y="264" width="640" height="136" fill="#b9c0c8"/>
-            <path d="M0 372H640" stroke="#eef1f4" stroke-width="4" stroke-dasharray="36 28"/>
-            <rect x="618" y="150" width="6" height="170" fill="#4a5058"/>
-            <rect x="606" y="110" width="30" height="70" rx="5" fill="#2b3037"/>
-            <circle cx="621" cy="124" r="8" fill="#e53935"/><circle cx="621" cy="145" r="8" fill="#5a4a1e"/><circle cx="621" cy="166" r="8" fill="#1f4a2c"/>
-            <g fill="#000" opacity=".14"><ellipse cx="25" cy="318" rx="95" ry="5"/><ellipse cx="320" cy="318" rx="150" ry="5"/><ellipse cx="542" cy="317" rx="66" ry="4"/></g>
-            <g transform="translate(-175 110) scale(.62)">
-              <path d="M90 130Q90 120 100 120H430Q445 120 455 135L520 215Q550 222 550 250V290Q550 300 540 300H100Q90 300 90 290Z" fill="#f2f3f4" stroke="#a8b0b8" stroke-width="2.4"/>
-              <polygon points="398,134 440,134 492,200 398,200" fill="#9fb4c8"/>
-              <path d="M388 122V298" stroke="#c3c9cf" stroke-width="2"/>
-              <rect x="92" y="290" width="458" height="10" rx="3" fill="#c5ccd3"/>
-              <circle cx="170" cy="305" r="36" fill="#3a3f45"/><circle cx="470" cy="305" r="36" fill="#3a3f45"/>
-              <circle cx="170" cy="305" r="30" fill="#23272c"/><circle cx="470" cy="305" r="30" fill="#23272c"/>
-              <circle cx="170" cy="305" r="14" fill="#c9d0d8"/><circle cx="470" cy="305" r="14" fill="#c9d0d8"/>
-            </g>
-            <g transform="translate(122 110) scale(.62)">
-              <path d="M90 130Q90 120 100 120H430Q445 120 455 135L520 215Q550 222 550 250V290Q550 300 540 300H100Q90 300 90 290Z" fill="#f4f5f6" stroke="#9aa3ad" stroke-width="2.4"/>
-              <polygon points="398,134 440,134 492,200 398,200" fill="#9fb4c8"/>
-              <path d="M388 122V298" stroke="#c3c9cf" stroke-width="2"/>
-              <rect x="91" y="258" width="458" height="6" fill="#d32f2f"/>
-              <rect x="91" y="266" width="458" height="6" fill="#1d4e89"/>
-              <text x="110" y="162" font-family="'Arial Black',Arial,sans-serif" font-style="italic" font-weight="900" font-size="22" fill="#1d4e89" stroke="#0b2a52" stroke-width=".6">GARAGE ZBINDEN AG</text>
-              <text x="110" y="186" font-family="Arial,sans-serif" font-style="italic" font-size="10" fill="#333">Reparaturen aller Marken • Pneuservice • Klimaservice</text>
-              <text x="110" y="200" font-family="Arial,sans-serif" font-style="italic" font-size="10" fill="#333">Abgaswartung • Occasionen • Carrosserie</text>
-              <text x="110" y="226" font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="#222">Tel. 032 000 00 00   Fax 032 000 00 01</text>
-              <text x="110" y="243" font-family="Arial,sans-serif" font-size="9" fill="#444">www.garage-zbinden-ag-seeland.ch</text>
-              <text x="400" y="232" font-family="Arial,sans-serif" font-weight="700" font-size="8.5" fill="#d32f2f">Abschleppdienst 24h</text>
-              <rect x="534" y="236" width="14" height="10" rx="2" fill="#fff6c8" stroke="#9aa3ad"/>
-              <rect x="92" y="290" width="458" height="10" rx="3" fill="#c5ccd3"/>
-              <circle cx="170" cy="305" r="36" fill="#3a3f45"/><circle cx="470" cy="305" r="36" fill="#3a3f45"/>
-              <circle cx="170" cy="305" r="30" fill="#23272c"/><circle cx="470" cy="305" r="30" fill="#23272c"/>
-              <circle cx="170" cy="305" r="14" fill="#c9d0d8" stroke="#fff" stroke-width="2"/><circle cx="470" cy="305" r="14" fill="#c9d0d8" stroke="#fff" stroke-width="2"/>
-            </g>
-            <rect x="480" y="266" width="124" height="34" rx="8" fill="#c4cad1"/>
-            <path d="M505 266L525 244H575L592 266Z" fill="#c4cad1"/>
-            <path d="M512 264L528 248H548V264ZM552 248H572L585 264H552Z" fill="#8fa3b6"/>
-            <circle cx="510" cy="302" r="14" fill="#23272c"/><circle cx="578" cy="302" r="14" fill="#23272c"/>
-            <circle cx="510" cy="302" r="6" fill="#9aa3ad"/><circle cx="578" cy="302" r="6" fill="#9aa3ad"/>
-            <rect x="20" y="48" width="290" height="68" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
-            <text x="36" y="72" font-family="Arial,sans-serif" font-size="11" fill="#66707c" data-i="x3r">Ce qu'on retient en 3 secondes</text>
-            <text x="36" y="101" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="18" fill="#1e2733" data-i="x3b">« Un garage… lequel ? »</text>
-          </svg>
-          <svg class="after" viewBox="0 0 640 400" aria-hidden="true">
-            <rect width="640" height="400" fill="#e3e8ee"/>
-            <g fill="#d3d9e0"><rect x="0" y="140" width="90" height="120"/><rect x="95" y="110" width="70" height="150"/><rect x="170" y="150" width="110" height="110"/><rect x="285" y="125" width="80" height="135"/><rect x="370" y="160" width="120" height="100"/><rect x="495" y="135" width="80" height="125"/><rect x="580" y="150" width="60" height="110"/></g>
-            <rect y="250" width="640" height="14" fill="#cfd5dc"/>
-            <rect y="264" width="640" height="136" fill="#b9c0c8"/>
-            <path d="M0 372H640" stroke="#eef1f4" stroke-width="4" stroke-dasharray="36 28"/>
-            <rect x="618" y="150" width="6" height="170" fill="#4a5058"/>
-            <rect x="606" y="110" width="30" height="70" rx="5" fill="#2b3037"/>
-            <circle cx="621" cy="124" r="8" fill="#e53935"/><circle cx="621" cy="145" r="8" fill="#5a4a1e"/><circle cx="621" cy="166" r="8" fill="#1f4a2c"/>
-            <g fill="#000" opacity=".14"><ellipse cx="25" cy="318" rx="95" ry="5"/><ellipse cx="320" cy="318" rx="150" ry="5"/><ellipse cx="542" cy="317" rx="66" ry="4"/></g>
-            <g transform="translate(-175 110) scale(.62)">
-              <path d="M90 130Q90 120 100 120H430Q445 120 455 135L520 215Q550 222 550 250V290Q550 300 540 300H100Q90 300 90 290Z" fill="#f2f3f4" stroke="#a8b0b8" stroke-width="2.4"/>
-              <polygon points="398,134 440,134 492,200 398,200" fill="#9fb4c8"/>
-              <path d="M388 122V298" stroke="#c3c9cf" stroke-width="2"/>
-              <rect x="92" y="290" width="458" height="10" rx="3" fill="#c5ccd3"/>
-              <circle cx="170" cy="305" r="36" fill="#3a3f45"/><circle cx="470" cy="305" r="36" fill="#3a3f45"/>
-              <circle cx="170" cy="305" r="30" fill="#23272c"/><circle cx="470" cy="305" r="30" fill="#23272c"/>
-              <circle cx="170" cy="305" r="14" fill="#c9d0d8"/><circle cx="470" cy="305" r="14" fill="#c9d0d8"/>
-            </g>
-            <g transform="translate(122 110) scale(.62)">
-              <path d="M90 130Q90 120 100 120H430Q445 120 455 135L520 215Q550 222 550 250V290Q550 300 540 300H100Q90 300 90 290Z" fill="#1d4e89"/>
-              <polygon points="398,134 440,134 492,200 398,200" fill="#9fb4c8"/>
-              <path d="M388 122V298" stroke="#163d6c" stroke-width="2"/>
-              <text x="114" y="160" font-family="Arial,sans-serif" font-weight="700" font-size="12" letter-spacing="4" fill="#ffffff" opacity=".75">GARAGE</text>
-              <text x="110" y="206" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="52" letter-spacing="-1.5" fill="#ffffff">Zbinden</text>
-              <text x="114" y="250" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="20" fill="#ffffff">032 000 00 00</text>
-              <circle cx="440" cy="245" r="20" fill="none" stroke="#ffffff" stroke-width="3"/>
-              <path d="M432 237H448L432 253H448" fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
-              <rect x="534" y="236" width="14" height="10" rx="2" fill="#fff6c8"/>
-              <rect x="92" y="290" width="458" height="10" rx="3" fill="#2b2f35"/>
-              <circle cx="170" cy="305" r="36" fill="#14365f"/><circle cx="470" cy="305" r="36" fill="#14365f"/>
-              <circle cx="170" cy="305" r="30" fill="#23272c"/><circle cx="470" cy="305" r="30" fill="#23272c"/>
-              <circle cx="170" cy="305" r="14" fill="#3a3f45"/><circle cx="470" cy="305" r="14" fill="#3a3f45"/>
-            </g>
-            <rect x="480" y="266" width="124" height="34" rx="8" fill="#c4cad1"/>
-            <path d="M505 266L525 244H575L592 266Z" fill="#c4cad1"/>
-            <path d="M512 264L528 248H548V264ZM552 248H572L585 264H552Z" fill="#8fa3b6"/>
-            <circle cx="510" cy="302" r="14" fill="#23272c"/><circle cx="578" cy="302" r="14" fill="#23272c"/>
-            <circle cx="510" cy="302" r="6" fill="#9aa3ad"/><circle cx="578" cy="302" r="6" fill="#9aa3ad"/>
-            <rect x="330" y="48" width="290" height="68" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
-            <text x="346" y="72" font-family="Arial,sans-serif" font-size="11" fill="#66707c" data-i="x3r">Ce qu'on retient en 3 secondes</text>
-            <text x="346" y="101" font-family="'Bricolage Grotesque',Arial,sans-serif" font-weight="700" font-size="18" fill="#1d4e89" data-i="x3n">« Zbinden, 032 000 00 00 »</text>
-          </svg>
+          <img class="before" src="img/ex/zbinden-avant.webp" width="1376" height="768" alt="" loading="lazy" decoding="async">
+          <img class="after" src="img/ex/zbinden-apres.webp" width="1376" height="768" alt="" loading="lazy" decoding="async">
           <span class="tag b" data-i="bf">Avant</span><span class="tag a" data-i="af">Après</span>
           <span class="handle"></span>
           <input type="range" min="0" max="100" step="any" value="50" aria-label="Comparer avant et après">
@@ -583,9 +375,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
           <dl>
             <div><dt data-i="x_kp">Point de départ</dt><dd data-i="x3a">Un véhicule qui roule tous les jours dans la région, mais dont personne ne retient rien : six prestations, deux numéros, une adresse web de trente caractères.</dd></div>
             <div><dt data-i="x_kk">On garde</dt><dd data-i="x3k">Le bleu des débuts et le nom de famille.</dd></div>
-            <div><dt data-i="x_km">On modernise</dt><dd data-i="x3m">Un nom lisible de loin, un seul numéro, une couleur qui se remarque dans la circulation. Le véhicule devient une publicité qui travaille tous les jours.</dd></div>
-            <div><dt data-i="x_kd">Livrables</dt><dd data-i="x3d">Logo modernisé, maquette du véhicule prête pour le carrossier, enseigne, modèles de documents.</dd></div>
+            <div><dt data-i="x_km">On modernise</dt><dd data-i="x3m">Un nom lisible de loin, un seul numéro, un jaune signal qui accompagne le bleu et se remarque dans la circulation. Le véhicule devient une publicité qui travaille tous les jours.</dd></div>
+            <div><dt data-i="x_kd">Livrables</dt><dd data-i="x3d">Logo modernisé, charte graphique, maquette du véhicule prête pour le carrossier, enseigne, modèles de documents.</dd></div>
           </dl>
+          <button class="ci" type="button" data-full="img/ex/zbinden-charte.webp" data-t="Garage Zbinden"><img src="img/ex/zbinden-charte-mini.webp" width="720" height="402" alt="" loading="lazy" decoding="async"><span data-i="x_ci">Voir la charte graphique</span></button>
         </div>
       </article>
 
@@ -726,6 +519,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
   </div>
 </section>
 </main>
+<dialog id="lb"><img src="" alt=""><button type="button" data-i="x_close" aria-label="Fermer">×</button></dialog>
 
 <footer>
   <div class="wrap">
@@ -746,6 +540,11 @@ document.querySelectorAll('.ba').forEach(ba=>{
  ['pointerup','pointercancel'].forEach(t=>ba.addEventListener(t,()=>{drag=false}));
 });
 
+
+/* brand guideline boards: open full size in a dialog */
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.querySelectorAll('.ci').forEach(b=>b.addEventListener('click',()=>{lbi.src=b.dataset.full;lbi.alt=b.dataset.t;lb.showModal()}));
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.tagName==='BUTTON')lb.close()});
 
 let LANG='fr';
 function calc(){}
@@ -804,14 +603,14 @@ Object.assign(DE,{m2p:"Was ich empfehle, in welcher Reihenfolge und zu welchem F
 a5c:"Online-Werbekampagne (soziale Medien, Google), Einrichtung und Betreuung, ohne Werbebudget",
 foot_c:"© 2026 Atelier Remaster · Julien Dornbierer, Marketingfachmann mit eidg. Fachausweis · Biel/Bienne",
 nav5:"Beispiele",fl1:"Ihr Name",fl2:"Unternehmen und Ort",fl3:"E-Mail oder Telefon",fl4:"Was Sie sich wünschen (freiwillig)",
-x_k:"Fiktive Beispiele",x_t:"Vorher, nachher: drei Beispiele",x_l:"Zum Vergleichen ziehen. Name, Farbe und Zeichen bleiben: Daran erkennen Ihre Kunden Sie. Alles andere wird klar und überall lesbar.",
+x_k:"Fiktive Beispiele",x_t:"Vorher, nachher: drei Beispiele",x_l:"Zum Vergleichen ziehen. Name, Farbe und Zeichen bleiben: Daran erkennen Ihre Kunden Sie. Alles andere wird klar und überall lesbar. Zu jedem Beispiel gehören die passenden Gestaltungsrichtlinien.",
 x_kp:"Ausgangslage",x_kk:"Bleibt",x_km:"Wird modernisiert",x_kd:"Lieferumfang",
 x1s:"Schreinerei · Seeland · seit 1978",x1a:"Ein Logo von 1990, und sonst nichts: keine festgelegten Farben, keine Schrift, eine einzige JPEG-Datei. Jede Druckerei macht es auf ihre Weise.",x1k:"Das Grün, die Tanne und das Gründungsjahr.",x1m:"Eine aus Brettern neu gezeichnete Tanne und ein vollständiges Erscheinungsbild: Farben, Schriften, Varianten für Firmenschild, soziale Medien und Dokumente.",x1d:"Logo in allen Grössen und Formaten, Gestaltungsrichtlinien, Dokumentvorlagen.",
 x1c1:"FARBEN",x1c2:"SCHRIFTEN",x1c3:"VARIANTEN",x1t1:"Titel",x1t2:"Text",
 x3r:"Was man in 3 Sekunden behält",x3b:"«Eine Garage… welche?»",x3n:"«Zbinden, 032 000 00 00»",
-x2s:"Treuhand · Region Neuenburg · seit 1991",x2a:"Eine Website von 2009, die auf dem Handy winzig erscheint. Die Öffnungszeiten sind unauffindbar, die Nummer ist nicht anklickbar.",x2k:"Das Marineblau, der seriöse Ton, die Liste der Leistungen.",x2m:"Eine Website, die zuerst fürs Handy gedacht ist: Öffnungszeiten sichtbar, Anruf mit einem Fingertipp, drei klare Leistungen.",x2d:"Neue Website, gehostet und gesichert, auf Französisch und Deutsch. Aktueller Google-Eintrag.",
-x3s:"Garage · Seeland · seit 1985",x3a:"Ein Fahrzeug, das jeden Tag in der Region unterwegs ist, aber an das sich niemand erinnert: sechs Leistungen, zwei Nummern, eine Webadresse mit dreissig Zeichen.",x3k:"Das Blau der Anfänge und der Familienname.",x3m:"Ein Name, der von weitem lesbar ist, eine einzige Nummer, eine Farbe, die im Verkehr auffällt. Das Fahrzeug wird zur Werbung, die jeden Tag arbeitet.",x3d:"Modernisiertes Logo, Fahrzeugbeschriftung bereit für den Carrossier, Firmenschild, Dokumentvorlagen.",
-x_fict:"Fiktive Unternehmen und Gestaltungen, zur Veranschaulichung erstellt. Kundenarbeiten zeige ich nur mit deren Einverständnis."});
+x2s:"Treuhand · Region Neuenburg · seit 1991",x2a:"Eine Website von 2009, die auf dem Handy winzig erscheint. Die Öffnungszeiten sind unauffindbar, die Nummer ist nicht anklickbar.",x2k:"Das Marineblau, der seriöse Ton, die Liste der Leistungen.",x2m:"Eine Website, die zuerst fürs Handy gedacht ist: Öffnungszeiten sichtbar, Anruf mit einem Fingertipp, drei klare Leistungen.",x2d:"Neue Website, gehostet und gesichert, auf Französisch und Deutsch. Verfeinertes Logo und Gestaltungsrichtlinien. Aktueller Google-Eintrag.",
+x3s:"Garage · Seeland · seit 1985",x3a:"Ein Fahrzeug, das jeden Tag in der Region unterwegs ist, aber an das sich niemand erinnert: sechs Leistungen, zwei Nummern, eine Webadresse mit dreissig Zeichen.",x3k:"Das Blau der Anfänge und der Familienname.",x3m:"Ein Name, der von weitem lesbar ist, eine einzige Nummer, ein Signalgelb, das das Blau begleitet und im Verkehr auffällt. Das Fahrzeug wird zur Werbung, die jeden Tag arbeitet.",x3d:"Modernisiertes Logo, Gestaltungsrichtlinien, Fahrzeugbeschriftung bereit für den Carrossier, Firmenschild, Dokumentvorlagen.",
+x_ci:"Gestaltungsrichtlinien ansehen",x_close:"×",x_fict:"Fiktive Unternehmen und Gestaltungen, zur Veranschaulichung erstellt. Kundenarbeiten zeige ich nur mit deren Einverständnis."});
 Object.assign(DE,{nav0:"Menü",h1a:"Was Ihren Ruf ausmacht, bleibt.",h1b:"Alles andere modernisiere ich.",lead_s:"Ich analysiere, was neue Kunden zuerst sehen",lead:"Logo, Website, soziale Medien, Google: <strong data-i=\"lead_s\">Ich analysiere, was neue Kunden zuerst sehen</strong>, und schlage Ihnen einen massgeschneiderten Plan zum Fixpreis vor.",w_l:"Vier Bereiche, ein einziger Ansprechpartner. Sie wählen, was Sie brauchen."});
 const EN={nav0:"Menu",h1b:"Everything else gets modernised.",nav1:"Services",nav5:"Examples",nav2:"Method",nav3:"Pricing",nav4:"Contact",
 h1a:"What built your reputation stays.",lead_s:"I review what a new customer sees first",
@@ -825,14 +624,14 @@ w1t:"Bring your image up to date",w1p:"Logo, colours, stationery, document templ
 w2t:"A modern, secure website",w2p:"Clear, fast, easy to read on a phone, in all your customers' languages. Hosted, secured and kept up to date by me. Your Google listing comes along too.",
 w3t:"Prepare your communication",w3p:"Posters, flyers, job ads, holiday notices, greeting cards, newsletters. One message is enough: you receive the finished result, ready to use.",
 w4t:"Set up your social media",w4p:"Instagram, Facebook, LinkedIn. Polished profiles, post templates in your colours, a schedule and tools to publish in a few minutes. I set up the system, you publish on your own.",
-x_k:"Fictional examples",x_t:"Before and after: three examples",x_l:"Drag to compare. The name, the colour and the symbol stay: that's what your customers recognise. Everything else becomes clear and legible everywhere.",
+x_k:"Fictional examples",x_t:"Before and after: three examples",x_l:"Drag to compare. The name, the colour and the symbol stay: that's what your customers recognise. Everything else becomes clear and legible everywhere. Each example comes with its brand guidelines.",
 x_kp:"Starting point",x_kk:"What stays",x_km:"What changes",x_kd:"Deliverables",bf:"Before",af:"After",
 x1c1:"COLOURS",x1c2:"TYPOGRAPHY",x1c3:"VARIATIONS",x1t1:"Headings",x1t2:"Body text",
 x1s:"Joinery · Seeland · since 1978",x1a:"A logo from 1990 and nothing around it: no defined colours, no typeface, a single JPEG file. Every printer does it their own way.",x1k:"The green, the fir tree and the founding year.",x1m:"A fir tree redrawn from wooden planks and a complete brand guide: colours, typefaces, variations for the sign, social media and documents.",x1d:"Logo in every size and format, brand guidelines, document templates.",
-x2s:"Accounting firm · Neuchâtel lakeside · since 1991",x2a:"A website from 2009 that shows up as a miniature on phones. The opening hours are impossible to find and the phone number isn't clickable.",x2k:"The navy blue, the serious tone, the list of services.",x2m:"A website designed for phones first: opening hours in plain sight, one tap to call, three clear services.",x2d:"New website, hosted and secured, in French and German. Up-to-date Google listing.",
+x2s:"Accounting firm · Neuchâtel lakeside · since 1991",x2a:"A website from 2009 that shows up as a miniature on phones. The opening hours are impossible to find and the phone number isn't clickable.",x2k:"The navy blue, the serious tone, the list of services.",x2m:"A website designed for phones first: opening hours in plain sight, one tap to call, three clear services.",x2d:"New website, hosted and secured, in French and German. Refined logo and brand guidelines. Up-to-date Google listing.",
 x3r:"What sticks after 3 seconds",x3b:"“A garage… which one?”",x3n:"“Zbinden, 032 000 00 00”",
-x3s:"Garage · Seeland · since 1985",x3a:"A vehicle that drives around the region every day, yet nobody remembers anything about it: six services, two phone numbers, a thirty-character web address.",x3k:"The original blue and the family name.",x3m:"A name you can read from a distance, a single number, a colour that stands out in traffic. The vehicle becomes an advert that works every day.",x3d:"Modernised logo, vehicle design ready for the body shop, signage, document templates.",
-x_fict:"Fictional businesses and visuals, created to illustrate the approach. Client work only appears with the client's consent.",
+x3s:"Garage · Seeland · since 1985",x3a:"A vehicle that drives around the region every day, yet nobody remembers anything about it: six services, two phone numbers, a thirty-character web address.",x3k:"The original blue and the family name.",x3m:"A name you can read from a distance, a single number, a signal yellow that joins the blue and stands out in traffic. The vehicle becomes an advert that works every day.",x3d:"Modernised logo, brand guidelines, vehicle design ready for the body shop, signage, document templates.",
+x_ci:"View the brand guidelines",x_close:"×",x_fict:"Fictional businesses and visuals, created to illustrate the approach. Client work only appears with the client's consent.",
 m_t:"Simple, from the first exchange onwards",m1t:"I review your image",m1p:"Free of charge. Logo, website, social media, Google, e-mails: I look at everything through the eyes of a new customer.",
 m2t:"You receive a costed plan",m2p:"What I recommend, in what order, and at what fixed price. We discuss it for half an hour by video call, and you decide.",
 m3t:"I take care of everything",m3p:"You approve every step. After that, a message or a photo is all it takes for any new request.",
