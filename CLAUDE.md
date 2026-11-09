@@ -44,6 +44,9 @@ il contient tout le contexte business, les décisions et la liste des tâches ou
 - Bilan d'image : gratuit (pour l'instant).
 - Trois offres simples, prix « dès » (plus de Packs S/M/L, plus de fourchettes) :
   Logo dès 490.– · Site dès 1'190.– (fiche Google comprise) · Logo + site dès 1'490.–.
+- Le site de base n'est pas limité à une page : « fonctionnalités standard » (plusieurs pages, affichage téléphone, formulaire, plan d'accès,
+  fiche Google) qui couvrent la plupart des besoins ; fonctionnalités avancées (plusieurs langues, réservation, boutique, catalogue) chiffrées à part.
+- Visioconférence facultative : diagnostic + proposition chiffrée d'abord, visio seulement si le client le souhaite.
 - Projet plus grand (plusieurs pages ou langues, véhicules, enseigne, papeterie) : sur devis, prix fixe.
 - Hébergement et entretien 39.– / mois (6 mois minimum, puis résiliable chaque mois).
 - À la pièce : heure 110.– (au quart d'heure), document graphique 90, modèle de publication 60,
